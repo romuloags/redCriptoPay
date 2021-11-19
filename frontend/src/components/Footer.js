@@ -38,7 +38,7 @@ const Footer = () => {
          </span>
          </li>  
          <li className="ms-3"><a className="text-muted bg-warning p-1 p-lg-2 rounded-2" 
-         href="/"><i className="bi bi-github text-danger"></i></a></li>
+         href="https://github.com/romuloags/redCriptoPay"><i className="bi bi-github text-danger"></i></a></li>
          <li className="ms-3"><a className="text-muted bg-warning p-1 p-lg-2 rounded-2" 
          href="https://redcripto.com/blog"><i className="bi bi-rss-fill text-danger"></i></a></li>
          </ul>
