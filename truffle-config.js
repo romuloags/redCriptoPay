@@ -19,6 +19,9 @@
  */
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
+const dotenv = require('dotenv');
+dotenv.config();
+const privateKey = process.env.PRIVATE_KEY
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
@@ -33,7 +36,7 @@ module.exports = {
    *
    * $ truffle test --network <network-name>
    */
-   contracts_build_directory: "./frontend/src/contracts",
+  contracts_build_directory: "./frontend/src/contracts",
 
   networks: {
     // Useful for testing. The `development` name is special - truffle uses it by default
@@ -82,16 +85,17 @@ module.exports = {
     // gas: 8500000,
     // gasPrice: web3.toWei("5", "gwei"),  
     // },
-    // bscTestnet: {
-    // provider: () => new HDWalletProvider (
-    // mnemonic,
-    //"https://data-seed-prebsc-1-s1.binance.org:8545/"
-    // ),
-    // network_id: 97,
-    // skipDryRun: true,
-    // gas: 8500000,
-    // gasPrice: web3.toWei("5", "gwei")  
-    //},
+      bscTestnet: {
+      provider: () => new HDWalletProvider (
+      privateKey,
+      "https://data-seed-prebsc-1-s1.binance.org:8545/"
+      ),
+      network_id: 97,
+      skipDryRun: true,
+      gas: 8500000,
+      gasPrice: 5000000000,
+      timeoutBlocks: 200  
+      },
   },
 
   // Set default mocha options here, use special reporters etc.
@@ -103,15 +107,15 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-       version: "0.8.4",    // Fetch exact version from solc-bin (default: truffle's version)
-       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
-       settings: {          // See the solidity docs for advice about optimization and evmVersion
+      version: "0.8.4",    // Fetch exact version from solc-bin (default: truffle's version)
+      // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
+      settings: {          // See the solidity docs for advice about optimization and evmVersion
         optimizer: {
           enabled: true,
           runs: 200
         },
         evmVersion: "byzantium"
-       }
+      }
     }
   },
 
@@ -126,13 +130,13 @@ module.exports = {
   // $ truffle migrate --reset --compile-all
   //
   // db: {
-    // enabled: false,
-    // host: "127.0.0.1",
-    // adapter: {
-    //   name: "sqlite",
-    //   settings: {
-    //     directory: ".db"
-    //   }
-    // }
+  // enabled: false,
+  // host: "127.0.0.1",
+  // adapter: {
+  //   name: "sqlite",
+  //   settings: {
+  //     directory: ".db"
+  //   }
+  // }
   // }
 };

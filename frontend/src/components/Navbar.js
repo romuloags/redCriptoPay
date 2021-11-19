@@ -10,7 +10,7 @@ const Navbar = ({connect, defaultAccount, connected, isLoading, noProvider}) => 
         <Link className="text-decoration-none ms-lg-3" to="/">
           <img src={logo} width="30" height="30" className="d-inline-block" alt="logo"></img>
           <i className="bi bi-cash text-danger p-2 pe-lg-2"></i>  
-          <h1 className="text-primary d-none fs-6 d-sm-inline">Pay</h1>
+          <h1 className="text-primary d-none fs-6 d-sm-inline">Testnet</h1>
         </Link>
         {connected && <CopyToClipboard text={defaultAccount}>
         <button className="btn btn-primary" type="submit">
