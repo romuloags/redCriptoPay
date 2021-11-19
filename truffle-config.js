@@ -85,15 +85,13 @@ module.exports = {
     // gas: 8500000,
     // gasPrice: web3.toWei("5", "gwei"),  
     // },
-      bscTestnet: {
+      ropsten: {
       provider: () => new HDWalletProvider (
       privateKey,
-      "https://data-seed-prebsc-1-s1.binance.org:8545/"
+      "https://ropsten.infura.io/v3/38eae0cfd8d041aa849adb7baeae1ec6"
       ),
-      network_id: 97,
+      network_id: 3,
       skipDryRun: true,
-      gas: 8500000,
-      gasPrice: 5000000000,
       timeoutBlocks: 200  
       },
   },
