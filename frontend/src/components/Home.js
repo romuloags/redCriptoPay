@@ -25,7 +25,7 @@ const Home = ({defaultAccount}) => {
             <div className="col mb-4 text-justify">
             <div className="card justify text-center bg-dark shadow content-center mb-4">
                <div className="card-body text-light px-0">
-                <h1>Red Cripto <span className="text-danger">Testnet</span></h1>
+                <h1>Red Cripto <span className="text-danger">Ropsten</span></h1>
                 <img src={home1} className="img-fluid d-block m-auto" alt="homeImage"></img> 
                 <h4 className=" fs-5 d-block d-md-none text-danger">Deposita y Recibe Criptomonedas de forma segura.</h4>
                 <h4 className=" fs-2 d-none d-md-block text-danger">Deposita y Recibe Criptomonedas de forma segura.</h4>
@@ -33,11 +33,11 @@ const Home = ({defaultAccount}) => {
              </div>
              <div className="card justify bg-light shadow content-center mb-4">
                <div className="card-body">
-                <h3>Testnet</h3>
+                <h3>Dapp Test</h3>
                 <h4 className=" fs-6 text-primary text-justify">
                  Procesador de pago en Criptomonedas con protección al Comprador y Vendedor, a 
                  través de la Binance Smart Chain. <span className="text-dark"> 
-                    Esta versión es de prueba (BSC testnet). </span> 
+                    Esta versión es de prueba (Ropsten). </span> 
                  Solo debes conectar tu billetera descentralizada a la testnet para probarla y añadir
                  los tokens de prueba.
                  <a className="px-1" href="https://metamask.io/download"><img src={metamaskicon} 
@@ -97,11 +97,11 @@ const Home = ({defaultAccount}) => {
              </div>
              {defaultAccount && <div className="card justify bg-dark shadow content-center mb-4">
                <div className="card-body">
-                <h3 className="text-danger">Mock Tokens BEP20</h3>
+                <h3 className="text-danger">Mock Tokens ERC20</h3>
                 <h4 className=" fs-6 text-light text-justify">
                 Agrega los mock tokens (tokens de prueba) 
-                BEP20 disponibles en Red Cripto Pay a tu billetera. Para Agregar 
-                los tokens primero debes obtener algo de BNB a través de una faucet (testnet), luego 
+                ERC20 disponibles en Red Cripto Pay a tu billetera. Para Agregar 
+                los tokens primero debes obtener algo de BNB a través de una faucet (Ropsten), luego 
                 puedes obtener tokens con la función de mint desde BscScan.</h4>
                 <div className="mx-2 mt-3 col-lg-5">
                 <div className="card justify bg-light shadow content-center">

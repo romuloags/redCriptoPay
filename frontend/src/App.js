@@ -47,21 +47,9 @@ if (provider) {
   
   try {
     await window.ethereum.request({
-      method: 'wallet_addEthereumChain',
-      params: [
-        {
-          chainId: '0x61',
-          chainName: 'Binance Smart Chain Testnet',
-          nativeCurrency: {
-          name: 'Binance Coin',
-          symbol: 'BNB',
-          decimals: 18
-        },
-        rpcUrls: ['https://bsc-dataseed.binance.org/'],
-        blockExplorerUrls: ['https://bscscan.com']
-        },
-      ],
-  });
+      method: 'wallet_switchEthereumChain',
+      params: [{ chainId: '0x3' }],
+    });
   } 
   catch (addError) {console.error(addError);}
   
@@ -79,7 +67,7 @@ if (provider) {
 
   const networkId = await web3.eth.net.getId();
 
-  if(networkId === 97) {
+  if(networkId === 3) {
  
   const contactInfo = new web3.eth.Contract(ContactInfo.abi, ContactInfo.networks[networkId].address);
   console.log(contactInfo);
@@ -88,10 +76,6 @@ if (provider) {
   const bnbEscrow = new web3.eth.Contract(BNBescrow.abi, BNBescrow.networks[networkId].address);
   console.log(bnbEscrow);
   setBnbEscrow(bnbEscrow);
-
-  const tokensEscrow = new web3.eth.Contract(TOKENSescrow.abi, TOKENSescrow.networks[networkId].address);
-  setTokensEscrow(tokensEscrow);
-  console.log(tokensEscrow);
 
   }
 
