@@ -77,6 +77,10 @@ if (provider) {
   console.log(bnbEscrow);
   setBnbEscrow(bnbEscrow);
 
+  const tokensEscrow = new web3.eth.Contract(TOKENSescrow.abi, TOKENSescrow.networks[networkId].address);
+  setTokensEscrow(tokensEscrow);
+  console.log(tokensEscrow);
+
   }
 
   else {

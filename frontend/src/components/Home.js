@@ -25,7 +25,7 @@ const Home = ({defaultAccount}) => {
             <div className="col mb-4 text-justify">
             <div className="card justify text-center bg-dark shadow content-center mb-4">
                <div className="card-body text-light px-0">
-                <h1>Red Cripto <span className="text-danger">Ropsten</span></h1>
+                <h1>Red Cripto <span className="text-danger">Testnet</span></h1>
                 <img src={home1} className="img-fluid d-block m-auto" alt="homeImage"></img> 
                 <h4 className=" fs-5 d-block d-md-none text-danger">Deposita y Recibe Criptomonedas de forma segura.</h4>
                 <h4 className=" fs-2 d-none d-md-block text-danger">Deposita y Recibe Criptomonedas de forma segura.</h4>
@@ -111,8 +111,8 @@ const Home = ({defaultAccount}) => {
                  <button className="btn btn-primary ms-2 m-2"
                  onClick={addBusd}>Agregar</button>
                  <a className="btn  btn-dark m-2 text-danger" 
-                 href="https://bscscan.com/token/0xe9e7cea3dedca5984780bafc599bd69add087d56" role="button">
-                 <i className="bi bi-box-arrow-up-right me-1"></i>BscScan</a>
+                 href="https://ropsten.etherscan.io/address/0x55bDFb5d5942D4BF4f04469A6788633068Ee8FC3" role="button">
+                 <i className="bi bi-box-arrow-up-right me-1"></i>EtherScan</a>
                  </span>
                  </div>  
                 </div>
@@ -124,8 +124,8 @@ const Home = ({defaultAccount}) => {
                  <button className="btn btn-primary ms-2 m-2"
                  onClick={addUsdt}>Agregar</button>
                  <a className="btn  btn-dark m-2 text-danger" 
-                 href="https://bscscan.com/token/0x55d398326f99059ff775485246999027b3197955" role="button">
-                 <i className="bi bi-box-arrow-up-right me-1"></i>BscScan</a>
+                 href="https://ropsten.etherscan.io/address/0xBcf453f861D6ca17DAF9D7f81B5B95D91FCEBABd#code" role="button">
+                 <i className="bi bi-box-arrow-up-right me-1"></i>EtherScan</a>
                  </span>
                  </div>  
                 </div>
@@ -137,8 +137,8 @@ const Home = ({defaultAccount}) => {
                  <button className="btn btn-primary ms-2 m-2"
                  onClick={addUsdc}>Agregar</button>
                  <a className="btn  btn-dark m-2 text-danger" 
-                 href="https://bscscan.com/token/0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d" role="button">
-                 <i className="bi bi-box-arrow-up-right me-1"></i>BscScan</a>
+                 href="https://ropsten.etherscan.io/address/0xce350DB112F346F1F8f557C1aD24828bD9E35cA3" role="button">
+                 <i className="bi bi-box-arrow-up-right me-1"></i>EtherScan</a>
                  </span>
                  </div>  
                 </div>
@@ -150,8 +150,8 @@ const Home = ({defaultAccount}) => {
                  <button className="btn btn-primary ms-2 m-2"
                  onClick={addBtcb}>Agregar</button>
                  <a className="btn  btn-dark m-2 text-danger" 
-                 href="https://bscscan.com/token/0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c" role="button">
-                 <i className="bi bi-box-arrow-up-right me-1"></i>BscScan</a>
+                 href="https://ropsten.etherscan.io/address/0x6b5e6DF50761e8a19C618D3768d2c594f050aeCf" role="button">
+                 <i className="bi bi-box-arrow-up-right me-1"></i>EtherScan</a>
                  </span>
                  </div>  
                 </div>
@@ -163,7 +163,7 @@ const Home = ({defaultAccount}) => {
                  <button className="btn btn-primary ms-2 m-2"
                  onClick={addEth}>Agregar</button>
                  <a className="btn  btn-dark m-2 text-danger" 
-                 href="https://bscscan.com/token/0x2170ed0880ac9a755fd29b2688956bd959f933f8" role="button">
+                 href="https://ropsten.etherscan.io/address/0x2EcEE73aa6f8ea3eb1e51815a1acEc319Fd4a674" role="button">
                  <i className="bi bi-box-arrow-up-right me-1"></i>BscScan</a>
                  </span>
                  </div>  
