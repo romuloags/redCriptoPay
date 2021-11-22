@@ -84,7 +84,7 @@ if (provider) {
   }
 
   else {
-    window.alert("Contratos no desplegados en la Red seleccionada, seleccione la BSC.")
+    window.alert("Contratos no desplegados en la Red seleccionada, seleccione la red Ropsten.")
   }
 } 
 

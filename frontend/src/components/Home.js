@@ -101,7 +101,7 @@ const Home = ({defaultAccount}) => {
                 <h4 className=" fs-6 text-light text-justify">
                 Agrega los mock tokens (tokens de prueba) 
                 ERC20 disponibles en Red Cripto Pay a tu billetera. Para Agregar 
-                los tokens primero debes obtener algo de BNB a través de una faucet (Ropsten), luego 
+                los tokens primero debes obtener algo de test ETH a través de una faucet (Ropsten), luego 
                 puedes obtener tokens con la función de mint desde BscScan.</h4>
                 <div className="mx-2 mt-3 col-lg-5">
                 <div className="card justify bg-light shadow content-center">
@@ -187,7 +187,9 @@ const Home = ({defaultAccount}) => {
                  <div className="text-center text-warning mx-2 mt-2"> Para garantizar que un comprador 
                  o Vendedor realmente sean los dueños de una dirección de criptomonedas se registran sus
                   datos de Contacto correlacionados con su billetera directamente a la Blockchain.</div>
-                 <a className="btn btn-primary mt-2 mx-5" href="https://redcripto.com" role="button">Contrato</a>
+                 <a className="btn btn-primary mt-2 mx-5" 
+                 href="https://ropsten.etherscan.io/address/0xC2A54765fEE45c241b9ddcc9A445C29fcbB91cC0" 
+                 role="button">Contrato</a>
                  <div className="card-body">
                  </div>
                  </div>  
@@ -199,7 +201,9 @@ const Home = ({defaultAccount}) => {
                  </div>
                  <div className="text-center text-warning mx-2 mt-2"> Envíe y Reciba pagos con
                  Binance Coin de manera segura, a través de un contrato tipo fideicomiso.</div>
-                 <a className="btn btn-primary mt-2 mx-5" href="https://redcripto.com" role="button">Contrato</a>
+                 <a className="btn btn-primary mt-2 mx-5" 
+                 href="https://ropsten.etherscan.io/address/0x7b304a652897e8375763bD05b8c1Cba16B1F2a82" 
+                 role="button">Contrato</a>
                  <div className="card-body">
                  </div>
                  </div>  
@@ -237,7 +241,9 @@ const Home = ({defaultAccount}) => {
                  </div>
                  </div>
                  </div>
-                 <a className="btn btn-primary mt-2 mx-5" href="https://redcripto.com" role="button">Contrato</a>
+                 <a className="btn btn-primary mt-2 mx-5" 
+                 href="https://ropsten.etherscan.io/address/0x304F822BCbE5be4CC8e9639406ee6D6bf985F120" 
+                 role="button">Contrato</a>
                  <div className="card-body">
                 </div>
                 </div>      
