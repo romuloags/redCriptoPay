@@ -12,7 +12,7 @@ const DepositBNB = ({userBalance, defaultAccount, bnbEscrow}) => {
   const [amount, setAmount] = useState("");
   const [isSendingTransaction, setIsSendingTransaction] = useState(false);
 
-  const web3 = Web3
+  const web3 = Web3;
 
   const validInput = web3.utils.isAddress(receiverAccount) && amount > 0;
 
@@ -43,16 +43,13 @@ const DepositBNB = ({userBalance, defaultAccount, bnbEscrow}) => {
                 <div className="my-3 text-start">
                 <label htmlFor="address" className="text-info form-label">Dirección (Receptor)</label>
                 <div className="row g-2">
-                <div className="col-10 col-xl-11">  
+                <div>  
                 <input type="text" className="form-control" id="address"
                 required  value={receiverAccount}
                 onChange={(e) =>setReceiverAccount(e.target.value)}
                 placeholder="e.g 0xD212....C03E"/>
                 </div>
                 <div className="col-2 col-xl-1">
-                <button className="btn btn-primary mt-1 btn-sm" type="submit"><i 
-                className="bi bi-clipboard-check"></i>
-                </button>
                 </div>
                 </div>
                 </div>
