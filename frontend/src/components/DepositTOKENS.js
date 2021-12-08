@@ -96,17 +96,12 @@ function customTheme(theme) {
                 <div className="my-3 text-start">
                 <label htmlFor="address" className="text-info form-label">Dirección (Receptor)</label>
                 <div className="row g-2">
-                <div className="col-10 col-xl-11">
+                <div>
                 <input type="text" className="form-control" id="address"
                 aria-describedby="Receptor"
                 placeholder="e.g 0xD212....C03E"
                 required  value={receiverAccount}
                 onChange={(e) =>setReceiverAccount(e.target.value)}/>
-                </div>
-                <div className="col-2 col-xl-1">
-                <button className="btn btn-primary mt-1 btn-sm" type="submit"><i 
-                className="bi bi-clipboard-check"></i>
-                </button>
                 </div>
                 </div>
                 </div>
