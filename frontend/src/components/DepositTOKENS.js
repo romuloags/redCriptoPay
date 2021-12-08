@@ -103,8 +103,6 @@ function customTheme(theme) {
                 required  value={receiverAccount}
                 onChange={(e) =>setReceiverAccount(e.target.value)}/>
                 </div>
-                <div className="col-2 col-xl-1">
-                </div>
                 </div>
                 </div>
                 <div className="my-3 text-start">
