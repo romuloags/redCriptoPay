@@ -3,10 +3,16 @@ import { useState } from "react";
 import Tooltip from "react-bootstrap/Tooltip"
 import  OverlayTrigger from "react-bootstrap/OverlayTrigger"
 
+import Web3 from "web3";
+
 const SearchUser = ({contactInfo, defaultAccount}) => {
   const [userAccount, setUserAccount] = useState("");
   const [accountResults, setAccountResults] = useState("");
   const [showResults, setShowResults] = useState(false);
+
+  const web3 = Web3;
+  
+  const validInput = web3.utils.isAddress(userAccount);
 
   const searchUserAccount = async (e) => {
     e.preventDefault();
@@ -61,9 +67,8 @@ const SearchUser = ({contactInfo, defaultAccount}) => {
                 <input className="form-control my-3 border-2 shadow" type="search" 
                 placeholder=" dirección e.g 0x07E...aFC3" aria-label="Search"
                 value={userAccount} onChange={(e) =>setUserAccount(e.target.value)}></input>
+                {defaultAccount && validInput && 
                 <button className="btn btn-primary ms-3 btn-sm" type="submit"><i 
-                className="bi bi-clipboard-check pe-2"></i>Pegar</button>
-                {defaultAccount && <button className="btn btn-primary ms-3 btn-sm" type="submit"><i 
                 className="bi bi-search pe-2"></i>Buscar</button>}
                 </form>              
                  </div>

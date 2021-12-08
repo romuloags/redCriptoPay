@@ -90,7 +90,26 @@ const Profile = ({defaultAccount, contactInfo, connected}) => {
                 <div className="card mb-5">
                <div className="card-body">
                <h5 className="card-title text-start"><i className=
-               "bi bi-pencil-square me-2"></i>Actualizar datos</h5>
+               "bi bi-pencil-square me-2"></i>Actualizar datos
+               <span>
+                            <>
+                            {['bottom'].map((placement) => (
+                            <OverlayTrigger
+                            key={placement}
+                            placement={placement}
+                            overlay={
+                            <Tooltip id={`tooltip-${placement}`}>
+                            Recuerde que para registrar sus datos en la Blockchain debe pagar una comisión de red (gas fee)
+                            en BNB.
+                            </Tooltip>
+                            }
+                            >   
+                            <i className="bi bi-info-circle ms-2 fs-5 text-danger"></i>
+                            </OverlayTrigger>
+                            ))}
+                            </>
+                 </span>
+               </h5>
                <form onSubmit={updateProfile}>
                <div className="input-group my-3">
                <textarea required  value={info} className="form-control border-2" 
