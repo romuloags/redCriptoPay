@@ -21,6 +21,8 @@ import SingleBNBreceiver from "./components/singleBNBreceiver";
 import SingleTOKENSsender from "./components/singleTOKENSsender";
 import SingleTOKENSreceiver from "./components/singleTOKENSreceiver";
 import Error404 from "./components/404";
+import WhitePaper from "./components/whitepaper"
+import Support from "./components/support";
 
 import "./custom.css"
 
@@ -187,6 +189,12 @@ setIsLoading(false);
             bnbEscrow={bnbEscrow}>
             </Judge>
           </Route>
+          <Route exact path="/whitepaper" >
+           <WhitePaper/>
+          </Route>
+          <Route exact path="/soporte" >
+           <Support/>
+          </Route>  
           <Route path="*">
             <Error404></Error404>
           </Route>  

@@ -1,6 +1,7 @@
-import logo from "../assets/favicon.png"
-import Tooltip from "react-bootstrap/Tooltip"
-import  OverlayTrigger from "react-bootstrap/OverlayTrigger"
+import logo from "../assets/favicon.png";
+import Tooltip from "react-bootstrap/Tooltip";
+import  OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -29,16 +30,16 @@ const Footer = () => {
           </Tooltip>
           }
           >
-          <a className="text-muted bg-warning p-1 p-lg-2 
-          rounded-2" href="/" id="tt"><i className="bi bi-file-text text-light"></i>
-          </a>
+          <Link className="text-muted bg-warning p-1 p-lg-2 
+          rounded-2" to="/whitepaper" id="tt"><i className="bi bi-file-text text-light"></i>
+          </Link>
           </OverlayTrigger>
           ))}
          </>
          </span>
          </li>  
          <li className="ms-3"><a className="text-muted bg-warning p-1 p-lg-2 rounded-2" 
-         href="/"><i className="bi bi-github text-danger"></i></a></li>
+         href="https://github.com/romuloags/redCriptoPay"><i className="bi bi-github text-danger"></i></a></li>
          <li className="ms-3"><a className="text-muted bg-warning p-1 p-lg-2 rounded-2" 
          href="https://redcripto.com/blog"><i className="bi bi-rss-fill text-danger"></i></a></li>
          </ul>
