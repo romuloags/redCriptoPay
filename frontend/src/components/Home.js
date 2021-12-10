@@ -13,6 +13,7 @@ import use5 from "../assets/use-5.png"
 import use6 from "../assets/use-6.png"
 import metamaskicon from "../assets/metamaskicon.png"
 import {addBusd, addUsdt, addUsdc, addBtcb, addEth} from "./addTokens"
+import { Link } from "react-router-dom";
 
 const Home = ({defaultAccount}) => {
 
@@ -238,9 +239,9 @@ const Home = ({defaultAccount}) => {
                 </div>      
               </div>
                 <div className="mt-3 text-light">Para una información más detallada 
-                <a className="btn btn-primary mt-lg-0 mt-2 btn-sm ms-2" 
-                 href="https://redcripto.com" role="button"> 
-                 <i className="bi bi-file-text text-white pe-1"></i>Whitepaper</a>
+                <Link className="btn btn-primary mt-lg-0 mt-2 btn-sm ms-2" 
+                 to="/whitepaper" role="button"> 
+                 <i className="bi bi-file-text text-white pe-1"></i>Whitepaper</Link>
                 </div>
                 </div> 
                </div>  

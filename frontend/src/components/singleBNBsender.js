@@ -4,8 +4,9 @@ import  OverlayTrigger from "react-bootstrap/OverlayTrigger"
 import { useHistory } from "react-router-dom"
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useParams } from "react-router";
-import Web3 from "web3"
-import bnbicon from "../assets/bnbicon.png"
+import Web3 from "web3";
+import bnbicon from "../assets/bnbicon.png";
+import { Link } from "react-router-dom";
 
 const SingleBNBsender = ({defaultAccount, bnbEscrow, contactInfo}) => {
   
@@ -201,10 +202,13 @@ const SingleBNBsender = ({defaultAccount, bnbEscrow, contactInfo}) => {
                             </span>
                             </div>
                             <div className="text-primary">
-                            {transactionStatus === "0" && <span>Depósito recibido, 
-                            en espera de liberación o reembolso.</span>}
-                            {transactionStatus === "1" && <span>Depósito liberado al Receptor.</span>}
-                            {transactionStatus === "2" && <span>Depósito reembolsado al Emisor.</span>}
+                            {transactionStatus === "0" && <span>Depósito recibido 
+                            <i className="bi bi-lock-fill text-dark px-1"></i>
+                            En espera de liberación o reembolso.</span>}
+                            {transactionStatus === "1" && <span>Depósito liberado al Receptor 
+                            <i className="bi bi-unlock-fill text-dark px-1"></i></span>}
+                            {transactionStatus === "2" && <span>Depósito reembolsado al Emisor
+                            <i className="bi bi-unlock-fill text-dark px-1"></i></span>}
                             {transactionStatus === "3" && <span>Depósito en disputa, 
                             en espera del jurado para liberación al receptor o reembolso al emisor.</span>}
                             </div>
@@ -242,9 +246,9 @@ const SingleBNBsender = ({defaultAccount, bnbEscrow, contactInfo}) => {
                             {isSendingTransaction && <div className="text-primary">
                             Si cancela la transacción debe recargar la página.</div>}
                             <div className="mt-3">
-                            <button className="btn btn-dark" type="submit">    
-                            <i className="bi bi-chat-left-dots pe-2"></i> 
-                            Jurado</button>
+                            <Link className="btn btn-dark" 
+                            to="/soporte" role="button"><i className="bi bi-chat-left-dots pe-2">
+                            </i>Jurado</Link>
                             <span>
                             <>
                             {['top'].map((placement) => (
