@@ -1,6 +1,7 @@
-import logo from "../assets/favicon.png"
-import Tooltip from "react-bootstrap/Tooltip"
-import  OverlayTrigger from "react-bootstrap/OverlayTrigger"
+import logo from "../assets/favicon.png";
+import Tooltip from "react-bootstrap/Tooltip";
+import  OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -29,9 +30,9 @@ const Footer = () => {
           </Tooltip>
           }
           >
-          <a className="text-muted bg-warning p-1 p-lg-2 
-          rounded-2" href="/" id="tt"><i className="bi bi-file-text text-light"></i>
-          </a>
+          <Link className="text-muted bg-warning p-1 p-lg-2 
+          rounded-2" to="/whitepaper" id="tt"><i className="bi bi-file-text text-light"></i>
+          </Link>
           </OverlayTrigger>
           ))}
          </>

@@ -14,7 +14,7 @@ const Judge = ({defaultAccount, tokensEscrow, contactInfo, bnbEscrow}) => {
             <div className="col my-4 text-center">
               <div>
                 <h3 className="fs-4 text-danger text-start"><i 
-                className="bi bi-shield-fill-check text-danger pe-2"></i>Jurado</h3>
+                className="bi bi-file-lock2 text-danger pe-2"></i>Jurado</h3>
               </div>
             </div>
           </div>
