@@ -189,7 +189,7 @@ const Home = ({defaultAccount}) => {
                  o Vendedor realmente sean los dueños de una dirección de criptomonedas se registran sus
                   datos de Contacto correlacionados con su billetera directamente a la Blockchain.</div>
                  <a className="btn btn-primary mt-2 mx-5" 
-                 href="https://ropsten.etherscan.io/address/0xC2A54765fEE45c241b9ddcc9A445C29fcbB91cC0" 
+                 href="https://ropsten.etherscan.io/address/0x196C87571D74D9123154197200B84568e09E5e19#code" 
                  role="button">Contrato</a>
                  <div className="card-body">
                  </div>
