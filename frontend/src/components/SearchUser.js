@@ -76,9 +76,14 @@ const SearchUser = ({contactInfo, defaultAccount}) => {
                 {showResults && <div className="card mb-5">
                <div className="card-body">
                <h5 className="card-title text-start">Resultados</h5>
+               {accountResults !== "" &&
                <div className="text-warning"><span className="text-muted mx-1"><i 
                 className="bi bi-person-circle mx-1"></i> 
-                </span>{accountResults}</div>
+                </span>{accountResults}</div>}
+                {accountResults === "" &&
+               <div className="text-warning"><span className="text-muted mx-1"><i 
+                className="bi bi-person-circle mx-1"></i> 
+                </span>No registrado.</div>}
                </div> 
               </div>}
           </div>

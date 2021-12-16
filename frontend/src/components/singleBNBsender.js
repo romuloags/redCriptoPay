@@ -179,8 +179,10 @@ const SingleBNBsender = ({defaultAccount, bnbEscrow, contactInfo}) => {
                             ))}
                             </>
                             </span>
-                            <div className="ms-2 text-dark">{receiverContactInfo}
-                            </div>
+                            {receiverContactInfo !== "" && <div className="ms-2 text-dark">{receiverContactInfo}
+                            </div>}
+                            {receiverContactInfo === "" && <div className="ms-2 text-dark">No registrado.
+                            </div>}
                             </div>
                             <div className="my-2">Estado de la transacción
                             <span>
