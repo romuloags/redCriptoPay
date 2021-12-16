@@ -183,8 +183,10 @@ const SingleTOKENSreceiver = ({defaultAccount, tokensEscrow, contactInfo}) => {
                             ))}
                             </>
                             </span>
-                            <div className="ms-2 text-dark">{senderContactInfo}
-                            </div>
+                            {senderContactInfo !== "" && <div className="ms-2 text-dark">{senderContactInfo}
+                            </div>}
+                            {senderContactInfo === "" && <div className="ms-2 text-dark">No registrado.
+                            </div>}
                             </div>
                             <div className="my-2">Estado de la transacción
                             <span>
