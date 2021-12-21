@@ -72,7 +72,7 @@ const Home = ({defaultAccount}) => {
                 una vez verificado, el receptor deberá enviar el producto o servicio al emisor.</p>
                 <img src={use3} width="300" height="300" className="img-fluid d-block m-auto" alt="use3"></img>
                 <p className="text-info">Una vez el emisor haya recibido el producto o servicio de parte 
-                del receptor, el emisor debe liberar el depósito en garantía el receptor, y así culminar 
+                del receptor, el emisor debe liberar el depósito en garantía al receptor, y así culminar 
                 la transacción de manera exitosa.</p>
                 <h4 className="text-primary">¿Qué pasaría si el emisor nunca recibe el producto o servicio?</h4>
                 <p className="text-info">Si el emisor nunca recibe el producto o servicio, el receptor 
