@@ -103,7 +103,7 @@ const Home = ({defaultAccount}) => {
                 Agrega los mock tokens (tokens de prueba) 
                 ERC20 disponibles en Red Cripto Pay a tu billetera. Para Agregar 
                 los tokens primero debes obtener algo de test ETH a través de una faucet (Ropsten), luego 
-                puedes obtener tokens con la función de mint desde BscScan.</h4>
+                puedes obtener tokens con la función de mint desde EtherScan.</h4>
                 <div className="mx-2 mt-3 col-lg-5">
                 <div className="card justify bg-light shadow content-center">
                  <span className="ms-2 text-dark fw-bold">
@@ -112,7 +112,7 @@ const Home = ({defaultAccount}) => {
                  <button className="btn btn-primary ms-2 m-2"
                  onClick={addBusd}>Agregar</button>
                  <a className="btn  btn-dark m-2 text-danger" 
-                 href="https://ropsten.etherscan.io/address/0x55bDFb5d5942D4BF4f04469A6788633068Ee8FC3" role="button">
+                 href="https://ropsten.etherscan.io/address/0x3103D92d2888B7Aeee60C59a72e4Ba6A3146C9d0" role="button">
                  <i className="bi bi-box-arrow-up-right me-1"></i>EtherScan</a>
                  </span>
                  </div>  
@@ -125,7 +125,7 @@ const Home = ({defaultAccount}) => {
                  <button className="btn btn-primary ms-2 m-2"
                  onClick={addUsdt}>Agregar</button>
                  <a className="btn  btn-dark m-2 text-danger" 
-                 href="https://ropsten.etherscan.io/address/0xBcf453f861D6ca17DAF9D7f81B5B95D91FCEBABd#code" role="button">
+                 href="https://ropsten.etherscan.io/address/0xA9178362c48219dDa5FE0F79DF4d4c62A602260D" role="button">
                  <i className="bi bi-box-arrow-up-right me-1"></i>EtherScan</a>
                  </span>
                  </div>  
@@ -138,7 +138,7 @@ const Home = ({defaultAccount}) => {
                  <button className="btn btn-primary ms-2 m-2"
                  onClick={addUsdc}>Agregar</button>
                  <a className="btn  btn-dark m-2 text-danger" 
-                 href="https://ropsten.etherscan.io/address/0xce350DB112F346F1F8f557C1aD24828bD9E35cA3" role="button">
+                 href="https://ropsten.etherscan.io/address/0xbFe4f8A71C8C3E1b748D42ACfB2F1140931f50bA" role="button">
                  <i className="bi bi-box-arrow-up-right me-1"></i>EtherScan</a>
                  </span>
                  </div>  
@@ -151,7 +151,7 @@ const Home = ({defaultAccount}) => {
                  <button className="btn btn-primary ms-2 m-2"
                  onClick={addBtcb}>Agregar</button>
                  <a className="btn  btn-dark m-2 text-danger" 
-                 href="https://ropsten.etherscan.io/address/0x6b5e6DF50761e8a19C618D3768d2c594f050aeCf" role="button">
+                 href="https://ropsten.etherscan.io/address/0x3aFf2aB4cd7cF0f08B54E06D943dcDe8719cfd82" role="button">
                  <i className="bi bi-box-arrow-up-right me-1"></i>EtherScan</a>
                  </span>
                  </div>  
@@ -164,8 +164,8 @@ const Home = ({defaultAccount}) => {
                  <button className="btn btn-primary ms-2 m-2"
                  onClick={addEth}>Agregar</button>
                  <a className="btn  btn-dark m-2 text-danger" 
-                 href="https://ropsten.etherscan.io/address/0x2EcEE73aa6f8ea3eb1e51815a1acEc319Fd4a674" role="button">
-                 <i className="bi bi-box-arrow-up-right me-1"></i>BscScan</a>
+                 href="https://ropsten.etherscan.io/address/0xdFabe06028A1008354ae8Ed8F8E63202A0A11853" role="button">
+                 <i className="bi bi-box-arrow-up-right me-1"></i>EtherScan</a>
                  </span>
                  </div>  
                 </div>             
@@ -177,8 +177,8 @@ const Home = ({defaultAccount}) => {
                 <h4 className=" fs-6 mb-2 text-light text-start">
                  <p> 
                  Red Cripto desarrolló tres contratos inteligentes desplegados en
-                 la BSC Testnet (Binance Smart Chain Testnet), estos pueden ser consultados desde 
-                 <span className="badge bg-primary fw-bold ms-2">BscScan</span>
+                 Ropsten Testnet, estos pueden ser consultados desde 
+                 <span className="badge bg-primary fw-bold ms-2">EtherScan</span>
                  </p>
                  </h4>
                 <div className="row gx-lg-5 mx-lg-3 my-3">
@@ -189,7 +189,7 @@ const Home = ({defaultAccount}) => {
                  o Vendedor realmente sean los dueños de una dirección de criptomonedas se registran sus
                   datos de Contacto correlacionados con su billetera directamente a la Blockchain.</div>
                  <a className="btn btn-primary mt-2 mx-5" 
-                 href="https://ropsten.etherscan.io/address/0x196C87571D74D9123154197200B84568e09E5e19#code" 
+                 href="https://ropsten.etherscan.io/address/0x933590EAdab9A682F883513A4D77D6Cd64b3E56E#code" 
                  role="button">Contrato</a>
                  <div className="card-body">
                  </div>
@@ -203,7 +203,7 @@ const Home = ({defaultAccount}) => {
                  <div className="text-center text-warning mx-2 mt-2"> Envíe y Reciba pagos con
                  Binance Coin de manera segura, a través de un contrato tipo fideicomiso.</div>
                  <a className="btn btn-primary mt-2 mx-5" 
-                 href="https://ropsten.etherscan.io/address/0x7b304a652897e8375763bD05b8c1Cba16B1F2a82" 
+                 href="https://ropsten.etherscan.io/address/0xd4dF89e360C9A91990Fc19C41a81173F18DE335d#code" 
                  role="button">Contrato</a>
                  <div className="card-body">
                  </div>
@@ -243,7 +243,7 @@ const Home = ({defaultAccount}) => {
                  </div>
                  </div>
                  <a className="btn btn-primary mt-2 mx-5" 
-                 href="https://ropsten.etherscan.io/address/0x304F822BCbE5be4CC8e9639406ee6D6bf985F120" 
+                 href="https://ropsten.etherscan.io/address/0x6A7b8D000133307e325375Ca2A790008849b9B20#code" 
                  role="button">Contrato</a>
                  <div className="card-body">
                 </div>
