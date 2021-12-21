@@ -39,10 +39,11 @@ const Home = ({defaultAccount}) => {
                  Procesador de pago en Criptomonedas con protección al Comprador y Vendedor, a 
                  través de la Binance Smart Chain. <span className="text-dark"> 
                     Esta versión es de prueba (Ropsten). </span> 
-                 Solo debes conectar tu billetera descentralizada a la testnet para probarla y añadir
-                 los tokens de prueba.
-                 <a className="px-1" href="https://metamask.io/download"><img src={metamaskicon} 
-                 width="25" height="25" alt="bnbicon"></img></a></h4>
+                 Solo debes conectar tu billetera descentralizada 
+                 <a className="px-1 text-decoration-none text-dark" href="https://metamask.io/download"><img src={metamaskicon} 
+                 width="25" height="25" alt="bnbicon"></img>Metamask</a> a la testnet para probarla y añadir
+                 los tokens de prueba. Para probar la Dapp puedes obtener ETH de prueba a través de una faucet de Ropsten.
+                </h4>
                </div>  
              </div>
              <div className="card justify bg-light shadow content-center mb-4">
@@ -101,8 +102,8 @@ const Home = ({defaultAccount}) => {
                 <h3 className="text-danger">Mock Tokens ERC20</h3>
                 <h4 className=" fs-6 text-light text-justify">
                 Agrega los mock tokens (tokens de prueba) 
-                ERC20 disponibles en Red Cripto Pay a tu billetera. Para Agregar 
-                los tokens primero debes obtener algo de test ETH a través de una faucet (Ropsten), luego 
+                ERC20 disponibles en Red Cripto Pay a tu billetera. Para depositar Tokens
+                primero debes obtener algo de test ETH a través de una faucet (Ropsten), luego 
                 puedes obtener tokens con la función de mint desde EtherScan.</h4>
                 <div className="mx-2 mt-3 col-lg-5">
                 <div className="card justify bg-light shadow content-center">
@@ -147,7 +148,7 @@ const Home = ({defaultAccount}) => {
                 <div className="card justify bg-light shadow content-center">
                  <span className="ms-2 text-dark fw-bold">
                  <img src={btcbicon} width="20" height="20" alt="bnbicon" className="me-2"></img>
-                   BTCB <span className="text-muted">Bitcoin BEP2</span>
+                   BTCB <span className="text-muted">Bitcoin BEP20</span>
                  <button className="btn btn-primary ms-2 m-2"
                  onClick={addBtcb}>Agregar</button>
                  <a className="btn  btn-dark m-2 text-danger" 
@@ -156,9 +157,9 @@ const Home = ({defaultAccount}) => {
                  </span>
                  </div>  
                 </div>
-                <div className="mx-2 mt-3 col-lg-5">
+                <div className="ms-2 mt-3 col-lg-5">
                 <div className="card justify bg-light shadow content-center">
-                 <span className="ms-2 text-dark fw-bold">
+                 <span className="ms-0 text-dark fw-bold">
                  <img src={ethicon} width="20" height="20" alt="bnbicon" className="me-2"></img>
                    ETH <span className="text-muted">Ethereum Token</span>
                  <button className="btn btn-primary ms-2 m-2"
