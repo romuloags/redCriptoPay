@@ -132,14 +132,13 @@ const SingleTOKENSreceiver = ({defaultAccount, tokensEscrow, contactInfo}) => {
                             </CopyToClipboard>    
                             </span>
                             </div>
-                            <div className=" my-2 text-info">Monto total              
-                            <span className="ms-2 text-warning">{transactionAmount}
-                            { tokensTransactions.map((token) =>(
+                            <div className=" my-2 text-info">Monto total
+                            <span className="ms-2 text-warning">{transactionAmount}</span>
+                            {tokensTransactions.map((token) =>(
                             <span className="text-warning ms-2" key={token.address}>
                             {token.address === transactionToken && <span>{token.labelSingle}
                             </span>}
-                            </span> ))}
-                            </span>   
+                            </span> ))}   
                             </div>
                             <div className="text-info my-2">Valor
                             {transactionToken !== "0x0A7907e2e29374d98de8861e06ae74ECf7453Aed" 
