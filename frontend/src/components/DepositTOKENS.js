@@ -163,8 +163,9 @@ function customTheme(theme) {
                 ))}
                 </>
                 </span>
-                <span className="text-warning ms-2">{(amount * 0.03).toFixed(5)}
-                <span className="text-warning ms-1">{tokenTag}</span></span></div>
+                {tokenId !== 5 && <span className="text-warning ms-2">{(amount * 0.03).toFixed(5)}</span>}
+                {tokenId === 5 && <span className="text-warning ms-2">0</span>}
+                <span className="text-warning ms-1">{tokenTag}</span></div>
                 <div className="text-muted text-start my-2">Cantidad a recibir
                 <span>
                 <>
@@ -183,8 +184,9 @@ function customTheme(theme) {
                 ))}
                 </>
                 </span>
-                <span className="ms-2 text-warning">{(amount *0.97).toFixed(5)}
-                <span className="text-warning ms-1">{tokenTag}</span></span></div>    
+                {tokenId !== 5 && <span className="ms-2 text-warning">{(amount *0.97).toFixed(5)}</span>}
+                {tokenId === 5 && <span className="ms-2 text-warning">{(amount *1).toFixed(5)}</span>}
+                <span className="text-warning ms-1">{tokenTag}</span></div>    
                 {defaultAccount && validInput > 0 && tokenId !== undefined && isSendingTransaction === false &&
                 <button className="btn btn-primary m-3" type="submit"onClick={TOKENSdeposit}>
                   <i className="bi bi-box-arrow-in-down pe-2"></i>Depositar</button>}

@@ -5,7 +5,7 @@ import busdicon from "../assets/busdicon.png"
 import usdcicon from "../assets/usdcicon.png"
 
 const addBusd = async () => {
-const tokenAddress = '0xe9e7cea3dedca5984780bafc599bd69add087d56';
+const tokenAddress = '0x26811EdBf3C708dDAB9C4B2BFDda5e9647be5e5B';
 const tokenSymbol = 'BUSD';
 const tokenDecimals = 18;
 const tokenImage = busdicon;
@@ -36,7 +36,7 @@ const tokenImage = busdicon;
     }
 
     const addUsdt = async () => {
-        const tokenAddress = '0x55d398326f99059ff775485246999027b3197955';
+        const tokenAddress = '0x0A7907e2e29374d98de8861e06ae74ECf7453Aed';
         const tokenSymbol = 'USDT';
         const tokenDecimals = 18;
         const tokenImage = usdticon;
@@ -67,7 +67,7 @@ const tokenImage = busdicon;
             }
 
             const addUsdc = async () => {
-                const tokenAddress = '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d';
+                const tokenAddress = '0x5e5F34c531Ee61e5A06315A663C7323698db80f5';
                 const tokenSymbol = 'USDC';
                 const tokenDecimals = 18;
                 const tokenImage = usdcicon;
@@ -98,7 +98,7 @@ const tokenImage = busdicon;
                     }
 
                     const addBtcb = async () => {
-                        const tokenAddress = '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c';
+                        const tokenAddress = '0x60225A4aeC7C1310dC18f9CC02df949782558FA6';
                         const tokenSymbol = 'BTCB';
                         const tokenDecimals = 18;
                         const tokenImage = btcbicon;
@@ -129,7 +129,7 @@ const tokenImage = busdicon;
                             }
 
                             const addEth = async () => {
-                                const tokenAddress = '0x2170ed0880ac9a755fd29b2688956bd959f933f8';
+                                const tokenAddress = '0x93214264d3Da881c6a7036ade63B40585B8e3dAC';
                                 const tokenSymbol = 'ETH';
                                 const tokenDecimals = 18;
                                 const tokenImage = ethicon;
