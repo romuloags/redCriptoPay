@@ -134,13 +134,12 @@ const SingleTOKENSsender = ({defaultAccount, tokensEscrow, contactInfo}) => {
                             </span>
                             </div>
                             <div className=" my-2 text-info">Monto total
-                            <span className="ms-2 text-warning">{transactionAmount}
+                            <span className="ms-2 text-warning">{transactionAmount}</span>
                             { tokensTransactions.map((token) =>(
                             <span className="text-warning ms-2" key={token.address}>
                             {token.address === transactionToken && <span>{token.labelSingle}
                             </span>}
-                            </span> ))}
-                            </span>    
+                            </span> ))}    
                             </div>
                             <div className="text-info my-2">Valor
                             <span className="mx-2 text-warning">{transactionValue}</span>
