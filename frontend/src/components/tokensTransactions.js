@@ -29,7 +29,12 @@ const tokensTransactions =[
     tag: 'ETH', label: <div><img className="me-2 mb-1" src={ethicon} 
     width="20" height="20" alt="usdticon"/>ETH</div>,
     labelSingle: <span><img className="me-2 mb-1" src={ethicon} 
-    width="20" height="20" alt="usdticon"/>ETH</span>}
+    width="20" height="20" alt="usdticon"/>ETH</span>},
+    { address: "0x2b4db28Bf7759963e889cfED135f74051fBD1274", 
+    tag: 'LEC', label: <div><img className="me-2 mb-1" src={ethicon} 
+    width="20" height="20" alt="usdticon"/>LEC</div>,
+    labelSingle: <span><img className="me-2 mb-1" src={ethicon} 
+    width="20" height="20" alt="usdticon"/>LEC</span>}
     ];
 
     export default tokensTransactions;
