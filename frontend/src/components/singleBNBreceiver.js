@@ -219,7 +219,7 @@ const SingleBNBreceiver = ({defaultAccount, bnbEscrow, contactInfo}) => {
                             <button className="btn btn-primary ms-4 btn-sm" type="submit"
                             onClick={raiseDispute}><i 
                             className="bi bi-megaphone pe-2"></i>Abrir disputa</button>}
-                             {(transactionStatus === "0" || transactionStatus === "3") && 
+                             {transactionStatus === "0" && !isSendingTransaction && 
                             <span>
                             <>
                             {['top'].map((placement) => (
