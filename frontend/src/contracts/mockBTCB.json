@@ -6776,12 +6776,12 @@
         }
       },
       "links": {},
-      "address": "0xdCADc0Ba1a767D7259776a1324474Db54aa5dCA3",
-      "transactionHash": "0x67d27fcfabccfe3b4428a0556811abd60a5c749d2a07f5fe94feb96c6c123f17"
+      "address": "0x60225A4aeC7C1310dC18f9CC02df949782558FA6",
+      "transactionHash": "0x557c3602765229e7e550255edf296dc128e56bca09133e14ab371a093545bca0"
     }
   },
-  "schemaVersion": "3.4.3",
-  "updatedAt": "2021-12-16T21:28:52.624Z",
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-01-05T22:52:53.267Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
