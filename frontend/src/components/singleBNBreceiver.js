@@ -47,7 +47,7 @@ const SingleBNBreceiver = ({defaultAccount, bnbEscrow, contactInfo}) => {
       load();
     }
    
-  }, [defaultAccount]);
+  }, [defaultAccount, bnbEscrow]);
 
   const refundSender = async (event) => {
     event.preventDefault();

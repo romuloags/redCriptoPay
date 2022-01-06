@@ -51,7 +51,7 @@ const SingleBNBsender = ({defaultAccount, bnbEscrow, contactInfo}) => {
     if(typeof defaultAccount) {
     load(); }
 
-  }, [defaultAccount]);
+  }, [defaultAccount, bnbEscrow]);
 
   const releaseFunds = async (event) => {
     event.preventDefault();

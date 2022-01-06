@@ -7,9 +7,9 @@ import  OverlayTrigger from "react-bootstrap/OverlayTrigger"
 const Profile = ({defaultAccount, contactInfo, connected}) => {
   const [info, setInfo] = useState("");
   const [showInfo, setShowInfo] = useState("");
+  const [sentTransaction, setSentTransaction] = useState(false);
   const [isSendingTransaction, setIsSendingTransaction] = useState(false);
 
-  console.log(showInfo);
 
   useEffect(()  => {
     const load = async () => {     
@@ -21,16 +21,16 @@ const Profile = ({defaultAccount, contactInfo, connected}) => {
       load();
     }
    
-  }, [defaultAccount, showInfo]);
+  }, [defaultAccount, showInfo, contactInfo, sentTransaction]);
 
   const updateProfile = async (e) => {
     e.preventDefault();
     setIsSendingTransaction(true);
-   const receipt = await contactInfo.methods.Setusercontactinfo(info).send({from: defaultAccount});    
-   console.log(receipt);
-   const check = await contactInfo.methods.getusercontactinfo(defaultAccount).call();    
+   const receipt = await contactInfo.methods.Setusercontactinfo(info).send({from: defaultAccount});     
    setInfo("");
-   console.log(check);
+   console.log(receipt);
+   setIsSendingTransaction(false);
+   setSentTransaction(true);
   }  
 
     return (

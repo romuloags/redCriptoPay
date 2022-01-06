@@ -53,7 +53,7 @@ const SingleTOKENSsender = ({defaultAccount, tokensEscrow, contactInfo}) => {
     if(typeof defaultAccount) {
     load(); }
 
-  }, [defaultAccount]);
+  }, [defaultAccount, tokensEscrow]);
 
   const releaseFunds = async (event) => {
     event.preventDefault();
