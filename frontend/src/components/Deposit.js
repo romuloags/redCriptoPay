@@ -61,11 +61,11 @@ const Deposit = ({userBalance, bnbEscrow, tokensEscrow, defaultAccount}) => {
                     <div className="tab-content" id="pills-tabContent">
                     <div className="tab-pane fade show active" id="pills-home" role="tabpanel" 
                     aria-labelledby="pills-home-tab"><DepositBNB 
-                    userBalance={userBalance} bnbEscrow={bnbEscrow} defaultAccount={defaultAccount}/>
+                     bnbEscrow={bnbEscrow} defaultAccount={defaultAccount}/>
                     </div>
                     <div className="tab-pane fade" id="pills-profile" role="tabpanel" 
                     aria-labelledby="pills-profile-tab"><DepositTOKENS 
-                    userBalance={userBalance} defaultAccount={defaultAccount} tokensEscrow={tokensEscrow}/>
+                     defaultAccount={defaultAccount} tokensEscrow={tokensEscrow}/>
                     </div>
                     </div>
                     </div>               

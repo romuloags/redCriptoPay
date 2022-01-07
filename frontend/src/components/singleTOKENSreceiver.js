@@ -53,7 +53,7 @@ const SingleTOKENSreceiver = ({defaultAccount, tokensEscrow, contactInfo}) => {
     if(typeof defaultAccount) {
     load(); }
 
-  }, [defaultAccount]);
+  }, [defaultAccount, tokensEscrow]);
 
   const refundSender = async (event) => {
   event.preventDefault();
