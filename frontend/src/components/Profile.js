@@ -8,8 +8,7 @@ const Profile = ({defaultAccount, contactInfo, connected}) => {
   const [info, setInfo] = useState("");
   const [showInfo, setShowInfo] = useState("");
   const [isSendingTransaction, setIsSendingTransaction] = useState(false);
-
-  console.log(showInfo);
+  const [sentTransaction, setSentTransaction] = useState(false);
 
   useEffect(()  => {
     const load = async () => {     
@@ -21,7 +20,7 @@ const Profile = ({defaultAccount, contactInfo, connected}) => {
       load();
     }
    
-  }, [defaultAccount]);
+  }, [defaultAccount, showInfo, contactInfo, sentTransaction]);
 
   const updateProfile = async (e) => {
     e.preventDefault();
@@ -31,6 +30,9 @@ const Profile = ({defaultAccount, contactInfo, connected}) => {
    const check = await contactInfo.methods.getusercontactinfo(defaultAccount).call();    
    setInfo("");
    console.log(check);
+   setIsSendingTransaction(false);
+   setSentTransaction(true);
+
   }  
 
     return (

@@ -6,7 +6,7 @@ import bnbicon from "../assets/bnbicon.png"
 import Tooltip from "react-bootstrap/Tooltip"
 import  OverlayTrigger from "react-bootstrap/OverlayTrigger"
 
-const DepositBNB = ({userBalance, defaultAccount, bnbEscrow}) => {
+const DepositBNB = ({defaultAccount, bnbEscrow}) => {
 
   const [receiverAccount, setReceiverAccount] = useState("");
   const [amount, setAmount] = useState("");
