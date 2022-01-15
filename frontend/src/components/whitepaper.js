@@ -1,3 +1,9 @@
+import datoscontacto from "../assets/datoscontacto.JPG"
+import depositar from "../assets/depositar.JPG"
+import historial from "../assets/historial.JPG"
+import historial1 from "../assets/historial1.PNG"
+import web3jsimage from "../assets/web3js.png"
+
 const Whitepaper = () => {
     
    return (  
@@ -35,17 +41,21 @@ const Whitepaper = () => {
                         <div id="list-example" className="list-group my-md-4 mt-4 mb-0 shadow">
                         <a className="list-group-item list-group-item-action border-0" href="#introduccion">
                         <i className="bi bi-arrow-right-circle-fill text-primary mx-2"></i>Introducción</a>
-                        <a className="list-group-item list-group-item-action border-0" href="#funcionalidad-usabilidad">
-                        <i className="bi bi-arrow-right-circle-fill text-primary mx-2"></i>Funcionalidad y Usabilidad</a>
-                        <a className="list-group-item list-group-item-action border-0" href="#terminos-y-condiciones">
-                        <i className="bi bi-arrow-right-circle-fill text-primary mx-2"></i>Términos y Condiciones</a>
+                        <a className="list-group-item list-group-item-action border-0" href="#funcionalidad">
+                        <i className="bi bi-arrow-right-circle-fill text-primary mx-2"></i>Funcionalidad</a>
+                        <a className="list-group-item list-group-item-action border-0" href="#usabilidad">
+                        <i className="bi bi-arrow-right-circle-fill text-primary mx-2"></i>Usabilidad</a>
+                        <a className="list-group-item list-group-item-action border-0" href="#comisiones">
+                        <i className="bi bi-arrow-right-circle-fill text-primary mx-2"></i>Comisiones</a>
                         </div>
                         </div>
 
                         <div className="col-md-6 text-start">
                         <div id="list-example2" className="list-group my-md-4 mb-4 mt-0 shadow">
+                        <a className="list-group-item list-group-item-action border-0" href="#terminos-y-condiciones">
+                        <i className="bi bi-arrow-right-circle-fill text-primary mx-2"></i>Términos y Condiciones</a>
                         <a className="list-group-item list-group-item-action border-0" href="#metamask-web3">
-                        <i className="bi bi-arrow-right-circle-fill text-primary mx-2"></i>Metamask y Web 3.0</a>
+                        <i className="bi bi-arrow-right-circle-fill text-primary mx-2"></i>Metamask y web3.js</a>
                         <a className="list-group-item list-group-item-action border-0" href="#contratos">
                         <i className="bi bi-arrow-right-circle-fill text-primary mx-2"></i>Contratos Inteligentes</a>
                         <a className="list-group-item list-group-item-action border-0" href="#futuro">
@@ -54,7 +64,7 @@ const Whitepaper = () => {
                         </div>
                         </div>
                         <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" className="scrollspy-example" tabIndex="0">
-                        <h5 id="introduccion">Introducción</h5>
+                        <h5 className="fw-bold" id="introduccion">Introducción</h5>
                         <p className="text-start">
                         Las Criptomonedas han tomado gran auge desde el 2017, y a finales del 2020 y comienzos del 2021 cada vez eran 
                         más utilizadas las aplicaciones descentralizadas (Dapps). Con el nacimiento de la Binance Smart Chain en el 2020, 
@@ -75,26 +85,188 @@ const Whitepaper = () => {
                         transacción (comprador y vendedor), con un sistema de disputa en caso de ser necesario dentro de la transacción.
                         <span className="fw-bold"> Red Cripto Pay es una aplicación descentralizada (Dapp)</span>, que funciona con contratos 
                         inteligentes desplegados en la <span className="fw-bold">Binance Smart Chain (BSC)</span>. Para interactuar con la aplicación el usuario
-                        debe utilizar su billetera sin custodia (Metamask), la mayoría de las Dapps en la actualidad utiliza esta modalidad para
+                        debe utilizar su billetera sin custodia (Metamask), la mayoría de las Dapps en la actualidad utilizan esta modalidad para
                         conectar a sus usuarios.
                         </p>
-                        <h5 id="funcionalidad-usabilidad">Funcionalidad y Usabilidad</h5>
+                        <h5 className="fw-bold" id="funcionalidad">Funcionalidad</h5>
+                        <p className="text-start">
+                        Red Cripto Pay es un fideicomiso P2P (Escrow) muy común en el universo Cripto, donde los pares, no confían entre si, y para
+                        realizar una transacción entre ambas partes necesitan un seguro o intermediario para realizar la transacción de manera exitosa.
+                        El fideicomiso de Red Cripto Pay cuenta de tres entidades, Emisor (entidad que realiza el depósito), Receptor (entidad que espera
+                        recibir el dinero depositado), y Jurado (entidad encargada de resolver una disputa entre Emisor y Receptor)
+                        Para explicar de forma más análoga y sencilla el fideicomiso, nos topamos con el clásico ejemplo de Alice y Bob, donde ambos 
+                        quieren realizar un intercambio, Alice quiere comprar diamantes a Bob usando 
+                        Criptomonedas, pero Alice no está segura si Bob realmente está vendiendo diamantes o simplemente es un estafador en 
+                        línea buscando nuevas víctimas, por otro lado Bob no sabe si Alice realmente pagará por los diamantes cuando él los envíe, 
+                        a pesar de que ambos tienen buenas intenciones, ninguno las sabe, y por ello dejan pasar la oportunidad de realizar un intercambio
+                        que beneficie a ambas partes. Por ello se creó Red Cripto Pay, para asegurar que Alice y Bob realicen un intercambio de forma segura
+                        y sin intermediarios, ya que Red Cripto Pay bajo la forma de Jurado, solo interviene en caso de abrirse una disputa, pero en níngun 
+                        momento el dinero o las conversaciones de Alice y Bob están en manos de la plataforma.
+                        </p>
+                        <p className="text-start">
+                        Alice interactúa con los Contratos inteligentes de Red Cripto,
+                        para ello primero debe registrar sus datos de contacto con su dirección de billetera, de esta forma la dirección de Billetera de Alice
+                        queda registrada en la Blockchain con sus datos de contacto, como número telefónico, redes sociales, correo electrónico 
+                        o entre otros medios de contacto; de igual forma Alice debe asegurarse que la Billetera suministrada por Bob contenga datos de contacto,
+                        ya que de esta forma ambas partes se aseguran que los medios de contacto por lo que se comunican corresponden a su dirección de billetera,
+                        la cual utilizarán para realizar la transacción, si Alice o Bob presentan un Dato de Contacto diferente en su billetera con respecto
+                        al que interactuan, deben corregirlo y así asegurar que se trata de ellos; e.g: Alice habla con Bob previamente con su número
+                        teléfonico 1234567, luego de que llegan a un acuerdo Alice registra sus datos de contacto con otro número telefónico 7654321
+                        y le da su dirección de billetera a su contraparte, Bob cuando busca la dirección de Billetera de Alice se da cuenta 
+                        que su número telefónico es otro y no corresponde con el que se comunicaron previamente, Bob por seguridad le pide a Alice que
+                        edite sus datos de contacto con el número telefónico 1234567, Alice vuelve a registrar sus Datos de Contacto, esta vez con el número 1234567,
+                        Bob revisa nuevamente la dirección de Billetera y confirma el número telefónico de Alice, por otra parte Alice debe confirmar los datos 
+                        de Contacto de su contraparte, Bob registra su número telefónico y le proporciona a Alice su dirección de Billetera, Alice confirma 
+                        que el número telefónico de Bob corresponde con el de su Billetera; de esta forma Alice y Bob ya pueden empezar un intercambio de manera más 
+                        segura.
+                        </p>
+                        <p className="text-start">
+                        Alice procede a realizar un depósito en Criptomonedas, puede hacerlo con el token nativo de la BSC, Binance Coin (BNB) o con Tokens BEP-20, 
+                        Alice debe pegar la dirección de Billetera de Bob, elegir la moneda a depositar e introducir el monto a enviar, una vez la transacción
+                        haya sido confirmada por la Blockchain, el depósito habrá sido puesto en garantía de manera exitosa, esto quiere decir que los fondos
+                        depositados por Alice están bloqueados dentro del contrato, ni Alice, ni Bob pueden obtener acceso a esos fondos, a menos de que Alice libere
+                        los fondos a Bob, por otro lado, Bob puede reembolsar los fondos a Alice, ambas partes pueden abrir una disputa, entonces, el jurado podrá 
+                        intervenir, liberando los fondos a Bob o reembolsar los fondos a Alice. 
+                        </p>
+                        <p className="text-start">
+                        Una vez Alice haya realizado el depósito, Bob debe asegurarse de que eso sea cierto, Bob conectado a su billetera debe echar un 
+                        vistazo en el historial de transacciones recibidas y asegurarse de que el Id de la transacción, el monto, la dirección de la Billetera de
+                        Alice  y sus datos de contacto coincidan con la transacción de Alice, ambas partes deben mantener un canal de comunicación abierto durante la 
+                        transacción. Cuando Bob haya confirmado la validez de la transacción debe proceder a enviar el producto o servicio (acordado de manera previa) 
+                        a Alice.
+                        </p>
+                        <p className="text-start">
+                        Cuando Alice haya recibido el producto o servicio (acordado de manera previa) por parte de Bob, Alice deberá liberar los fondos a Bob para así 
+                        culminar con la transacción de manera exitosa.
+                        </p>
+                        <p className="text-start">
+                          ¿Que pasaría si Bob nunca envía el producto o servicio?
+                        </p>
+                        <p className="text-start">
+                          Bob puede reembolsar los fondos a Alice de manera inmediata y así finalizar la transacción, sin afectar a ninguna de las partes.
+                        </p>
+                        <p className="text-start">
+                          ¿Que pasaría si Bob y Alice no llegan a un acuerdo luego de que el depósito haya sido puesto en garantía?
+                        </p>
+                        <p className="text-start">
+                          una de las dos partes puede abrir una disputa, debe completar el formulario proporcionado por el Jurado de Red Cripto Pay, el Jurado de 
+                          Red Cripto procederá a comunicarse con ambas partes de la transacción a través de su data de contacto registrada en la Blockchain,
+                          de otra forma el Jurado no podrá asegurarse de que se trata de Alice y Bob, puede que Alice suplante la identidad de Bob o viceversa, 
+                          es por ello que el Jurado solo se comunicará a través del o los canales de Información registrados en sus respectivas billeteras.
+                          El jurado luego de dialogar con ambas partes tomará la decisión final, de reembolsar los fondos a Alice o liberar los fondos a Bob.
+                        </p>
+                        <h5 className="fw-bold" id="usabilidad">Usabilidad</h5>
+                        <p className="text-start">
+                        Para utilizar Red Cripto Pay debe conectar su billetera sin custodia (Metamask), para así poder interactuar con los
+                        Contratos inteligentes de la plataforma. Si no posee ninguna billetera no podrá utilizar Red Cripto Pay, ya que carece
+                        de billetera propia. Una vez haya descargado Metamask, ya sea la extensión de navegador, o la aplicación móvil, debe ingresar
+                        a pay.redcripto.com, si lo hace desde el móvil debe utilizar el explorador de metamask; una vez dentro de la página 
+                        web, debe darle click a "Conectar Billetera", Se abrirá una ventana de Metamask donde se autoriza a Red Cripto Pay a conectarse
+                        con la Red a la Binance Smart Chain y conectar su dirección de billetera con la plataforma para poder escribir transacciones en
+                        los contratos de la misma, una vez de conectada su billetera a Red Cripto Pay puede interactuar con la aplicación.
+                        </p>
+                        <p className="text-start">
+                        Con su billetera conectada a la aplicación, puede dirigirse hacia el perfil, para observar sus datos de contacto registrados en la Blockchain
+                        con la billetera conectada; si debajo de Datos de Contacto aparece como "No Registrado" debe registar los medios de contacto de su 
+                        preferencia, como número telefónico, correo electrónico, redes sociales, entre otros; pauede registrar o actualizar sus datos de contacto en 
+                        el perfil, dentro de la sección de Actualizar Datos; recuerde que para registrar sus datos de contacto en la
+                        Blockchain, debe tener en cuenta las comisiones de Red de la BSC, ya que para registrar o editar sus datos de contacto debe
+                        interactuar con el contrato, escribiendo una transacción.
+                        </p>
+                        <img src={datoscontacto} width="600" height="600" className="img-fluid d-block m-auto my-4" alt="use6"></img>
+                        <p className="text-start">
+                        Para abrir un depósito debe dirigirse al apartado del menú "Depositar", una vez este dentro de la sección de Depositar, puede elegir dos
+                        opciones, depositar con el token nativo de la BSC Binance Coin (BNB), o depositar con tokens BEP-20. Si elije depositar con BNB debe pegar
+                        la dirección de Billetera de su contraparte (receptor) y escribir el monto exacto a depositar en BNB, si incluye decimales estos deben escribirse 
+                        después de un punto; por otro lado, si elije depositar con tokens BEP-20 debe pegar la dirección de su contraparte (receptor), elegir entre
+                        las opciones el token BEP-20 a depositar y el monto exacto a enviar en el token seleccionado, si incluye decimales de igual forma deben 
+                        escribirse después de un punto; una vez hay llenado todos los campos de manera correcta, debe dar click a Depositar; debe tener en cuenta
+                        las comisiones de Red de la BSC para realizar la transacción siempre pagadas en BNB. Cuando de click en Depositar, se abrirá una ventana de 
+                        Metamask para confirmar la transacción, si deposita con BNB solo bastará confirmar una transacción, en caso de que haya seleccionado un token
+                        debe confirmar dos transacciones, una para dar permiso a Red Cripto Pay de gastar su token y otra para aprobar la transacción, al confirmar la 
+                        primera transacción, inmediatamente Metamask le mostrará la segunda transacción por confirmar.
+                        </p>
+                        <img src={depositar} width="600" height="600" className="img-fluid d-block m-auto my-4" alt="use6"></img>
+                        <p className="text-start">
+                        Cuando haya sido aprobada la transacción de Depósito por la Blockchain, puede dirigirse hacia el apartado del menú "Historial", dentro del
+                        historial podrá ver dos opciones BNB y Tokens BEP-20, y dentro de cada una de ellas podrá ver dos opciones más, enviadas y recibidas, de esta 
+                        forma podrá ver las transacciones enviadas o recibidas con BNB y Tokens; de manera previa puede visualizar el Id de la transacción el monto,
+                        la moneda y la dirección de billetera del receptor en caso de que este dentro de las transacciones enviadas o del emisor en caso de que este 
+                        dentro de las transacciones recibidas.
+                        Si da click en la transacción podrá observar los detalles de la misma, nuevamente el Id de la transacción, la dirección de Billetera del emisor
+                        y receptor, el monto total de la transacción, el valor de la transacción (monto total menos la comisión de depósito), BNB o token BEP-20,
+                        datos de contacto de la contraparte, Estado de la transacción, donde se muestra si el depósito está resguardado en el contrato, si fue liberado,
+                        si fue reembolsado, o si hay una disputa en marcha. Por último se muestran
+                        tres botones: "Liberar fondos", en caso de ser emisor; "Reembolsar", en caso de ser receptor; "Abrir 
+                        Disputa"; y el botón "Jurado" para enviar el formulario y comunicarse con Soporte técnico en caso de algún problema con la contraparte durante
+                        la transacción.
+                        </p>
+                        <img src={historial} width="600" height="600" className="img-fluid d-block m-auto my-4" alt="use6"></img>
+                        <img src={historial1} width="600" height="600" className="img-fluid d-block m-auto my-4" alt="use6"></img>
+                        <h5 className="fw-bold" id="comisiones">Comisiones</h5>
+                        <p className="text-start">
+                        Red Cripto Pay aplica comisiones por cada depósito que se realice dentro de la plataforma, las comisiones son fijas
+                        y no pueden ser modificadas debido a que están adheridas en los contratos inteligentes de forma tal que no puedan ser modificadas,
+                        se entiende que mientras Red Cripto Pay funcione con los actuales contratos inteligentes la comisión de depósito seguirá siendo
+                        la misma. Las Comisiones de depósito internas funcionan de la siguiente manera: 3% del total del monto depositado, de los cuales
+                        2% se enviarán a la dirección del dueño del contrato (owner) y 1% se enviará a la dirección del Jurado del contrato (judge); el 
+                        "owner" y el "judge" siempre recibirán su comisión luego de que la transacción haya finalizado, es decir, cuando los fondos hayan
+                        sido liberados al receptor, o reembolsados al Emisor, esto quiere decir que mientras los fondos estén reesguardados dentro del contrato
+                        ninguna entidad podrá recibir su respectiva comisión. El 
+                        depósito en caso de ser reembolsado al Emisor se le descontará el 3% del monto total depositado; si el depósito es liberado al Receptor,
+                        este recibirá el 97% del monto total depositado por el Emisor. E.g: Alice deposita 100 USDT dentro del contrato, luego Bob y Alice nunca
+                        llegan a un acuerdo, Bob decide reembolsar el depósito a Alice, Alice recibe 97 USDT de vuelta ya que se descontó el 3% (3 USDT) del
+                        monto total; en caso de que Alice y Bob si lleguen a un acuerdo, Alice libera el depósito a Bob, Bob recibe 97 USDT ya que se descontó 
+                        el 3% (3 USDT) del monto total.               
+                        </p>
+                        <h5 className="fw-bold" id="terminos-y-condiciones">Términos y Condiciones</h5>
                         <p className="text-start">
                         ...
                         </p>
-                        <h5 id="terminos-y-condiciones">Términos y Condiciones</h5>
+                        <h5 className="fw-bold" id="metamask-web3">Metamask y web3.js</h5>          
+                        <p className="text-start fw-bold">
+                        ¿Por qué Metamask?
+                        </p>
+                        <p className="text-start">
+                        MetaMask es la herramienta pionera que permite las interacciones y la experiencia del usuario en Web3. Actualmente está disponible como 
+                        extensión del navegador y como aplicación móvil en dispositivos Android e iOS. MetaMask se creó para satisfacer las necesidades de sitios 
+                        web seguros y utilizables basados en Ethereum. En particular, se encarga de la gestión de cuentas y de la conexión del usuario 
+                        a la cadena Blockchain. MetaMask permite a los usuarios administrar cuentas y sus claves de varias maneras, incluidas billeteras de hardware, 
+                        mientras las aísla del contexto del sitio. Esta es una gran mejora de seguridad con respecto al almacenamiento de claves de usuario en un único
+                        servidor central, o incluso en un almacenamiento local, lo que puede permitir robos masivos de cuentas. Esta característica de seguridad también
+                        viene con la conveniencia del desarrollador: para los desarrolladores, simplemente interactúa con la API de ethereum disponible globalmente
+                        que identifica a los usuarios de navegadores compatibles con web3 (como los usuarios de MetaMask), y cada vez que solicita una firma
+                        de transacción (como eth_sendTransaction, eth_signTypedData o otros), MetaMask le indicará al usuario de la manera más comprensible posible. 
+                        Esto mantiene a los usuarios informados y deja a los atacantes solo la opción de intentar phishing a usuarios individuales, en lugar 
+                        de realizar hackeos masivos (aunque los hackeos de DNS todavía se pueden usar para phishing en masa).
+                        MetaMask viene precargado con conexiones rápidas a la Blockchain de Ethereum y varias redes de prueba a través de Infura.
+                        Esto permite conectar una Dapp y sus usuarios a la Blockchain sin sincronizar un nodo completo, al tiempo que brinda la opción de actualizar 
+                        su seguridad y usar el proveedor de blockchain de su elección.
+                        Actualmente, MetaMask es compatible con cualquier Blockchain que exponga una API JSON RPC compatible con 
+                        Ethereum, incluidas las Blockchains privadas y personalizadas. Metamask brinda herramientas sencillas, seguras y completas a desarrolladores 
+                        Blockchain basados en Ethereum, es por ello que Red Cripto Pay decidió utilizar Metamask para conectar a los usuarios con la Aplicación, en
+                        todas las fases de prueba de Red Cripto Pay se utilizó Metamask como billetera, se recomienda a los usuarios utilizar 
+                        Metamask para interactuar con Red Cripto Pay.  
+                        <a className="px-1 text-primary text-decoration-none" href="https://docs.metamask.io/">Para más información acerca de Metamask.</a>
+                        </p>
+                        <p className="text-start fw-bold">
+                        web3.js
+                        </p>
+                        <p className="text-start">
+                        Para conectar la interfaz de usuario con la Blockchain y por consiguiente con los contratos inteligentes, se utilizó web3.js,  
+                        la cual, es una colección de bibliotecas de JavaScript, que permiten interactuar con un nodo de Ethereum local o remoto mediante HTTP, 
+                        IPC o WebSocket. Con web3.js puedes desarrollar aplicaciones (frontend) que interactúan con la Blockchain de Ethereum (o cualquier Blockchain 
+                        que exponga una API JSON RPC compatible con Ethereum como la Binance Smart Chain), leer y escribir 
+                        datos de contratos inteligentes, o crear contratos inteligentes. web3.js se conecta con Blockchains compatibles con Ethereum  mediante JSON RPC 
+                        (llamada a procedimiento remoto). Esta tecnología permite utilizar web3.js para hacer peticiones a un nodo de Ethereum individual.
+                        Este nodo, una máquina virtual de Ethereum (EVM) pertenece a la red de Ethereum.
+                        </p>
+                        <img src={web3jsimage} width="600" height="600" className="img-fluid d-block m-auto my-4" alt="use6"></img>
+                        <h5 className="fw-bold" id="contratos">Contratos Inteligentes</h5>
                         <p className="text-start">
                         ...
                         </p>
-                        <h5 id="metamask-web3">Metamask y Web 3.0</h5>
-                        <p className="text-start">
-                        ...
-                        </p>
-                        <h5 id="contratos">Contratos Inteligentes</h5>
-                        <p className="text-start">
-                        ...
-                        </p>
-                        <h5 id="futuro">Futuro Desarrollo</h5>
+                        <h5 className="fw-bold" id="futuro">Futuro Desarrollo</h5>
                         <p className="text-start">
                         ...
                         </p>
