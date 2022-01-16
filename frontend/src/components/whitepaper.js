@@ -81,16 +81,17 @@ const Whitepaper = () => {
                         en línea, de esta premisa nace un problema: <span className="fw-bold">las estafas en línea</span>, una de las 
                         problemáticas más comunes del comercio electrónico desde su inicio, por ello Red Cripto decidió desarrollar una plataforma 
                          llamada <span className="fw-bold">Red Cripto Pay </span> 
-                         que funciona con <span className="fw-bold"> depósitos en garantía P2P</span> para proteger a ambas partes durante una
+                         que funciona con <span className="fw-bold"> depósitos en garantía peer to peer (P2P)</span> para proteger a ambas partes durante una
                         transacción (comprador y vendedor), con un sistema de disputa en caso de ser necesario dentro de la transacción.
-                        <span className="fw-bold"> Red Cripto Pay es una aplicación descentralizada (Dapp)</span>, que funciona con contratos 
-                        inteligentes desplegados en la <span className="fw-bold">Binance Smart Chain (BSC)</span>. Para interactuar con la aplicación el usuario
+                        <span className="fw-bold"> Red Cripto Pay es una aplicación descentralizada (Dapp)</span>, que funciona con 
+                        <span className="fw-bold"> contratos 
+                        inteligentes</span> desplegados en la <span className="fw-bold">Binance Smart Chain (BSC)</span>. Para interactuar con la aplicación el usuario
                         debe utilizar su billetera sin custodia (Metamask), la mayoría de las Dapps en la actualidad utilizan esta modalidad para
                         conectar a sus usuarios.
                         </p>
                         <h5 className="fw-bold" id="funcionalidad">Funcionalidad</h5>
                         <p className="text-start">
-                        Red Cripto Pay es un fideicomiso P2P (Escrow) muy común en el universo Cripto, donde los pares, no confían entre si, y para
+                        Red Cripto Pay es un fideicomiso P2P (Escrow) muy común en el universo Cripto, donde los pares no confían entre si, y para
                         realizar una transacción entre ambas partes necesitan un seguro o intermediario para realizar la transacción de manera exitosa.
                         El fideicomiso de Red Cripto Pay cuenta de tres entidades, Emisor (entidad que realiza el depósito), Receptor (entidad que espera
                         recibir el dinero depositado), y Jurado (entidad encargada de resolver una disputa entre Emisor y Receptor)
@@ -253,18 +254,198 @@ const Whitepaper = () => {
                         web3.js
                         </p>
                         <p className="text-start">
-                        Para conectar la interfaz de usuario con la Blockchain y por consiguiente con los contratos inteligentes, se utilizó web3.js,  
+                        Para conectar la interfaz de usuario (UI) con la Blockchain y por consiguiente con los contratos inteligentes, se utilizó web3.js,  
                         la cual, es una colección de bibliotecas de JavaScript, que permiten interactuar con un nodo de Ethereum local o remoto mediante HTTP, 
                         IPC o WebSocket. Con web3.js puedes desarrollar aplicaciones (frontend) que interactúan con la Blockchain de Ethereum (o cualquier Blockchain 
                         que exponga una API JSON RPC compatible con Ethereum como la Binance Smart Chain), leer y escribir 
                         datos de contratos inteligentes, o crear contratos inteligentes. web3.js se conecta con Blockchains compatibles con Ethereum  mediante JSON RPC 
                         (llamada a procedimiento remoto). Esta tecnología permite utilizar web3.js para hacer peticiones a un nodo de Ethereum individual.
                         Este nodo, una máquina virtual de Ethereum (EVM) pertenece a la red de Ethereum.
+                        <a className="px-1 text-primary text-decoration-none" href="https://web3js.readthedocs.io/en/v1.5.2/">Para más información acerca de web3.js.</a>
                         </p>
                         <img src={web3jsimage} width="600" height="600" className="img-fluid d-block m-auto my-4" alt="use6"></img>
                         <h5 className="fw-bold" id="contratos">Contratos Inteligentes</h5>
                         <p className="text-start">
-                        ...
+                        Red Cripto Pay desarrolló cuatro contratos inteligentes desplegados en la Binance Smart Chain. Se utilizó Solidity como lenguaje de programación,
+                        y se copiaron varias librerías de OpenZeppelin para hacer más seguro el código.
+                        </p>
+                        <p className="text-start">
+                        <a className="px-1 text-primary text-decoration-none" href="#">redcriptopaycontactINFO.sol</a> Donde el usuario puede registrar su información de
+                        contacto, teniendo en cuenta que puede registrar cualquier caracter que desee, cualquier información de contacto que registre se podrá encontrar
+                        de manera pública en la Blockchain, depende del usuario que tipo de información registrar. Este contrato funciona principalmente a 
+                        través de una variable 
+                        <span className="text-muted"> mapping (address => string) usercontactinfo; </span> la cual asigna a cada
+                        dirección de billetera la información que registre de manera única a través de la función <span className="text-muted">
+                        function Setusercontactinfo (string memory info) external</span>. Puede obtener la información de contacto de la dirección, a través de una función de
+                        lectura <span className="text-muted">function getusercontactinfo (address user) external view returns (string memory)</span>.
+                        </p>
+                        <p className="text-start">
+                        <a className="px-1 text-primary text-decoration-none" href="#">Ownable.sol</a> Es una copia modificada de 
+                        OpenZeppelin donde la dirección que despliega el contrato se le asigna el rol de "owner", este rol puede ser transferido a otra dirección de
+                        billetera sólo por el antiguo "owner" a través de <span className="text-muted">function transferOwnership(address newOwner) public virtual
+                        onlyOwner</span>. A diferencia de la librería de OpenZeppelin, en este caso la función renounceOwnership fue eliminada, ya que la función de
+                          "owner" es de suma importancia en los contratos descritos a continuación redcriptopayTOKENS.sol y redcriptopayBNB.sol .
+                        </p>
+                        <p className="text-start">
+                        <a className="px-1 text-primary text-decoration-none" href="#">redcriptopayBNB.sol</a> Es el contrato encargado de registrar depósitos de BNB
+                        dentro de la Dapp, este es un contrato del tipo Escrow, donde el emisor deposita BNB dentro del contrato, y luego de que manera externa obtiene
+                        lo estipulado por el receptor, el emisor debe liberar los BNB del contrato al receptor. Si existiese algún problema con la transacción de manera
+                        externa, Emisor y Receptor no lleguen a un acuerdo, estos pueden abrir una disputa y entrará en acción el Jurado para resolver la Disputa. 
+                        redcriptopayBNB.sol utiliza Ownable.sol para declarar la función <span className="text-muted">function setJudge(address _judge) external 
+                        onlyOwner</span> de esta manera solo el "owner" del contrato puede asignar la variable "judge", el encargado de resolver las disputas de 
+                        las transacciones del contrato.
+                        </p>
+                        <p className="text-start">
+                        Para
+                        la creación del Depósito se utiliza la función <span className="text-muted">function createDeposit(address _receiver) payable external 
+                        onlyEOA</span> donde el emisor copia la dirección del receptor, y escribe el monto exacto a enviar en BNB; con la función createDeposit se
+                        establece la comisión del "owner" y "judge", además se registra el depósito como transacción y se le asigna un Id a través de un Array 
+                        <span className="text-muted"> Transaction[] public TransactionLedger;</span> Transaction es un struct compuesto por las variables
+                        address sender, address receiver, uint amount, uint judgeFee, uint ownerFee, uint value (monto total menos ownerFee y judgeFee)
+                        y TransactionStatus status, esta última es un enum 
+                        compuesto por los diferentes estados de una transacción <span className="text-muted">FundsReceived, FundsReleased, Refunded, 
+                        AwaitingResolution</span>, en el caso de createDeposit se se actualizará el estado de la transaccióna a "FundsReceived"; por último en
+                        la función createDeposit se declara
+                        el evento <span className="text-muted">DepositCreation(msg.sender, _receiver, id, msg.value, value);</span> el cual dentro de la UI a través
+                        de web3.js sirve para obtener los depósitos donde estén involucrados el emisor o receptor. 
+                        </p>
+                        <p className="text-start">
+                        Este escrow de BNB tiene tres funciones de
+                        escritura más: liberar los fondos, reembolar los fondos y abrir una disputa.  La función de liberar los fondos
+                        <span className="text-muted"> function releaseFunds(uint id) external nonReentrant onlyEOA</span> tiene  como objetivo desbloquear los fondos
+                        en BNB de una transacción en específico dentro del contrato y enviarlos a la dirección de billetera del receptor de la transacción, 
+                        tomando en cuenta que se resta del monto total la comisión del "judge" y "owner, quedando así el valor neto de la transacción 
+                        <span className="text-muted"> t.value</span>. Esta
+                        función solo puede ser llamada por el "judge" o el emisor de la transacción, además la transacción debe poseer el estado de "FundsReceived"
+                        o "AwaitingResolution", 
+                        de lo contrario fallará el intento de liberar los fondos; de igual forma al llamar esta función se enviará la comisión en BNB al "judge" y 
+                        "owner" del contrato; y por último se actualizará el estado de la transacción a "FundsReleased" y se emitirá el evento 
+                        <span className="text-muted"> DepositCompleted(t.Sender, t.Receiver, id, t.value, t.status)</span>.
+                        </p>
+                        <p className="text-start">
+                         La función de reembolsar los fondos
+                        <span className="text-muted"> function refundSender(uint id) external nonReentrant onlyEOA</span> tiene como objetivo desbloquear los fondos
+                        en BNB de una transacción en específico dentro del contrato y enviarlos de vuelta a la dirección de billetera del emisor de la transacción,
+                        tomando en cuenta que se resta del monto total la comisión del "judge" y "owner, quedando así el valor neto de la transacción
+                        <span className="text-muted"> t.value</span>. Esta
+                        función solo puede ser llamada por el "judge" o el receptor de la transacción, además la transacción debe poseer el estado de "FundsReceived"
+                        o "AwaitingResolution", 
+                        de lo contrario fallará el intento de reembolar los fondos; de igual forma al llamar esta función se enviará la comisión en BNB al "judge" y 
+                        "owner" del contrato; y por último se actualizará el estado de la transacción a "Refunded" y se emitirá el evento 
+                        <span className="text-muted"> DepositCompleted(t.Sender, t.Receiver, id, t.value, t.status)</span>.
+                        </p>
+                        <p className="text-start">
+                         La última función de escritura dentro de este
+                        contrato es la de abrir una disputa <span className="text-muted">function raiseDispute(uint id) external onlyEOA</span>, la cual permite
+                        al emisor o receptor presentar su disconformidad o inconveniente con su contraparte a través de la Blockchain, esta es la única manera de que
+                        Red Cripto Pay se asegure de que una de las partes presenta algún problema externo con la transacción; la función de abrir una disputa solo 
+                        puede ser llamada una vez por cada transacción, ya sea por el emisor o receptor, además la transacción debe poseer el estado de "FundsReceived",
+                        de lo contrario fallará el intento de abrir una disputa; por último dentro la función raiseDispute se actualizará el estado de la transacción a
+                        "AwaitingResolution" y se emitirá el evento <span className="text-muted"> Dispute(t.Sender, t.Receiver, id, t.value)</span>.
+                        </p>
+                        <p className="text-start">
+                        <a className="px-1 text-primary text-decoration-none" href="#">redcriptopayTOKENS.sol</a> Es el contrato encargado de registrar depósitos de 
+                        Tokens BEP-20 dentro de la Dapp, este es un contrato del tipo Escrow, donde el emisor deposita un token dentro del contrato, 
+                        y luego de que manera externa obtiene lo estipulado por el receptor, el emisor debe liberar los Tokens del contrato al receptor. 
+                        Si existiese algún problema con la transacción de manera externa, Emisor y Receptor no lleguen a un acuerdo, estos pueden abrir una disputa 
+                        y entrará en acción el Jurado para resolver la Disputa. redcriptopayTOKENS.sol utiliza Ownable.sol para declarar la función
+                        <span className="text-muted"> function setJudge(address _judge) external onlyOwner</span> de esta manera solo el "owner" del contrato puede 
+                        asignar la variable "judge", el encargado de resolver las disputas de las transacciones del contrato; también las funciones 
+                        <span className="text-muted"> function addToken(IERC20 tokencontractaddress) external onlyOwner onlyEOA</span> y 
+                        <span className="text-muted"> function removeToken(uint tokenindex) external onlyOwner onlyEOA</span> explicadas más adelante solo pueden
+                        ser llamadas por el "owner".
+                        </p>
+                        <p className="text-start">
+                        A diferencia de redcriptopayBNB.sol donde se deposita y envía el token nativo BNB, este contrato esta diseñado para depositar y 
+                        enviar Tokens BEP-20, para ello se utlizó la librería de OpenZeppelin IER20, se modificaron y agregaron algunas funciones con respecto al
+                        contrato Escrow de BNB. "createDeposit" en este contrato no es una función "payable", eso quiere decir que no se puede utilizar esta función
+                        para depositar el token nativo, en cambio se utiliza para depositar tokens BEP-20 con una función de IERC20 llamada <span className="text-muted">
+                        transferFrom</span> dentro de "createDeposit", con esta función se pueden enviar tokens a través de un contrato, en este caso la dirección 
+                        receptora es el contrato mismo; cabe destacar que el contrato del token en si, 
+                        debe otorgar permiso a la dirección de billetera que quiera realizar la función "TransferFrom" en este 
+                        particular la dirección de redcriptopayTOKENS.sol, llamando a la función <span className="text-muted">function 
+                        approve(address spender, uint256 amount) external returns (bool)</span> con un monto igual o mayor al que se va a transferir 
+                        y claro está antes de llamar a la función "transferFrom", de lo contrario el llamado a esta función generará un error 
+                        "ERC20: transfer amount exceeds allowance".
+                        </p>
+                        <p className="text-start">
+                        Es importante aclarar que ERC20 tokens y BEP-20 tokens tienen un código indistinguible entre sí, la diferencia radica a la hora de desplegar estos
+                        contratos en la Blockchain, los ERC20 tokens son los llamados tokens de la Red Ethereum, mientras que los BEP-20 tokens son de la BSC, de hecho
+                        estos últimos nacieron o son copiados de los ERC20 tokens por lo tanto siguen el mismo protocolo.
+                        Algo que no es un secreto es que cualquier persona puede crear un BEP-20 token, actualmente existen cientos de tokens Scam, que realmente no
+                        poseen valor alguno, simplemente son copias de otros tokens con gran capitalización de mercado que buscan confundir a nuevos inversores, haciendo
+                        creer que son los tokens originales por así decirlo, otros tokens se valen de la especulación y solo los primeros inversionistas sacan provecho, 
+                        mientras que los resagados pierden grandes cantidades de dinero cuando el token se desploma, para evitar este problema se decidió implementar 
+                        un Array <span className="text-muted">IERC20[] public Tokens </span>
+                        para agregar unicamente tokens BEP-20 verificados por la comunidad Cripto a nivel mundial, y así solo se permite crear depósitos con los tokens
+                        de dicho Array, estos solo pueden ser agregador por el "owner" 
+                        a través de la función <span className="text-muted">function addToken(IERC20 tokencontractaddress) external onlyOwner onlyEOA </span>, 
+                        de igual forma estos tokens pueden ser removidos del Array a través de la función <span className="text-muted">
+                        function removeToken(uint tokenindex) external onlyOwner onlyEOA</span>, sin embargo el hecho de remover un token del Array no quiere decir que
+                        se elimine de una transacción ya hecha, y se pierda consigo la información del token, esto traería grave consecuencias para los usuarios que
+                        tengan
+                        depositos congelados dentro del contrato, para no perjudicar a ningún usuario o token previamente añadido al Array y luego removido, al momento
+                        de crear un depósito, la dirección del token seleccionado se guardará dentro de la transacción, y en este caso nada tiene que ver el Array de 
+                        Tokens, este Array es unicamente para delimitar los tokens a la hora de crear un depósito, pero no así para liberar los fondos o reembolsarlos,
+                        en este caso se apunta a la dirección del token guardada en la transacción.
+                        </p>
+                        <p className="text-start">
+                        Para la creación del Depósito se utiliza la función <span className="text-muted">function createDeposit(address _receiver, uint tokenindex,
+                        uint _amount) external onlyEOA</span> donde el emisor copia la dirección del receptor, selecciona el token del Array Tokens y escribe 
+                        el monto exacto a enviar en el token seleccionado; con la función createDeposit se
+                        establece la comisión del "owner" y "judge", además se registra el depósito como transacción y se le asigna un Id a través de un Array 
+                        <span className="text-muted"> Transaction[] public TransactionLedger;</span> Transaction es un struct compuesto por las variables
+                        address sender, address receiver, IERC20 token, uint amount, uint judgeFee, uint ownerFee, uint value (monto total menos ownerFee y judgeFee)
+                        y TransactionStatus status, esta última es un enum 
+                        compuesto por los diferentes estados de una transacción <span className="text-muted">FundsReceived, FundsReleased, Refunded, 
+                        AwaitingResolution</span>, en el caso de createDeposit se actualizará el estado de la transaccióna a "FundsReceived"; por último en la 
+                        función createDeposit se declara
+                        el evento <span className="text-muted">DepositCreation(msg.sender, _receiver, id, Tokens[tokenindex], msg.value, value); </span> 
+                        el cual dentro de la UI a través de web3.js sirve para obtener los depósitos donde estén involucrados el emisor o receptor. 
+                        </p>
+                        <p className="text-start">
+                        Este escrow de Tokens BEP-20 tiene tres funciones de
+                        escritura más: liberar los fondos, reembolar los fondos y abrir una disputa.  La función de liberar los fondos
+                        <span className="text-muted"> function releaseFunds(uint id) external nonReentrant onlyEOA</span> tiene como objetivo desbloquear los fondos
+                        en tokens de una transacción en específico dentro del contrato y enviarlos a la dirección de billetera del receptor de la transacción, 
+                        tomando en cuenta que se resta del monto total la comisión del "judge" y "owner, quedando así el valor neto de la transacción 
+                        <span className="text-muted"> t.value</span>. Esta
+                        función solo puede ser llamada por el "judge" o el emisor de la transacción, además la transacción debe poseer el estado de "FundsReceived"
+                        o "AwaitingResolution", 
+                        de lo contrario fallará el intento de liberar los fondos; de igual forma al llamar esta función se enviará la comisión en tokens al "judge" y 
+                        "owner" del contrato; y por último se actualizará el estado de la transacción a "FundsReleased" y se emitirá el evento 
+                        <span className="text-muted"> DepositCompleted(t.Sender, t.Receiver, id, t.token, t.value, t.status)</span>.
+                        </p>
+                        <p className="text-start">
+                         La función de reembolsar los fondos
+                        <span className="text-muted"> function refundSender(uint id) external nonReentrant onlyEOA</span> tiene como objetivo desbloquear los fondos
+                        en tokens de una transacción en específico dentro del contrato y enviarlos de vuelta a la dirección de billetera del emisor de la transacción,
+                        tomando en cuenta que se resta del monto total la comisión del "judge" y "owner, quedando así el valor neto de la transacción
+                        <span className="text-muted"> t.value</span>. Esta
+                        función solo puede ser llamada por el "judge" o el receptor de la transacción, además la transacción debe poseer el estado de "FundsReceived"
+                        o "AwaitingResolution", 
+                        de lo contrario fallará el intento de reembolar los fondos; de igual forma al llamar esta función se enviará la comisión en tokens al "judge" y 
+                        "owner" del contrato; y por último se actualizará el estado de la transacción a "Refunded" y se emitirá el evento 
+                        <span className="text-muted"> DepositCompleted(t.Sender, t.Receiver, id, t.token, t.value, t.status)</span>.
+                        </p>
+                        <p className="text-start">
+                         La última función de escritura dentro de este
+                        contrato es la de abrir una disputa <span className="text-muted">function raiseDispute(uint id) external onlyEOA</span>, la cual permite
+                        al emisor o receptor presentar su disconformidad o inconveniente con su contraparte a través de la Blockchain, esta es la única manera de que
+                        Red Cripto Pay se asegure de que una de las partes presenta algún problema externo con la transacción; la función de abrir una disputa solo 
+                        puede ser llamada una vez por cada transacción, ya sea por el emisor o receptor, además la transacción debe poseer el estado de "FundsReceived",
+                        de lo contrario fallará el intento de abrir una disputa; por último dentro la función raiseDispute se actualizará el estado de la transacción a
+                        "AwaitingResolution" y se emitirá el evento <span className="text-muted"> Dispute(t.Sender, t.Receiver, id, t.token, t.value)</span>.
+                        </p>
+                        <p className="text-start fw-bold">Testing</p>
+                        <p className="text-start"> 
+                        Para testear los contratos inteligentes se utilizó Truffle y otras dependencias del mismo como Mocha testing framework, truffle assertions,
+                        y otras herramientas como eth gas reporter. 
+
+                        Antes de desplegar los contratos inteligentes en BSC Mainnet, se desplegaron en la red de pruebas Ropsten, puede probar la interfaz de 
+                        usuario y los contratos a 
+                        través de <a className="px-1 text-primary text-decoration-none" href="https://testnet.redcripto.com">Testnet Red Cripto Pay</a>cuyos
+                        contratos están verificados en EtherScan (Ropsten).
                         </p>
                         <h5 className="fw-bold" id="futuro">Futuro Desarrollo</h5>
                         <p className="text-start">
