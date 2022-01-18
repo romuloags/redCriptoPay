@@ -78,8 +78,8 @@ const Profile = ({defaultAccount, contactInfo, connected}) => {
                  <span className="visually-hidden">Loading...</span>
                  </div> 
                  }
-                 {connected && showInfo !== "" && <p className="card-text text-info">{showInfo}</p>}
-                 {connected && showInfo === "" && <p className="card-text text-info">No registrado.</p>}
+                 {connected && showInfo !== "" && !loading && <p className="card-text text-info">{showInfo}</p>}
+                 {connected && showInfo === "" && !loading && <p className="card-text text-info">No registrado.</p>}
                  <p className="card-text"><small className="text-muted"><i 
                  className="bi bi-person-circle pe-2"></i>
                  {connected ? <CopyToClipboard text={defaultAccount}>
