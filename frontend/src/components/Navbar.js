@@ -19,8 +19,10 @@ const Navbar = ({connect, defaultAccount, connected, isLoading, noProvider}) => 
         {!isLoading && !connected && !noProvider && <button onClick={connect} id="liveToast"
          className="btn btn-primary" type="submit">
         Conectar Billetera</button>}
-        {isLoading && !connected && <button disabled className="btn btn-primary" type="submit">
-        Conectar Billetera</button>}
+        {isLoading && !connected && <button className="btn btn-primary" type="button" disabled>
+        <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        <span className="visually-hidden">Loading...</span>
+        </button>}
         {!isLoading && !connected && noProvider && <a href="https://metamask.io/download">
         <button className="btn btn-dark" type="submit">
         Descargue Metamask</button></a>}
