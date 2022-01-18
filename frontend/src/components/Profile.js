@@ -9,13 +9,15 @@ const Profile = ({defaultAccount, contactInfo, connected}) => {
   const [showInfo, setShowInfo] = useState("");
   const [sentTransaction, setSentTransaction] = useState(false);
   const [isSendingTransaction, setIsSendingTransaction] = useState(false);
+  const [loading, setLoading] = useState(false);
 
 
   useEffect(()  => {
-    const load = async () => {     
+    const load = async () => {   
+      setLoading(true);
       const showUserContactInfo = await contactInfo.methods.getusercontactinfo(defaultAccount).call();
       setShowInfo(showUserContactInfo);
-     
+      setLoading(false);
     }
     if(connected) {
       load();
@@ -71,6 +73,11 @@ const Profile = ({defaultAccount, contactInfo, connected}) => {
                             </>
                  </span>
                  </h5>
+                 {loading && 
+                 <div className="spinner-border m-5 text-primary" role="status">
+                 <span className="visually-hidden">Loading...</span>
+                 </div> 
+                 }
                  {connected && showInfo !== "" && <p className="card-text text-info">{showInfo}</p>}
                  {connected && showInfo === "" && <p className="card-text text-info">No registrado.</p>}
                  <p className="card-text"><small className="text-muted"><i 
