@@ -18,6 +18,7 @@ const SingleBNBreceiver = ({defaultAccount, bnbEscrow, contactInfo}) => {
  const [transactionStatus, setTransactionStatus] = useState (undefined);
  const [senderContactInfo, setSenderContactInfo] = useState(undefined);
  const [isSendingTransaction, setIsSendingTransaction] = useState(false);
+ const [loading, setLoading] = useState(false);
 
   const web3 = Web3;
 
@@ -31,7 +32,12 @@ const SingleBNBreceiver = ({defaultAccount, bnbEscrow, contactInfo}) => {
   }
 
   useEffect(()  => {
-    const load = async () => {     
+    const load = async () => { 
+
+      try {
+      
+      setLoading(true);
+      
       const transactionId = await bnbEscrow.methods.TransactionLedger(id).call();
       setTransactionSender(transactionId[0]);
       setTransactionReceiver(transactionId[1]);
@@ -41,6 +47,13 @@ const SingleBNBreceiver = ({defaultAccount, bnbEscrow, contactInfo}) => {
 
       const senderContactInfo = await contactInfo.methods.getusercontactinfo(transactionId[0]).call();
       setSenderContactInfo(senderContactInfo);
+
+      setLoading(false);
+
+    } catch (error) {
+      alert ("Debe estar conectado para ver la transacción");
+      console.error(error);
+    }
 
     }
     if(defaultAccount) {
@@ -62,6 +75,7 @@ const SingleBNBreceiver = ({defaultAccount, bnbEscrow, contactInfo}) => {
   const receipt = await bnbEscrow.methods.raiseDispute(id).send({from: defaultAccount});
   console.log(receipt)
   }
+
     return ( 
         <div className="history">     
           <div className="bg-dark min-vh-100"> 
@@ -83,9 +97,18 @@ const SingleBNBreceiver = ({defaultAccount, bnbEscrow, contactInfo}) => {
                 </div>
               <div className="row justify-content-center  mx-lg-5">
                 <div className="col-lg-8  pb-5 text-center">
-                  <div className="card justify-content-center bg-secondary  mb-5">
+                   {loading && 
+                   <div className="card justify-content-center bg-secondary  mb-5">
+                    <div className="card-body">
+                    <div className="spinner-border m-2 text-primary" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                    </div>
+                    </div>
+                   </div>  
+                   }
+                   {!loading && <div className="card justify-content-center bg-secondary  mb-5">
                    <div className="card-body">
-                     <h5 className="card-title text-center">
+                     <h5 className="card-title text-center">  
                      <div className="row justify-content-center">
                      <span className="col-12"><i className="bi bi-arrow-down-circle-fill me-1">
                      </i>Transacción recibida</span>
@@ -266,8 +289,8 @@ const SingleBNBreceiver = ({defaultAccount, bnbEscrow, contactInfo}) => {
                           </div>
                         </div>
                       </div>
-                   </div>               
-                   </div>     
+                   </div>              
+                   </div>}     
                  </div>
                 </div>
               </div>            

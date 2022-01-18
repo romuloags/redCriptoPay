@@ -9,11 +9,14 @@ const Profile = ({defaultAccount, contactInfo, connected}) => {
   const [showInfo, setShowInfo] = useState("");
   const [isSendingTransaction, setIsSendingTransaction] = useState(false);
   const [sentTransaction, setSentTransaction] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(()  => {
-    const load = async () => {     
+    const load = async () => {  
+      setLoading(true);   
       const showUserContactInfo = await contactInfo.methods.getusercontactinfo(defaultAccount).call();
       setShowInfo(showUserContactInfo);
+      setLoading(false);
      
     }
     if(connected) {
@@ -73,8 +76,13 @@ const Profile = ({defaultAccount, contactInfo, connected}) => {
                             </>
                  </span>
                  </h5>
-                 {connected && showInfo !== "" && <p className="card-text text-info">{showInfo}</p>}
-                 {connected && showInfo === "" && <p className="card-text text-info">No registrado.</p>}
+                 {loading && 
+                 <div className="spinner-border m-2 text-primary" role="status">
+                 <span className="visually-hidden">Loading...</span>
+                 </div>
+                 }
+                 {connected && showInfo !== "" && !loading && <p className="card-text text-info">{showInfo}</p>}
+                 {connected && showInfo === "" && !loading && <p className="card-text text-info">No registrado.</p>}
                  <p className="card-text"><small className="text-muted"><i 
                  className="bi bi-person-circle pe-2"></i>
                  {connected ? <CopyToClipboard text={defaultAccount}>

@@ -17,6 +17,7 @@ const SingleBNBsender = ({defaultAccount, bnbEscrow, contactInfo}) => {
  const [transactionStatus, setTransactionStatus] = useState (undefined);
  const [receiverContactInfo, setReceiverContactInfo] = useState(undefined);
  const [isSendingTransaction, setIsSendingTransaction] = useState(false);
+ const [loading, setLoading] = useState(false);
 
  const web3 = Web3;
 
@@ -32,6 +33,8 @@ const SingleBNBsender = ({defaultAccount, bnbEscrow, contactInfo}) => {
    useEffect(()  => {
     const load = async () => {   
        try {
+
+      setLoading(true);  
         
       const transactionId = await bnbEscrow.methods.TransactionLedger(id).call();
       setTransactionSender(transactionId[0]);
@@ -42,6 +45,8 @@ const SingleBNBsender = ({defaultAccount, bnbEscrow, contactInfo}) => {
 
       const receiverContactInfo = await contactInfo.methods.getusercontactinfo(transactionId[1]).call();
       setReceiverContactInfo(receiverContactInfo);
+
+      setLoading(false);
 
        } catch (error) {
          alert ("Debe estar conectado para ver la transacción");
@@ -88,8 +93,16 @@ const SingleBNBsender = ({defaultAccount, bnbEscrow, contactInfo}) => {
                 </div>
               <div className="row justify-content-center  mx-lg-5">
                 <div className="col-lg-8  pb-5 text-center">
+                  {loading && 
                   <div className="card justify-content-center bg-secondary  mb-5">
-                    
+                    <div className="card-body">
+                    <div className="spinner-border m-2 text-primary" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                    </div>
+                    </div>
+                   </div>
+                   }  
+                   {!loading && <div className="card justify-content-center bg-secondary  mb-5">                    
                    <div className="card-body">
                      <h5 className="card-title text-center">
                      <div className="row justify-content-center">
@@ -274,7 +287,7 @@ const SingleBNBsender = ({defaultAccount, bnbEscrow, contactInfo}) => {
                         </div>
                       </div>
                    </div>               
-                   </div>     
+                   </div>}   
                  </div>
                 </div>
               </div>            

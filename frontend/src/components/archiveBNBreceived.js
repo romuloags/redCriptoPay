@@ -4,6 +4,7 @@ import Web3 from "web3";
 
 const ArchiveBNBreceived = ({defaultAccount, bnbEscrow, connected}) => {
 const [transactions, setTransactions] = useState ([]);
+const [loading, setLoading] = useState(false);
 const [currentPage, setCurrentPage] = useState(1);
 const [itemsPerPage, setItemsPerPage] = useState(10);
 
@@ -42,7 +43,9 @@ const RenderPageNumbers = pages.map(number =>{
 const web3 = new Web3 (window.ethereum);
 
   useEffect(()  => {
-    const load = async () => {     
+    const load = async () => { 
+      setLoading(true);
+
       const transactions = await bnbEscrow.getPastEvents("DepositCreation", {
         filter: {Receiver: defaultAccount},
         fromBlock: 0,
@@ -50,6 +53,8 @@ const web3 = new Web3 (window.ethereum);
     });
     transactions.sort((a, b) => b.returnValues.id - a.returnValues.id);
     setTransactions(transactions);
+
+    setLoading(false);
      
     }
     if(connected) {
@@ -82,6 +87,12 @@ const web3 = new Web3 (window.ethereum);
   let pageDecrementBtn = null;
   if(pages.length > maxPageNumberLimit) {
     pageDecrementBtn = <li onClick={handlePrevious}> &hellip; </li>
+  }
+
+  if(loading === true) {
+    return <div className="spinner-border m-2 text-primary" role="status">
+    <span className="visually-hidden">Loading...</span>
+    </div>
   }
 
     return ( 
