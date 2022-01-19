@@ -188,6 +188,26 @@ function customTheme(theme) {
                 {defaultAccount && validInput > 0 && tokenId !== undefined && isSendingTransaction === false &&
                 <button className="btn btn-primary m-3" type="submit"onClick={TOKENSdeposit}>
                   <i className="bi bi-box-arrow-in-down pe-2"></i>Depositar</button>}
+                  <span>
+                <>
+                {['top'].map((placement) => (
+                <OverlayTrigger
+                key={placement}
+                placement={placement}
+                overlay={
+                <Tooltip id={`tooltip-${placement}`}>
+                Para depositar tokens debe aceptar dos transacciones consecutivas en su billetera, 
+                la primera para permitir usar el monto de su token y la
+                segunda para permitir crear el depósito. 
+                
+                </Tooltip>
+                }
+                >   
+                <i className="bi bi-info-circle ms-2 ms-lg-2 fs-5 text-danger"></i>
+                </OverlayTrigger>
+                ))}
+                </>
+                </span>
                 </form>     
                 </div>
               </div>
