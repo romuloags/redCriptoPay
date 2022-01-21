@@ -4,7 +4,7 @@ import historial from "../assets/historial.JPG"
 import historial1 from "../assets/historial1.PNG"
 import web3jsimage from "../assets/web3js.png"
 
-const TermsOfUse = () => {
+const Terms = () => {
     
    return (  
 
@@ -318,4 +318,4 @@ const TermsOfUse = () => {
     );
 }
  
-export default TermsOfUse;
+export default Terms;
