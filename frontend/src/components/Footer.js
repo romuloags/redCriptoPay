@@ -75,7 +75,7 @@ const Footer = () => {
           }
           >
          <Link className="text-muted bg-warning p-1 p-lg-2 
-          rounded-2" to="/terminosypoliticas" id="tt"><i className="bi bi-file-text text-danger"></i>
+          rounded-2" to="/terminos" id="tt"><i className="bi bi-file-text text-danger"></i>
           </Link>
           </OverlayTrigger>
           ))}
