@@ -1,9 +1,3 @@
-import datoscontacto from "../assets/datoscontacto.JPG"
-import depositar from "../assets/depositar.JPG"
-import historial from "../assets/historial.JPG"
-import historial1 from "../assets/historial1.PNG"
-import web3jsimage from "../assets/web3js.png"
-
 const Terms = () => {
     
    return (  
