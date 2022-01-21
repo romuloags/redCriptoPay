@@ -198,8 +198,10 @@ const ArchiveBNBjudge = ({defaultAccount, contactInfo, tokensEscrow}) => {
                             ))}
                             </>
                             </span>
-                            <div className="ms-2 text-dark">{senderContactInfo}
-                            </div>
+                            {senderContactInfo !== "" && <div className="ms-2 text-dark">{senderContactInfo}
+                            </div>}
+                            {senderContactInfo === "" && <div className="ms-2 text-dark">No registrado.
+                            </div>}
                             </div>
                   <div className="text-dark my-2">Información del Receptor
                             <span>
@@ -219,8 +221,10 @@ const ArchiveBNBjudge = ({defaultAccount, contactInfo, tokensEscrow}) => {
                             ))}
                             </>
                             </span>
-                            <div className="ms-2 text-dark">{receiverContactInfo}
-                            </div>
+                            {receiverContactInfo !== "" && <div className="ms-2 text-dark">{receiverContactInfo}
+                            </div>}
+                            {receiverContactInfo === "" && <div className="ms-2 text-dark">No registrado.
+                            </div>}
                             </div>
                   <div className="my-2">Estado de la transacción
                   <span>
