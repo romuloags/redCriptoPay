@@ -185,7 +185,7 @@ setIsLoading(false);
           <Route exact path="/whitepaper" >
            <WhitePaper/>
           </Route>
-          <Route exact path="/terminosypoliticas" >
+          <Route exact path="/terminos" >
            <Terms/>
           </Route>
           <Route exact path="/soporte" >

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import datoscontacto from "../assets/datoscontacto.JPG"
 import depositar from "../assets/depositar.JPG"
 import historial from "../assets/historial.JPG"
@@ -528,7 +529,7 @@ const Whitepaper = () => {
                         (como se establece más particularmente en los Términos de servicio) asociados con su participación en Red Cripto Pay. Debe comprender 
                         de forma general cómo funciona Red Cripto Pay, leer el Whitepaper y los términos de servicio antes de interactuar con sus contratos 
                         inteligentes. Para mayor información:
-                        <a className="px-1 text-primary text-decoration-none" href="/terminosypoliticas">Términos de servicio y Políticas de Privacidad</a>  
+                        <Link className="px-1 text-primary text-decoration-none" to="/terminos">Términos de servicio y Políticas de Privacidad</Link>  
                         </p>  
                         </div>
                         </div>
