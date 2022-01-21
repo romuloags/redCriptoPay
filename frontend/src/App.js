@@ -23,6 +23,7 @@ import SingleTOKENSreceiver from "./components/singleTOKENSreceiver";
 import Error404 from "./components/404";
 import WhitePaper from "./components/whitepaper"
 import Support from "./components/support";
+import TermsOfUse from "./components/termsOfUse";
 
 import "./custom.css"
 
@@ -183,6 +184,9 @@ setIsLoading(false);
           </Route>
           <Route exact path="/whitepaper" >
            <WhitePaper/>
+          </Route>
+          <Route exact path="/terminosypoliticas" >
+           <TermsOfUse/>
           </Route>
           <Route exact path="/soporte" >
            <Support/>

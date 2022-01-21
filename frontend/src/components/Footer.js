@@ -40,8 +40,48 @@ const Footer = () => {
          </li>  
          <li className="ms-3"><a className="text-muted bg-warning p-1 p-lg-2 rounded-2" 
          href="https://github.com/romuloags/redCriptoPay"><i className="bi bi-github text-danger"></i></a></li>
-         <li className="ms-3"><a className="text-muted bg-warning p-1 p-lg-2 rounded-2" 
-         href="https://redcripto.com/blog"><i className="bi bi-rss-fill text-danger"></i></a></li>
+         <li className="ms-3">
+         <span>
+         <>
+          {['top'].map((placement) => (
+          <OverlayTrigger
+          key={placement}
+          placement={placement}
+          overlay={
+          <Tooltip id={`tooltip-${placement}`}>
+          Blog
+          </Tooltip>
+          }
+          >
+          <a className="text-muted bg-warning p-1 p-lg-2 rounded-2" 
+          href="https://redcripto.com/blog"><i className="bi bi-rss-fill text-danger"></i>
+          </a>
+          </OverlayTrigger>
+          ))}
+         </>
+         </span>  
+         </li>
+         <li className="ms-3" >
+         <span>
+         <>
+          {['top'].map((placement) => (
+          <OverlayTrigger
+          key={placement}
+          placement={placement}
+          overlay={
+          <Tooltip id={`tooltip-${placement}`}>
+          Términos de Servicio y Politicas de Privacidad.
+          </Tooltip>
+          }
+          >
+         <Link className="text-muted bg-warning p-1 p-lg-2 
+          rounded-2" to="/terminosypoliticas" id="tt"><i className="bi bi-file-text text-danger"></i>
+          </Link>
+          </OverlayTrigger>
+          ))}
+         </>
+         </span>
+         </li>
          </ul>
        </div>
      </div>   

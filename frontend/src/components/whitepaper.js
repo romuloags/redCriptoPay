@@ -34,7 +34,7 @@ const Whitepaper = () => {
                         <i className="bi bi-file-text pe-2"></i>Whitepaper</h4>
                         <div className="my-3">
                         <div className="text-muted">
-                        Whitepaper oficial de Red Cripto Pay, última actualización febrero 2022
+                        Whitepaper oficial de Red Cripto Pay, última revisión febrero 2022
                         </div>
                         <div className="row justify-content-center">
                         <div className="col-md-6 text-start">
@@ -52,14 +52,14 @@ const Whitepaper = () => {
 
                         <div className="col-md-6 text-start">
                         <div id="list-example2" className="list-group my-md-4 mb-4 mt-0 shadow">
-                        <a className="list-group-item list-group-item-action border-0" href="#terminos-y-condiciones">
-                        <i className="bi bi-arrow-right-circle-fill text-primary mx-2"></i>Términos y Condiciones</a>
                         <a className="list-group-item list-group-item-action border-0" href="#metamask-web3">
                         <i className="bi bi-arrow-right-circle-fill text-primary mx-2"></i>Metamask y web3.js</a>
                         <a className="list-group-item list-group-item-action border-0" href="#contratos">
                         <i className="bi bi-arrow-right-circle-fill text-primary mx-2"></i>Contratos Inteligentes</a>
                         <a className="list-group-item list-group-item-action border-0" href="#futuro">
                         <i className="bi bi-arrow-right-circle-fill text-primary mx-2"></i>Futuro Desarrollo</a>
+                        <a className="list-group-item list-group-item-action border-0" href="#terminos-y-condiciones">
+                        <i className="bi bi-arrow-right-circle-fill text-primary mx-2"></i>Descargo de responsabilidad y Riesgos</a>
                         </div>
                         </div>
                         </div>
@@ -219,10 +219,6 @@ const Whitepaper = () => {
                         llegan a un acuerdo, Bob decide reembolsar el depósito a Alice, Alice recibe 97 USDT de vuelta ya que se descontó el 3% (3 USDT) del
                         monto total; en caso de que Alice y Bob si lleguen a un acuerdo, Alice libera el depósito a Bob, Bob recibe 97 USDT ya que se descontó 
                         el 3% (3 USDT) del monto total.               
-                        </p>
-                        <h5 className="fw-bold" id="terminos-y-condiciones">Términos y Condiciones</h5>
-                        <p className="text-start">
-                        ...
                         </p>
                         <h5 className="fw-bold" id="metamask-web3">Metamask y web3.js</h5>          
                         <p className="text-start fw-bold">
@@ -469,6 +465,71 @@ const Whitepaper = () => {
                         dentro de la Dapp; para implementar nuevos cambios en la plataforma deben ser desplegados nuevos contratos, creando así la versión 2.0
                         de Red Cripto Pay, aclarando que la versión 1.0 (actual) seguiría funcionando para no perjudicar a ningún usuario.
                         </p>
+                        <h5 className="fw-bold" id="terminos-y-condiciones">Descargo de responsabilidad y Riesgos</h5>
+                        <p className="text-start fw-bold">Descargo de Responsabilidad</p>
+                        <p className="text-start">
+                        Lea detenidamente la totalidad de esta sección de “descargo de responsabilidad". Nada dentro de Red Cripto Pay constituye asesoría legal, 
+                        financiera, comercial o fiscal y usted debe consultar a su propio profesional legal, financiero, fiscal u otro asesor(es) antes de involucrarse
+                        en cualquier actividad en relación con Red Cripto Pay. Red Cripto Pay o cualquiera de los miembros del equipo del proyecto será responsable
+                        por cualquier tipo de daño o pérdida directa o indirecta que usted puede sufrir en relación con el acceso a este Whitepaper, o cualquier 
+                        otro sitio web o material publicado por Red Cripto Pay. El Whitepaper y el sitio web están destinados únicamente a fines informativos y
+                        de servicio de contacto entre pares del tipo P2P sin involucrar a Red Cripto Pay y no constituyen un prospecto, un documento de oferta,
+                        una oferta de valores, una solicitud de inversión o cualquier oferta para vender cualquier producto, artículo o activo (ya sea digitales
+                        o de otro tipo). La información contenida en este documento puede no ser exhaustiva y no implica ningún elemento de una relación 
+                        contractual. No hay seguridad en cuanto a la exactitud o integridad de dicha información y no se proporciona ni pretende proporcionar 
+                        ninguna representación, garantía o compromiso en cuanto a la exactitud o integridad de dicha información donde el Whitepaper o el 
+                        sitio web incluye información que ha sido obtenida de fuentes de terceros, Red Cripto Pay no ha verificado de forma independiente 
+                        la exactitud o integridad de dicha información. Además, usted reconoce que las circunstancias pueden cambiar y que el Whitepaper o 
+                        el sitio web pueden quedar obsoletos como resultado; y tampoco Red Cripto Pay tiene la obligación de actualizar o corregir este documento 
+                        en conexión con el mismo.
+                        </p>
+                        <p className="text-start fw-bold">Riegos</p>
+                        <p className="text-start">
+                        Si decide interactuar con los contratos inteligentes de Red Cripto Pay o participar en Red Cripto Pay, usted expresamente reconoce, 
+                        acepta y asume los siguientes riesgos:
+                        </p>
+                        <p className="text-start">
+                        Regulaciones Inciertas y Acciones de Cumplimiento: La regulación de Red Cripto Pay y el resto de las aplicaciones descentralizadas 
+                        es poco claro o está sin resolver en muchas jurisdicciones. La regulación de los activos digitales se ha convertido en un objetivo 
+                        principal de la regulación en todos los países principales en el mundo. Es imposible predecir cómo, cuándo o si las agencias de 
+                        regulación pueden aplicar regulaciones existentes o crear nuevas regulaciones con respecto a dicha tecnología y sus aplicaciones, 
+                        incluida Red Cripto Pay. Las acciones regulatorias podrían afectar negativamente a Red Cripto Pay de varias maneras. Red Cripto Pay 
+                        puede cesar sus operaciones en una jurisdicción en caso de que las acciones regulatorias, o los cambios a la ley o regulación, hagan 
+                        ilegal operar en dicha jurisdicción, o comercialmente indeseable para obtener la(s) aprobación(es) reglamentaria(s) necesaria(s) para 
+                        operar en tal jurisdicción.  
+                        </p>
+                        <p className="text-start">
+                        Divulgación inadecuada de información: a la fecha del presente, Red Cripto Pay aún está en desarrollo y sus conceptos de diseño, 
+                        consenso, mecanismos, algoritmos, códigos y otros detalles técnicos y los parámetros pueden ser constante y frecuentemente actualizados 
+                        y cambiados. Aunque este documento técnico contiene la información más actualizada relacionada con Red Cripto Pay, no está absolutamente 
+                        completa y aún puede ser ajustada y actualizada por el equipo de Red Cripto Pay de vez en cuando. Red Cripto Pay no tiene la capacidad ni 
+                        la obligación de mantener a los usuarios de la plataforma informados de cada detalle (incluido el progreso del desarrollo y las expectativas 
+                        e hitos) con respecto al proyecto para desarrollar Red Cripto Pay, por lo tanto, la divulgación de información de forma ineficiente es 
+                        inevitable.
+                        </p>
+                        <p className="text-start">
+                        Falta de desarrollo: existe el riesgo de que el desarrollo de Red Cripto Pay no se ejecutara ni implementara según lo planeado, por una 
+                        variedad de motivos, incluido, entre otros, el caso de una disminución de los precios de cualquier activo digital, imprevistos técnicos, 
+                        dificultades y escasez de fondos de desarrollo para las actividades.
+                        </p>
+                        <p className="text-start">
+                        Debilidades de seguridad: Hackers u otros grupos maliciosos u otras organizaciones pueden intentar interferir con Red Cripto Pay y todo 
+                        su ecosistema en una amplia variedad de formas, incluidos, entre otros, ataques de malware, ataques de denegación de servicio, ataques 
+                        basados en consenso, ataques Sybil, suplantación de identidad, obtención de los fondos dentro de los contratos inteligentes por 
+                        debilidades en el código Además, existe el riesgo de que un tercero o un miembro de Red Cripto Pay, puede introducir de manera 
+                        intencional o no intencional debilidades en el núcleo y/o infraestructura de Red Cripto Pay, lo que podría afectar negativamente 
+                        a la plataforma. Además, el futuro de las innovaciones en criptografía y seguridad son altamente impredecibles y los avances en 
+                        criptografía, o los avances técnicos (incluso sin limitación del desarrollo de la computación cuántica), podría presentar riesgos 
+                        desconocidos para Red Cripto Pay al renderizar de manera ineficaz el mecanismo de consenso criptográfico que sustenta el protocolo 
+                        de la Blockchain.
+                        </p>
+                        <p className="text-start">
+                        Otros riesgos: Además de los riesgos potenciales mencionados anteriormente, estos no son exhaustivos y existen otros riesgos 
+                        (como se establece más particularmente en los Términos de servicio) asociados con su participación en Red Cripto Pay. Debe comprender 
+                        de forma general cómo funciona Red Cripto Pay, leer el Whitepaper y los términos de servicio antes de interactuar con sus contratos 
+                        inteligentes. Para mayor información:
+                        <a className="px-1 text-primary text-decoration-none" href="/terminosypoliticas">Términos de servicio y Políticas de Privacidad</a>  
+                        </p>  
                         </div>
                         </div>
                       </div>
