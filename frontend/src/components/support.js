@@ -41,7 +41,8 @@ const Support = () => {
                         <h5 className="fw-bold">Contacte al Jurado</h5>
                         <div className="my-3">
                         <a className="btn btn-primary" 
-                        href="#" role="button"><i className="bi bi-pen pe-2"></i>Formulario</a>
+                        href="https://docs.google.com/forms/d/e/1FAIpQLScbRdBKtLX0AlZuWiG5VaCOHl_kwLrRK1GiS4dlxrAF49h_6w/viewform?usp=sf_link" role="button">
+                        <i className="bi bi-pen pe-2"></i>Formulario</a>
                         </div>
                         <div className="my-3">
                         <a className="btn btn-dark" 
