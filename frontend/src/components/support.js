@@ -6,7 +6,7 @@ const Support = () => {
 
     const handleOnclick = (e) => {
     e.preventDefault();
-    history.push("/historial")
+    history.go(-1)
    }
     
    return (  
@@ -46,7 +46,7 @@ const Support = () => {
                         </div>
                         <div className="my-3">
                         <a className="btn btn-dark" 
-                        href="#" role="button"><i className="bi bi-chat-left-text-fill pe-2"></i>Chat</a>
+                        href="https://api.whatsapp.com/send?phone=584120298783" role="button"><i className="bi bi-chat-left-text-fill pe-2"></i>Chat</a>
                         <div className="text-primary my-3">
                         Si tiene un problema con su transacción primero debe llenar el formulario y luego
                         contactar al Jurado  (soporte técnico).</div>
