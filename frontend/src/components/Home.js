@@ -32,22 +32,26 @@ const Home = ({defaultAccount}) => {
                 <h4 className=" fs-2 d-none d-md-block text-danger">Deposita y Recibe Criptomonedas de forma segura.</h4>
                </div>  
              </div>
-             <div className="card justify bg-light shadow content-center mb-4">
+             <div className="card justify shadow content-center mb-4">
                <div className="card-body">
-                <h3>Compra y vende Productos y Servicios de manera segura y descentralizada.</h3>
-                <h4 className=" fs-6 text-primary text-justify">
-                 Procesador de pago en Criptomonedas con protección al Comprador y Vendedor, a 
+                <h3 className="text-dark">Compra y vende Productos y Servicios de manera segura y descentralizada.</h3>
+                <p className=" fs-6 text-dark text-justify">
+                Depósitos descentralizados P2P intercambiando Criptomonedas por Productos y Servicios con protección al Comprador y Vendedor, a 
                  través de la Binance Smart Chain. 
-                 Solo debes conectar tu billetera descentralizada.  
-                 <a className="px-1" href="https://metamask.io/download"><img src={metamaskicon} 
-                 width="25" height="25" alt="bnbicon"></img></a></h4>
+                 Solo debes conectar tu billetera descentralizada
+                 <a className="btn btn-light text-primary ps-1 p-0" 
+                 href="https://metamask.io/download" role="button"> 
+                 <img className="me-1" src={metamaskicon} 
+                 width="25" height="25" alt="bnbicon"></img>Metamask</a> 
+                 </p>
+                 
                </div>  
              </div>
              <div className="card justify bg-light shadow content-center mb-4">
                <div className="card-body">
                 <div>  
                 <h4 className="col-lg-5 p-2 text-justify bg-primary rounded text-white">
-                <span className="ps-2">¿Cómo funciona Red Cripto Pay?</span></h4>
+                <span className="ps-3">¿Cómo funciona Red Cripto Pay?</span></h4>
                 </div>
                 <h4 className=" fs-6 text-info text-start">
                 Para enviar o recibir depósitos debes aegurarte de haberte registrado con tu billetera, añadiendo
