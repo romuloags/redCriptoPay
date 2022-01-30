@@ -188,7 +188,8 @@ function customTheme(theme) {
                 {defaultAccount && validInput > 0 && tokenId !== undefined && isSendingTransaction === false &&
                 <button className="btn btn-primary m-3" type="submit"onClick={TOKENSdeposit}>
                   <i className="bi bi-box-arrow-in-down pe-2"></i>Depositar</button>}
-                  <span>
+                  {defaultAccount && validInput > 0 && tokenId !== undefined && isSendingTransaction === false &&  
+                <span>
                 <>
                 {['top'].map((placement) => (
                 <OverlayTrigger
@@ -207,7 +208,7 @@ function customTheme(theme) {
                 </OverlayTrigger>
                 ))}
                 </>
-                </span>
+                </span>}
                 </form>     
                 </div>
               </div>
