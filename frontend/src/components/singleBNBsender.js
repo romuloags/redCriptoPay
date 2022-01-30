@@ -27,7 +27,7 @@ const SingleBNBsender = ({defaultAccount, bnbEscrow, contactInfo}) => {
 
   const handleOnclick = (e) => {
     e.preventDefault();
-    history.push("/historial")
+    history.go(-1)
    }
 
    useEffect(()  => {
