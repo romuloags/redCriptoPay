@@ -33,7 +33,6 @@ const SingleTOKENSsender = ({defaultAccount, tokensEscrow, contactInfo}) => {
 
    useEffect(()  => {
     const load = async () => {   
-       try {
 
       setLoading(true);  
         
@@ -50,10 +49,6 @@ const SingleTOKENSsender = ({defaultAccount, tokensEscrow, contactInfo}) => {
 
       setLoading(false);
 
-       } catch (error) {
-         alert ("Debe estar conectado para ver la transacción");
-         console.error(error);
-       }
     }
     if(typeof defaultAccount) {
     load(); }

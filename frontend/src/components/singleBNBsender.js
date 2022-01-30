@@ -32,7 +32,6 @@ const SingleBNBsender = ({defaultAccount, bnbEscrow, contactInfo}) => {
 
    useEffect(()  => {
     const load = async () => {   
-       try {
 
       setLoading(true);  
         
@@ -48,10 +47,6 @@ const SingleBNBsender = ({defaultAccount, bnbEscrow, contactInfo}) => {
 
       setLoading(false);
 
-       } catch (error) {
-         alert ("Debe estar conectado para ver la transacción");
-         console.error(error);
-       }
     }
     if(typeof defaultAccount) {
     load(); }

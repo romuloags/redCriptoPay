@@ -33,8 +33,6 @@ const SingleBNBreceiver = ({defaultAccount, bnbEscrow, contactInfo}) => {
 
   useEffect(()  => {
     const load = async () => { 
-
-      try {
       
       setLoading(true);
       
@@ -49,11 +47,6 @@ const SingleBNBreceiver = ({defaultAccount, bnbEscrow, contactInfo}) => {
       setSenderContactInfo(senderContactInfo);
 
       setLoading(false);
-
-    } catch (error) {
-      alert ("Debe estar conectado para ver la transacción");
-      console.error(error);
-    }
 
     }
     if(defaultAccount) {
