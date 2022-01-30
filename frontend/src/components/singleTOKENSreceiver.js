@@ -155,10 +155,7 @@ const SingleTOKENSreceiver = ({defaultAccount, tokensEscrow, contactInfo}) => {
                             </span> ))}   
                             </div>
                             <div className="text-info my-2">Valor
-                            {transactionToken !== "0x2b4db28Bf7759963e889cfED135f74051fBD1274" 
-                            && <span className="mx-2 text-warning">{transactionValue}</span>}
-                            {transactionToken === "0x2b4db28Bf7759963e889cfED135f74051fBD1274" 
-                            && <span className="mx-2 text-warning">{transactionAmount}</span>}
+                            <span className="mx-2 text-warning">{transactionValue}</span>
                             {tokensTransactions.map((token) =>(
                             <span className="text-warning mx-0" key={token.address}>
                             {token.address === transactionToken && <span>{token.labelSingle}</span>}

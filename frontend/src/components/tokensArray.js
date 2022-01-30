@@ -19,10 +19,7 @@ import usdcicon from "../assets/usdcicon.png"
         width="20" height="20" alt="btcbicon"/>BTCB<span className="text-dark"> Bitcoin BEP2</span></div> },
         { id: 4, address: "0x93214264d3Da881c6a7036ade63B40585B8e3dAC", 
         tag: 'ETH', label: <div> <img className="me-2 mb-1" src={ethicon} 
-        width="20" height="20" alt="usdticon"/>ETH<span className="text-dark"> Ethereum Token</span></div>},
-        { id: 5, address: "0x2b4db28Bf7759963e889cfED135f74051fBD1274", 
-        tag: 'LEC', label: <div> <img className="me-2 mb-1" src={ethicon} 
-        width="20" height="20" alt="usdticon"/>LEC<span className="text-dark"> Lechuga Coin</span></div>}
+        width="20" height="20" alt="usdticon"/>ETH<span className="text-dark"> Ethereum Token</span></div>}
         ];
         
 
