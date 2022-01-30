@@ -28,12 +28,11 @@ const SingleTOKENSsender = ({defaultAccount, tokensEscrow, contactInfo}) => {
 
   const handleOnclick = (e) => {
     e.preventDefault();
-    history.push("/historial")
+    history.go(-1)
    }
 
    useEffect(()  => {
     const load = async () => {   
-       try {
 
       setLoading(true);  
         
@@ -50,10 +49,6 @@ const SingleTOKENSsender = ({defaultAccount, tokensEscrow, contactInfo}) => {
 
       setLoading(false);
 
-       } catch (error) {
-         alert ("Debe estar conectado para ver la transacción");
-         console.error(error);
-       }
     }
     if(typeof defaultAccount) {
     load(); }
