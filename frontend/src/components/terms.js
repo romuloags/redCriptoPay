@@ -86,14 +86,14 @@ const Terms = () => {
                         <p className="text-start fw-bold">5. Operaciones de criptomonedas</p>
                         <p className="text-start">
                         Las partes de una operación se denominan "emisores" (aquellos que están interesados en intercambiar criptomonedas por productos y/o servicios)
-                        y "emisores" (aquellos que están interesados en intercambiar productos y/o servicios por criptomonedas).
+                        y "receptores" (aquellos que están interesados en intercambiar productos y/o servicios por criptomonedas).
                         Al operar con un usuario ubicado con la ayuda de los servicios de Red Cripto, las instrucciones de pago, envío, logística y todas las 
                         condiciones propuestas para el intercambio, solo pueden comunicarse directamente entre el emisor y el receptor. No tenemos cuentas bancarias,
                         almacenes, o logística de productos que retengan los fondos o productos de los usuarios, ni facilitamos ni custodiamos ningún pago en moneda
                         local o productos y/o servicios entre compradores y vendedores. En ningún momento durante el curso de una operación, la criptomoneda de 
                         los compradores o vendedores entra en nuestro control, siempre estará en el contrato mientras no se libere o reembolse el depósito, 
                         cuando se libere o reembolse el depósito se transferirá a nuestro control las comisiones por el servicio restado del monto total de 
-                        la transacción. Las transacciones de Binance Coin(BNB) y tokens BEP-20 se realizan a través de la red informática distribuida de la 
+                        la transacción. Las transacciones de Binance Coin (BNB) y tokens BEP-20 se realizan a través de la red informática distribuida de la 
                         Binance Smart Chain (BSC), que no podemos controlar ni controlamos. Cuando un emisor envía BNB o tokens a un receptor durante el curso
                         de una transacción, el emisor transfiere BNB o tokens directamente a un contrato inteligente de custodia en la BSC. Red Cripto Pay
                         no puede acceder al BNB o token retenido en custodia sin el permiso digital explícito del emisor o receptor. Es imposible que dirijamos 
@@ -156,7 +156,7 @@ const Terms = () => {
                         <p className="text-start">
                         Las transferencias de criptomonedas son irreversibles. Si libera o envía criptomonedas a otra persona, generalmente no es posible que 
                         Red Cripto Pay, ni usted mismo, recupere los fondos. Esto también se aplica al envío de criptomonedas a una dirección incorrecta. 
-                        Transfiere cualquier criptomoneda bajo su propio riesgo. Si alguien obtiene acceso a su cuenta y usa su billetera, no tendremos forma
+                        Transfiera cualquier criptomoneda bajo su propio riesgo. Si alguien obtiene acceso a su cuenta y usa su billetera, no tendremos forma
                         de recuperar sus fondos. Le recomendamos encarecidamente que, si no tiene un conocimiento sólido de la tecnología Blockchain subyacente
                         que admite criptomonedas como Binance Coin y tokens BEP-20, no utilice nuestros servicios. Las criptomonedas pueden estar sujetas a una 
                         volatilidad de precios extrema. Debe considerar sus circunstancias financieras y su tolerancia al riesgo antes de adquirir y operar con 
@@ -222,7 +222,7 @@ const Terms = () => {
                         </p>
                         <p className="text-start fw-bold">Contacto</p>
                         <p className="text-start">
-                        Envíe cualquier pregunta, comentario, problema o correspondencia general por correo electrónico a soporte@redcripto.com.    
+                        Envíe cualquier pregunta, comentario, problema o correspondencia general por correo electrónico a soporte@redcripto.com   
                         </p>
                         <h5 className="fw-bold mb-3" id="introduccion">Política de Privacidad</h5>
                         <p className="text-start">
