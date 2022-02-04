@@ -229,7 +229,7 @@ const Home = ({defaultAccount}) => {
                  <div>
                    <span>
                    <img className="me-1" src={btcbicon} width="20" height="20" alt="usdticon"></img> 
-                   </span>BTCB Bitcoin BEP2
+                   </span>BTCB Bitcoin BEP20
                  </div>
                  <div>
                    <span>
