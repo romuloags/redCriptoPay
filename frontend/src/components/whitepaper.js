@@ -67,7 +67,7 @@ const Whitepaper = () => {
                         <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" className="scrollspy-example" tabIndex="0">
                         <h5 className="fw-bold" id="introduccion">Introducción</h5>
                         <p className="text-start">
-                        Las Criptomonedas han tomado gran auge desde el 2017, y a finales del 2020 y comienzos del 2021 cada vez eran 
+                        Las Criptomonedas han tomado gran auge desde el 2017, a finales del 2020 y comienzos del 2021 cada vez eran 
                         más utilizadas las aplicaciones descentralizadas (Dapps). Con el nacimiento de la Binance Smart Chain en el 2020, 
                         cada vez son más los proyectos de la Web 3 que salen a la luz. En Venezuela desde el año 2018 las Criptomonedas son 
                         un tema cotidiano, y cada vez son más personas que las utilizan, de hecho, Venezuela es el tercer país a 
@@ -106,11 +106,11 @@ const Whitepaper = () => {
                         momento el dinero o las conversaciones de Alice y Bob están en manos de la plataforma.
                         </p>
                         <p className="text-start">
-                        Alice interactúa con los Contratos inteligentes de Red Cripto,
+                        Alice interactúa con los Contratos inteligentes de Red Cripto Pay,
                         para ello primero debe registrar sus datos de contacto con su dirección de billetera, de esta forma la dirección de Billetera de Alice
-                        queda registrada en la Blockchain con sus datos de contacto, como número telefónico, redes sociales, correo electrónico 
+                        queda registrada en la Blockchain con sus datos de contacto como número telefónico, redes sociales, correo electrónico 
                         o entre otros medios de contacto; de igual forma Alice debe asegurarse que la Billetera suministrada por Bob contenga datos de contacto,
-                        ya que de esta forma ambas partes se aseguran que los medios de contacto por lo que se comunican corresponden a su dirección de billetera,
+                        ya que de esta forma ambas partes se aseguran que los medios de contacto por los que se comunican corresponden a su dirección de billetera,
                         la cual utilizarán para realizar la transacción, si Alice o Bob presentan un Dato de Contacto diferente en su billetera con respecto
                         al que interactúan, deben corregirlo y así asegurar que se trata de ellos; ej.: Alice habla con Bob previamente con su número
                         telefónico 1234567, luego de que llegan a un acuerdo Alice registra sus datos de contacto con otro número telefónico 7654321
@@ -136,8 +136,6 @@ const Whitepaper = () => {
                         Alice  y sus datos de contacto coincidan con la transacción de Alice, ambas partes deben mantener un canal de comunicación abierto durante la 
                         transacción. Cuando Bob haya confirmado la validez de la transacción debe proceder a enviar el producto o servicio (acordado de manera previa) 
                         a Alice.
-                        </p>
-                        <p className="text-start">
                         Cuando Alice haya recibido el producto o servicio (acordado de manera previa) por parte de Bob, Alice deberá liberar los fondos a Bob para así 
                         culminar con la transacción de manera exitosa.
                         </p>
@@ -182,7 +180,7 @@ const Whitepaper = () => {
                         la dirección de Billetera de su contraparte (receptor) y escribir el monto exacto a depositar en BNB, si incluye decimales estos deben escribirse 
                         después de un punto; por otro lado, si elije depositar con tokens BEP-20 debe pegar la dirección de su contraparte (receptor), elegir entre
                         las opciones el token BEP-20 a depositar y el monto exacto a enviar en el token seleccionado, si incluye decimales de igual forma deben 
-                        escribirse después de un punto; una vez hay llenado todos los campos de manera correcta, debe dar click a Depositar; debe tener en cuenta
+                        escribirse después de un punto; una vez haya llenado todos los campos de manera correcta, debe dar click a Depositar; debe tener en cuenta
                         las comisiones de Red de la BSC para realizar la transacción siempre pagadas en BNB. Cuando de click en Depositar, se abrirá una ventana de 
                         Metamask para confirmar la transacción, si deposita con BNB solo bastará confirmar una transacción, en caso de que haya seleccionado un token
                         debe confirmar dos transacciones, una para dar permiso a Red Cripto Pay de gastar su token y otra para aprobar la transacción, al confirmar la 
@@ -193,11 +191,10 @@ const Whitepaper = () => {
                         Cuando haya sido aprobada la transacción de Depósito por la Blockchain, puede dirigirse hacia el apartado del menú "Historial", dentro del
                         historial podrá ver dos opciones BNB y Tokens BEP-20, y dentro de cada una de ellas podrá ver dos opciones más, enviadas y recibidas, de esta 
                         forma podrá ver las transacciones enviadas o recibidas con BNB y Tokens; de manera previa puede visualizar el Id de la transacción el monto,
-                        la moneda y la dirección de billetera del receptor en caso de que este dentro de las transacciones enviadas o del emisor en caso de que este 
-                        dentro de las transacciones recibidas.
+                        la moneda y la dirección de billetera del receptor  o del emisor según sea el caso.
                         Si da click en la transacción podrá observar los detalles de la misma, nuevamente el Id de la transacción, la dirección de Billetera del emisor
                         y receptor, el monto total de la transacción, el valor de la transacción (monto total menos la comisión de depósito), BNB o token BEP-20,
-                        datos de contacto de la contraparte, Estado de la transacción, donde se muestra si el depósito está resguardado en el contrato, si fue liberado,
+                        datos de contacto de la contraparte, Estado de la transacción donde se muestra si el depósito está resguardado en el contrato, si fue liberado,
                         si fue reembolsado, o si hay una disputa en marcha. Por último, se muestran
                         tres botones: "Liberar fondos", en caso de ser emisor; "Reembolsar", en caso de ser receptor; "Abrir 
                         Disputa"; y el botón "Jurado" para enviar el formulario y comunicarse con Soporte técnico en caso de algún problema con la contraparte durante
@@ -229,7 +226,7 @@ const Whitepaper = () => {
                         MetaMask es la herramienta pionera que permite las interacciones y la experiencia del usuario en Web3. Actualmente está disponible como 
                         extensión del navegador y como aplicación móvil en dispositivos Android y iOS. MetaMask se creó para satisfacer las necesidades de sitios 
                         web seguros y utilizables basados en Ethereum. En particular, se encarga de la gestión de cuentas y de la conexión del usuario 
-                        a la cadena Blockchain. MetaMask permite a los usuarios administrar cuentas y sus claves de varias maneras, incluidas billeteras de hardware, 
+                        a la Blockchain. MetaMask permite a los usuarios administrar cuentas y sus claves de varias maneras, incluidas billeteras de hardware, 
                         mientras las aísla del contexto del sitio. Esta es una gran mejora de seguridad con respecto al almacenamiento de claves de usuario en un único
                         servidor central, o incluso en un almacenamiento local, lo que puede permitir robos masivos de cuentas. Esta característica de seguridad también
                         viene con la conveniencia del desarrollador: para los desarrolladores, simplemente interactúa con la API de ethereum disponible globalmente
@@ -350,7 +347,7 @@ const Whitepaper = () => {
                         Si existiese algún problema con la transacción de manera externa, Emisor y Receptor no lleguen a un acuerdo, estos pueden abrir una disputa 
                         y entrará en acción el Jurado para resolver la Disputa. redcriptopayTOKENS.sol utiliza Ownable.sol para declarar la función
                         <span className="text-muted"> function setJudge(address _judge) external onlyOwner</span> de esta manera solo el "owner" del contrato puede 
-                        asignar la variable "judge", el encargado de resolver las disputas de las transacciones del contrato; también las funciones 
+                        asignar la variable "judge" el encargado de resolver las disputas de las transacciones del contrato; también las funciones 
                         <span className="text-muted"> function addToken(IERC20 tokencontractaddress) external onlyOwner onlyEOA</span> y 
                         <span className="text-muted"> function removeToken(uint tokenindex) external onlyOwner onlyEOA</span> explicadas más adelante solo pueden
                         ser llamadas por el "owner".
@@ -412,7 +409,7 @@ const Whitepaper = () => {
                         en tokens de una transacción en específico dentro del contrato y enviarlos a la dirección de billetera del receptor de la transacción, 
                         tomando en cuenta que se resta del monto total la comisión del "judge" y "owner, quedando así el valor neto de la transacción 
                         <span className="text-muted"> t.value</span>. Esta
-                        función solo puede ser llamada por el "judge" o el emisor de la transacción, además la transacción debe poseer el estado de "FundsReceived"
+                        función solo puede ser llamada por el "judge" o el emisor de la transacción, además, la transacción debe poseer el estado de "FundsReceived"
                         o "AwaitingResolution", 
                         de lo contrario fallará el intento de liberar los fondos; de igual forma al llamar esta función se enviará la comisión en tokens al "judge" y 
                         "owner" del contrato; y por último se actualizará el estado de la transacción a "FundsReleased" y se emitirá el evento 
@@ -471,8 +468,8 @@ const Whitepaper = () => {
                         <p className="text-start">
                         Lea detenidamente la totalidad de esta sección de “descargo de responsabilidad". Nada dentro de Red Cripto Pay constituye asesoría legal, 
                         financiera, comercial o fiscal y usted debe consultar a su propio profesional legal, financiero, fiscal u otro asesor(es) antes de involucrarse
-                        en cualquier actividad en relación con Red Cripto Pay. Red Cripto Pay o cualquiera de los miembros del equipo del proyecto será responsable
-                        por cualquier tipo de daño o pérdida directa o indirecta que usted puede sufrir en relación con el acceso a este Whitepaper, o cualquier 
+                        en cualquier actividad en relación con Red Cripto Pay. Red Cripto Pay o cualquiera de los miembros del equipo del proyecto no será responsable
+                        por cualquier tipo de daño o pérdida directa o indirecta que usted puede sufrir en relación con el acceso a esta Plataforma, o cualquier 
                         otro sitio web o material publicado por Red Cripto Pay. El Whitepaper y el sitio web están destinados únicamente a fines informativos y
                         de servicio de contacto entre pares del tipo P2P sin involucrar a Red Cripto Pay y no constituyen un prospecto, un documento de oferta,
                         una oferta de valores, una solicitud de inversión o cualquier oferta para vender cualquier producto, artículo o activo (ya sea digitales
@@ -517,7 +514,7 @@ const Whitepaper = () => {
                         Debilidades de seguridad: Hackers u otros grupos maliciosos u otras organizaciones pueden intentar interferir con Red Cripto Pay y todo 
                         su ecosistema en una amplia variedad de formas, incluidos, entre otros, ataques de malware, ataques de denegación de servicio, ataques 
                         basados en consenso, ataques Sybil, suplantación de identidad, obtención de los fondos dentro de los contratos inteligentes por 
-                        debilidades en el código Además, existe el riesgo de que un tercero o un miembro de Red Cripto Pay, puede introducir de manera 
+                        debilidades en el código. Además, existe el riesgo de que un tercero o un miembro de Red Cripto Pay, puede introducir de manera 
                         intencional o no intencional debilidades en el núcleo y/o infraestructura de Red Cripto Pay, lo que podría afectar negativamente 
                         a la plataforma. Además, el futuro de las innovaciones en criptografía y seguridad son altamente impredecibles y los avances en 
                         criptografía, o los avances técnicos (incluso sin limitación del desarrollo de la computación cuántica), podría presentar riesgos 
