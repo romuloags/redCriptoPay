@@ -146,7 +146,7 @@ const Home = ({defaultAccount}) => {
                 <div className="card justify bg-light shadow content-center">
                  <span className="ms-2 text-dark fw-bold">
                  <img src={btcbicon} width="20" height="20" alt="bnbicon" className="me-2"></img>
-                   BTCB <span className="text-muted">Bitcoin BEP2</span>
+                   BTCB <span className="text-muted">Bitcoin BEP20</span>
                  <button className="btn btn-primary ms-2 m-2"
                  onClick={addBtcb}>Agregar</button>
                  <a className="btn  btn-dark m-2 text-danger" 
@@ -223,7 +223,7 @@ const Home = ({defaultAccount}) => {
                  <div>
                    <span>
                    <img className="me-1" src={btcbicon} width="20" height="20" alt="usdticon"></img> 
-                   </span>BTCB Bitcoin BEP2
+                   </span>BTCB Bitcoin BEP20
                  </div>
                  <div>
                    <span>
