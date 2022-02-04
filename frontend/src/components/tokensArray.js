@@ -16,7 +16,7 @@ import usdcicon from "../assets/usdcicon.png"
         width="20" height="20" alt="usdcicon"/>USDC<span className="text-dark"> USD Coin</span></div> },
         { id: 3, address: "0x60225A4aeC7C1310dC18f9CC02df949782558FA6", 
         tag: 'BTCB', label:<div> <img className="me-2 mb-1" src={btcbicon} 
-        width="20" height="20" alt="btcbicon"/>BTCB<span className="text-dark"> Bitcoin BEP2</span></div> },
+        width="20" height="20" alt="btcbicon"/>BTCB<span className="text-dark"> Bitcoin BEP20</span></div> },
         { id: 4, address: "0x93214264d3Da881c6a7036ade63B40585B8e3dAC", 
         tag: 'ETH', label: <div> <img className="me-2 mb-1" src={ethicon} 
         width="20" height="20" alt="usdticon"/>ETH<span className="text-dark"> Ethereum Token</span></div>}
