@@ -73,7 +73,7 @@ const Navbar = ({connect, defaultAccount, connected, isLoading, noProvider}) => 
               <Link className="nav-link text-light d-inline py-0" to="/depositar">
               <li className="nav-item-menu py-2" data-bs-dismiss="offcanvas" aria-label="Close">
                 <i 
-                className="bi bi-bank2 text-light d-inline p-2"></i>Depositar
+                className="bi bi-cash text-light d-inline p-2"></i>Depositar
               </li>
               </Link>
               <Link className="nav-link text-light d-inline py-0" to="/historial">

@@ -14,7 +14,7 @@ const Deposit = ({userBalance, bnbEscrow, tokensEscrow, defaultAccount}) => {
             <div className="col my-4 text-center">
               <div>
                 <h3 className="fs-4 text-danger text-start"><i 
-                className="bi bi-bank2 text-danger pe-2"></i>Depositar</h3>
+                className="bi bi-cash text-danger pe-2"></i>Depositar</h3>
               </div>
             </div>
           </div>
