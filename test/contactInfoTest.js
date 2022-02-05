@@ -1,7 +1,5 @@
 const ContactINFO = artifacts.require("redcriptopaycontactINFO");
 
-const truffleAssert = require("truffle-assertions");
-
 contract("redcriptopaycontactINFO", (accounts) => {
     let redcriptopaycontactinfo = null;
     before(async() => {   
@@ -30,6 +28,10 @@ contract("redcriptopaycontactINFO", (accounts) => {
    it("should get the value in the key", async () => {
        const result = await redcriptopaycontactinfo.getusercontactinfo(accounts[7])
        assert(result === "laesperanza");
+   });
+   it("should get the value in the key", async () => {
+    const result = await redcriptopaycontactinfo.getusercontactinfo(accounts[1])
+    assert(result === "contactinfo");
    });
    it("should get an empty value in the key", async () => {
       const result = await redcriptopaycontactinfo.getusercontactinfo(accounts[2])

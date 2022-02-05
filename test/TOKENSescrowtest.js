@@ -45,7 +45,7 @@ contract("redcriptopayTOKENS", (accounts) => {
         assert(tokenslength.toNumber() === 0); 
     });
     it("should not add a token, only owner can", async () => {
-        await truffleAssert.reverts(redcriptopaytokens.addToken(mockusdt.address, {from: accounts[2]}));
+        await truffleAssert.reverts(redcriptopaytokens.addToken(mockusdt.address, {from: accounts[0]}));
     });
     it("should add a token", async () => {
         await redcriptopaytokens.addToken(mockusdt.address, {from: accounts[1]});
@@ -61,7 +61,7 @@ contract("redcriptopayTOKENS", (accounts) => {
     });
     it("should approve expending tokens", async () => {
         await mockusdt.approve(redcriptopaytokens.address, web3.utils.toWei("1000000"), {from: accounts[3]});    
-    });
+    }); 
     it("should create a deposit", async () => {
         await redcriptopaytokens.createDeposit(accounts[4], "0", web3.utils.toWei("1000"), {from: accounts[3]});
         const transaction = await redcriptopaytokens.TransactionLedger(0)
@@ -156,7 +156,7 @@ contract("redcriptopayTOKENS", (accounts) => {
         assert(transaction[7].toNumber() === 0);
     });
     it("should not remove a token, only owner can", async () => {
-        await truffleAssert.reverts(redcriptopaytokens.removeToken(mockusdt.address, {from: accounts[2]}));
+        await truffleAssert.reverts(redcriptopaytokens.removeToken("0", {from: accounts[2]}));
     });
     it("should remove a token", async () => {
         await redcriptopaytokens.removeToken("1", {from: accounts[1]});
@@ -208,7 +208,7 @@ contract("redcriptopayTOKENS", (accounts) => {
         assert.equal(balance.toString(), 100000)
     });
     it("should not release the funds, funds have already been released", async () => {
-        await truffleAssert.reverts(redcriptopaytokens.releaseFunds("1", {from: accounts[2]}));            
+        await truffleAssert.reverts(redcriptopaytokens.releaseFunds("1", {from: accounts[7]}));            
     });
     it("should add a token", async () => {
         await redcriptopaytokens.addToken(mockusdc.address, {from: accounts[1]});
@@ -329,8 +329,8 @@ contract("redcriptopayTOKENS", (accounts) => {
         const result = await redcriptopaytokens.Judge()
         assert(result === accounts[0]);
     });
-    it("should not refund the funds, only recevier and t.judge can refund the sender", async () => {
-        await truffleAssert.reverts(redcriptopaytokens.refundSender("2", {from: accounts[0]}));
+    it("should not refund the funds, only recevier and judge can refund the sender", async () => {
+        await truffleAssert.reverts(redcriptopaytokens.refundSender("3", {from: accounts[1]}));
     });
     it("should refund the funds, new judge is calling it", async () => {
         await redcriptopaytokens.refundSender("3", {from: accounts[0]});

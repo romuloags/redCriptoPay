@@ -22,7 +22,7 @@ contract("redcriptopayBNB", (accounts) => {
     });
     it("the judge should be iqual to deployer address", async () => {
         const result = await redcriptopaybnb.Judge()
-        assert(result === accounts[0]); 
+        assert(result === accounts[0]);  
     });
     it("should set the judge", async () => {
         await redcriptopaybnb.setJudge(accounts[2], {from: accounts[1]});
@@ -113,7 +113,7 @@ contract("redcriptopayBNB", (accounts) => {
         assert(transaction[6].toNumber() === 1);
     });
     it("should not release the funds, funds have already been released", async () => {
-        await truffleAssert.reverts(redcriptopaybnb.releaseFunds("1", {from: accounts[2]}));            
+        await truffleAssert.reverts(redcriptopaybnb.releaseFunds("1", {from: accounts[7]}));            
     });
     it("should create a deposit id 2", async () => {
         await redcriptopaybnb.createDeposit(accounts[9], {from: accounts[8], value: 1000000000});
