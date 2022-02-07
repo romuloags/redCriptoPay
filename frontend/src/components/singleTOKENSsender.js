@@ -53,20 +53,22 @@ const SingleTOKENSsender = ({defaultAccount, tokensEscrow, contactInfo}) => {
     if(typeof defaultAccount) {
     load(); }
 
-  }, [defaultAccount, tokensEscrow]);
+  }, [defaultAccount, tokensEscrow, isSendingTransaction]);
 
   const releaseFunds = async (event) => {
     event.preventDefault();
     setIsSendingTransaction(true);
   const receipt = await tokensEscrow.methods.releaseFunds(id).send({from: defaultAccount});
-  console.log(receipt)
+  console.log(receipt);
+  setIsSendingTransaction(false)
   }
 
   const raiseDispute = async (event) => {
     event.preventDefault();
     setIsSendingTransaction(true);
   const receipt = await tokensEscrow.methods.raiseDispute(id).send({from: defaultAccount});
-  console.log(receipt)
+  console.log(receipt);
+  setIsSendingTransaction(false)
   }
 
     return (
