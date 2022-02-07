@@ -53,20 +53,22 @@ const SingleBNBreceiver = ({defaultAccount, bnbEscrow, contactInfo}) => {
       load();
     }
    
-  }, [defaultAccount, bnbEscrow]);
+  }, [defaultAccount, bnbEscrow, isSendingTransaction]);
 
   const refundSender = async (event) => {
     event.preventDefault();
     setIsSendingTransaction(true);
   const receipt = await bnbEscrow.methods.refundSender(id).send({from: defaultAccount});
-  console.log(receipt)
+  console.log(receipt);
+  setIsSendingTransaction(false)
   }
 
   const raiseDispute = async (event) => {
     event.preventDefault();
     setIsSendingTransaction(true);
   const receipt = await bnbEscrow.methods.raiseDispute(id).send({from: defaultAccount});
-  console.log(receipt)
+  console.log(receipt);
+  setIsSendingTransaction(false)
   }
     return ( 
         <div className="history">     
