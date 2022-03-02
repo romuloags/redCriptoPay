@@ -17,7 +17,7 @@
  * phrase from a file you've .gitignored so it doesn't accidentally become public.
  *
  */
-
+const web3 = require('web3');
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const dotenv = require('dotenv');
 dotenv.config();
@@ -82,8 +82,7 @@ module.exports = {
      ),
      network_id: 56,
      skipDryRun: true,
-     gas: 8500000,
-     gasPrice: web3.toWei("5", "gwei"),  
+     gasPrice: web3.utils.toWei("5", "gwei"),  
      },
 
     // bscTestnet: {

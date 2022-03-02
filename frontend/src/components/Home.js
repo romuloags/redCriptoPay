@@ -187,7 +187,8 @@ const Home = ({defaultAccount}) => {
                  <div className="text-center text-warning mx-2 mt-2"> Para garantizar que un comprador 
                  o Vendedor realmente sean los dueños de una dirección de criptomonedas se registran sus
                   datos de Contacto correlacionados con su billetera directamente a la Blockchain.</div>
-                 <a className="btn btn-primary mt-2 mx-5" href="https://redcripto.com" role="button">Contrato</a>
+                 <a className="btn btn-primary mt-2 mx-5" 
+                 href="https://bscscan.com/address/0xb1db2f8daa0749bb6c0c4b1f15522c89978e3cc0#code" role="button">Contrato</a>
                  <div className="card-body">
                  </div>
                  </div>  
