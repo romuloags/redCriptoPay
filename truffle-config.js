@@ -19,6 +19,9 @@
  */
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
+const dotenv = require('dotenv');
+dotenv.config();
+const privateKey = process.env.PRIVATE_KEY
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
@@ -72,16 +75,17 @@ module.exports = {
     // network_id: 2111,   // This network is yours, in the cloud.
     // production: true    // Treats this network as if it was a public net. (default: false)
     // }
-    // bsc: {
-    // provider: () => new HDWalletProvider (
-    // mnemonic,
-    // "https://bsc-dataseed.binance.org/"
-    // ),
-    // network_id: 56,
-    // skipDryRun: true,
-    // gas: 8500000,
-    // gasPrice: web3.toWei("5", "gwei"),  
-    // },
+     bsc: {
+     provider: () => new HDWalletProvider (
+     privateKey,
+     "https://bsc-dataseed.binance.org/"
+     ),
+     network_id: 56,
+     skipDryRun: true,
+     gas: 8500000,
+     gasPrice: web3.toWei("5", "gwei"),  
+     },
+
     // bscTestnet: {
     // provider: () => new HDWalletProvider (
     // mnemonic,
@@ -135,4 +139,9 @@ module.exports = {
     //   }
     // }
   // }
+  plugins: ['truffle-plugin-verify'],
+
+  api_keys: {
+    bscscan: process.env.BSCSCAN_API_KEY
+  }
 };

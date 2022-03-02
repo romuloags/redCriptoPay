@@ -48,6 +48,26 @@ const provider = await detectEthereumProvider()
 
 if (provider) { 
   
+  try {
+    await window.ethereum.request({
+      method: 'wallet_addEthereumChain',
+      params: [
+        {
+          chainId: '0x38',
+          chainName: 'BNB Smart Chain Mainnet',
+          nativeCurrency: {
+          name: 'Binance Coin',
+          symbol: 'BNB',
+          decimals: 18
+        },
+        rpcUrls: ['https://bsc-dataseed.binance.org/'],
+        blockExplorerUrls: ['https://bscscan.com']
+        },
+      ],
+  });
+  } 
+  catch (addError) {console.error(addError);}
+
   await window.ethereum.request({ method: 'eth_requestAccounts' }).then(accountChangedHandler);
   
   const ChainchangedHandler = () => {
@@ -62,7 +82,7 @@ if (provider) {
 
   const networkId = await web3.eth.net.getId();
 
-  if(networkId === 5777) {
+  if(networkId === 56) {
  
   const contactInfo = new web3.eth.Contract(ContactInfo.abi, ContactInfo.networks[networkId].address);
   console.log(contactInfo);
