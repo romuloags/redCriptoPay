@@ -49,7 +49,7 @@ const web3 = new Web3 (window.ethereum);
 
       const transactions = await tokensEscrow.getPastEvents("DepositCreation", {
         filter: {Sender: defaultAccount},
-        fromBlock: 0,
+        fromBlock: 15723199,
         toBlock: "latest"
     });
 

@@ -200,7 +200,8 @@ const Home = ({defaultAccount}) => {
                  </div>
                  <div className="text-center text-warning mx-2 mt-2"> Envíe y Reciba pagos con
                  Binance Coin de manera segura, a través de un contrato tipo fideicomiso.</div>
-                 <a className="btn btn-primary mt-2 mx-5" href="https://redcripto.com" role="button">Contrato</a>
+                 <a className="btn btn-primary mt-2 mx-5" 
+                 href="https://bscscan.com/address/0xe414caa589f36e1679298e424957ac10bcd3a340#code" role="button">Contrato</a>
                  <div className="card-body">
                  </div>
                  </div>  
@@ -238,7 +239,8 @@ const Home = ({defaultAccount}) => {
                  </div>
                  </div>
                  </div>
-                 <a className="btn btn-primary mt-2 mx-5" href="https://redcripto.com" role="button">Contrato</a>
+                 <a className="btn btn-primary mt-2 mx-5" 
+                 href="https://bscscan.com/address/0x09e2fd2db3eddc4acf128ede0d39a85bc8d7db4c#code" role="button">Contrato</a>
                  <div className="card-body">
                 </div>
                 </div>      
