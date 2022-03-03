@@ -37,7 +37,7 @@ const tokenImage = busdicon;
 
     const addUsdt = async () => {
         const tokenAddress = '0x55d398326f99059ff775485246999027b3197955';
-        const tokenSymbol = 'USDT';
+        const tokenSymbol = 'USDT'; 
         const tokenDecimals = 18;
         const tokenImage = usdticon;
           
