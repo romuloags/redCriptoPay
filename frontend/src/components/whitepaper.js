@@ -264,7 +264,8 @@ const Whitepaper = () => {
                         y se copiaron varias librerías de OpenZeppelin para hacer más seguro el código.
                         </p>
                         <p className="text-start">
-                        <a className="px-1 text-primary text-decoration-none" href="#">redcriptopaycontactINFO.sol</a> Donde el usuario puede registrar su información de
+                        <a className="px-1 text-primary text-decoration-none" 
+                        href="https://bscscan.com/address/0xb1db2f8daa0749bb6c0c4b1f15522c89978e3cc0#code">redcriptopaycontactINFO.sol</a> Donde el usuario puede registrar su información de
                         contacto, teniendo en cuenta que puede registrar cualquier carácter que desee, cualquier información de contacto que registre se podrá encontrar
                         de manera pública en la Blockchain, depende del usuario que tipo de información registrar. Este contrato funciona principalmente a 
                         través de una variable 
@@ -274,14 +275,15 @@ const Whitepaper = () => {
                         lectura <span className="text-muted">function getusercontactinfo (address user) external view returns (string memory)</span>.
                         </p>
                         <p className="text-start">
-                        <a className="px-1 text-primary text-decoration-none" href="#">Ownable.sol</a> Es una copia modificada de 
+                        <span className="px-1 text-primary">Ownable</span> Es una copia modificada de 
                         OpenZeppelin donde la dirección que despliega el contrato se le asigna el rol de "owner", este rol puede ser transferido a otra dirección de
                         billetera sólo por el antiguo "owner" a través de <span className="text-muted">function transferOwnership(address newOwner) public virtual
                         onlyOwner</span>. A diferencia de la librería de OpenZeppelin, en este caso la función renounceOwnership fue eliminada, ya que la función de
                           "owner" es de suma importancia en los contratos descritos a continuación redcriptopayTOKENS.sol y redcriptopayBNB.sol .
                         </p>
                         <p className="text-start">
-                        <a className="px-1 text-primary text-decoration-none" href="#">redcriptopayBNB.sol</a> Es el contrato encargado de registrar depósitos de BNB
+                        <a className="px-1 text-primary text-decoration-none" 
+                        href="https://bscscan.com/address/0xe414caa589f36e1679298e424957ac10bcd3a340#code">redcriptopayBNB.sol</a> Es el contrato encargado de registrar depósitos de BNB
                         dentro de la Dapp, este es un contrato del tipo Escrow, donde el emisor deposita BNB dentro del contrato, luego el emisor de manera externa 
                         obtiene
                         lo estipulado por el receptor, y para finalizar la transacción el emisor debe liberar los BNB del contrato al receptor. 
@@ -340,7 +342,8 @@ const Whitepaper = () => {
                         "AwaitingResolution" y se emitirá el evento <span className="text-muted"> Dispute(t.Sender, t.Receiver, id, t.value)</span>.
                         </p>
                         <p className="text-start">
-                        <a className="px-1 text-primary text-decoration-none" href="#">redcriptopayTOKENS.sol</a> Es el contrato encargado de registrar depósitos de 
+                        <a className="px-1 text-primary text-decoration-none" 
+                        href="https://bscscan.com/address/0x09e2fd2db3eddc4acf128ede0d39a85bc8d7db4c#code">redcriptopayTOKENS.sol</a> Es el contrato encargado de registrar depósitos de 
                         Tokens BEP-20 dentro de la Dapp, este es un contrato del tipo Escrow, donde el emisor deposita un token dentro del contrato, 
                         luego el emisor de manera externa obtiene lo estipulado por el receptor, y para finalizar la transacción el emisor debe liberar los 
                         Tokens del contrato al receptor. 
