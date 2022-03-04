@@ -37,7 +37,7 @@ const Home = ({defaultAccount}) => {
                 <h3 className="text-dark">Compra y vende Productos y Servicios de manera segura y descentralizada.</h3>
                 <p className=" fs-6 text-dark text-justify">
                 Depósitos descentralizados P2P intercambiando Criptomonedas por Productos y Servicios con protección al Comprador y Vendedor, a 
-                 través de la Binance Smart Chain. 
+                 través de la BNB Smart Chain. 
                  Solo debes conectar tu billetera descentralizada
                  <a className="btn btn-light text-primary ps-1 p-0" 
                  href="https://metamask.io/download" role="button"> 
@@ -176,7 +176,7 @@ const Home = ({defaultAccount}) => {
                 <h4 className=" fs-6 mb-2 text-light text-start">
                  <p> 
                  Red Cripto desarrolló tres contratos inteligentes desplegados en
-                 la BSC (Binance Smart Chain), estos pueden ser consultados desde 
+                 la BSC (BNB Smart Chain), estos pueden ser consultados desde 
                  <span className="badge bg-primary fw-bold ms-2">BscScan</span>
                  </p>
                  </h4>
