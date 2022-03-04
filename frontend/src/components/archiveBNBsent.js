@@ -40,20 +40,21 @@ const RenderPageNumbers = pages.map(number =>{
   
 });
 
-const web3 = new Web3 (window.ethereum);
+const web3 = new Web3 (new Web3.providers.WebsocketProvider("wss://speedy-nodes-nyc.moralis.io/1dbf183726683ea7cb2fa7de/bsc/mainnet/ws"));
 
   useEffect(()  => {
     const load = async () => {
       
       setLoading(true);
 
-      const transactions = await bnbEscrow.getPastEvents("DepositCreation", {
+      const transactions = await bnbEscrow.events.DepositCreation({
         filter: {Sender: defaultAccount},
         fromBlock: 15722483,
         toBlock: "latest"
-    });
+    }).on('data', async function(event){
     transactions.sort((a, b) => b.returnValues.id - a.returnValues.id);
       setTransactions(transactions);
+    })  
 
       setLoading(false);
 
