@@ -44,9 +44,10 @@ const web3 = new Web3 (window.ethereum);
 
   useEffect(()  => {
 
-    setLoading(true);
+    const load = async () => {   
+      
+      setLoading(true);
 
-    const load = async () => {     
       const transactions = await bnbEscrow.getPastEvents("DepositCreation", {
         filter: {Receiver: defaultAccount},
         fromBlock: 0,

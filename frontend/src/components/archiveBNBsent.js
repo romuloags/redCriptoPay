@@ -43,6 +43,7 @@ const RenderPageNumbers = pages.map(number =>{
 const web3 = new Web3 (window.ethereum);
 
   useEffect(()  => {
+    
     const load = async () => {  
       
       setLoading(true);
@@ -54,6 +55,14 @@ const web3 = new Web3 (window.ethereum);
     });
     transactions.sort((a, b) => b.returnValues.id - a.returnValues.id);
       setTransactions(transactions);
+
+
+      bnbEscrow.events.DepositCreation({
+        filter: {Sender: defaultAccount},
+        fromBlock: 0
+    }).on('data', function(event){
+        console.log(event)
+   });
 
       setLoading(false);
 

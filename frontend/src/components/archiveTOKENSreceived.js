@@ -45,9 +45,10 @@ const web3 = new Web3 (window.ethereum);
 
   useEffect(()  => {
 
-    setLoading(true);
-
-    const load = async () => {     
+    const load = async () => {  
+      
+      setLoading(true);
+      
       const transactions = await tokensEscrow.getPastEvents("DepositCreation", {
         filter: {Receiver: defaultAccount},
         fromBlock: 0,
