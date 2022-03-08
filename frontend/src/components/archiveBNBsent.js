@@ -8,6 +8,8 @@ const [transactions, setTransactions] = useState ([]);
 const [loading, setLoading] = useState(false);
 const [currentPage, setCurrentPage] = useState(1);
 const [itemsPerPage, setItemsPerPage] = useState(10);
+const [transactionsLength, setTransactionsLength] = useState(0);
+const [senderLedger, setSenderLedger] = useState([]);
 
 const [pageNumberLimit, setPageNumberLimit] = useState(3);
 const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(3);
@@ -48,6 +50,17 @@ const web3 = new Web3 (window.ethereum);
       
       setLoading(true);
 
+      const transactionsLength = await bnbEscrow.methods.getSenderLedgerLength(defaultAccount).call();
+      setTransactionsLength(transactionsLength);
+     
+      for (let i = 0; i < transactionsLength; i++){
+      const id = await bnbEscrow.methods.SenderLedger(defaultAccount, i).call();
+       console.log(id)
+       const arr = await bnbEscrow.methods.TransactionLedger(id).call();
+       console.log(arr)      
+       
+      }
+
       const transactions = await bnbEscrow.getPastEvents("DepositCreation", {
         filter: {Sender: defaultAccount},
         fromBlock: 0,
@@ -55,15 +68,7 @@ const web3 = new Web3 (window.ethereum);
     });
     transactions.sort((a, b) => b.returnValues.id - a.returnValues.id);
       setTransactions(transactions);
-
-
-      bnbEscrow.events.DepositCreation({
-        filter: {Sender: defaultAccount},
-        fromBlock: 0
-    }).on('data', function(event){
-        console.log(event)
-   });
-
+    
       setLoading(false);
 
     }
