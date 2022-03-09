@@ -65,7 +65,7 @@ const Deposit = ({userBalance, bnbEscrow, tokensEscrow, defaultAccount}) => {
                     userBalance={userBalance} bnbEscrow={bnbEscrow} defaultAccount={defaultAccount}/>
                     </div>
                     <div className="tab-pane fade" id="pills-profile" role="tabpanel" 
-                    aria-labelledby="pills-profile-tab"><DepositTokensUnavailable
+                    aria-labelledby="pills-profile-tab"><DepositTOKENS
                     userBalance={userBalance} defaultAccount={defaultAccount} tokensEscrow={tokensEscrow}/>
                     </div>
                     </div>

@@ -72,7 +72,7 @@ const web3 = new Web3 (window.ethereum);
         },
 
       }
-       const tx = util.returnTxMap(i,result)
+       const tx = util.returnTxMap(id, result)
        transactions.push(tx)
        transactions.sort((a, b) => b.id - a.id);
       setTransactions(transactions);
