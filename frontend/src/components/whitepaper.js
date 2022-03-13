@@ -35,7 +35,7 @@ const Whitepaper = () => {
                         <i className="bi bi-file-text pe-2"></i>Whitepaper</h4>
                         <div className="my-3">
                         <div className="text-muted">
-                        Whitepaper oficial de Red Cripto Pay, última revisión febrero 2022
+                        Whitepaper oficial de Red Cripto Pay, última revisión marzo 2022
                         </div>
                         <div className="row justify-content-center">
                         <div className="col-md-6 text-start">
