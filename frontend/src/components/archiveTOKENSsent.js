@@ -45,9 +45,9 @@ const web3 = new Web3 (window.ethereum);
 
   useEffect(()  => {
 
-    setLoading(true);
-
-    const load = async () => {     
+    const load = async () => {  
+      
+      setLoading(true);
       
       const transactionsLength = await tokensEscrow.methods.getSenderLedgerLength(defaultAccount).call();
       setTransactionsLength(transactionsLength);
