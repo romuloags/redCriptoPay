@@ -35,7 +35,7 @@ const Whitepaper = () => {
                         <i className="bi bi-file-text pe-2"></i>Whitepaper</h4>
                         <div className="my-3">
                         <div className="text-muted">
-                        Whitepaper oficial de Red Cripto Pay, última revisión febrero 2022
+                        Whitepaper oficial de Red Cripto Pay, última revisión marzo 2022
                         </div>
                         <div className="row justify-content-center">
                         <div className="col-md-6 text-start">
@@ -301,9 +301,9 @@ const Whitepaper = () => {
                         y TransactionStatus status, esta última es un enum 
                         compuesto por los diferentes estados de una transacción <span className="text-muted">FundsReceived, FundsReleased, Refunded, 
                         AwaitingResolution</span>, en el caso de createDeposit se actualizará el estado de la transaccióna a "FundsReceived"; por último en
-                        la función createDeposit se declara
-                        el evento <span className="text-muted">DepositCreation(msg.sender, _receiver, id, msg.value, value);</span> el cual dentro de la UI a través
-                        de web3.js sirve para obtener los depósitos donde estén involucrados el emisor o receptor. 
+                        la función createDeposit se le anexa el id de la transacción a los Mappings
+                        <span className="text-muted"> SenderLedger</span> y <span className="text-muted">ReceiverLedger</span>  los cuales dentro de la UI a través
+                        de web3.js sirven para obtener las transacciones/depósitos donde estén involucrados el emisor o receptor. 
                         </p>
                         <p className="text-start">
                         Este escrow de BNB tiene tres funciones de
@@ -398,9 +398,9 @@ const Whitepaper = () => {
                         y TransactionStatus status, esta última es un enum 
                         compuesto por los diferentes estados de una transacción <span className="text-muted">FundsReceived, FundsReleased, Refunded, 
                         AwaitingResolution</span>, en el caso de createDeposit se actualizará el estado de la transaccióna a "FundsReceived"; por último en la 
-                        función createDeposit se declara
-                        el evento <span className="text-muted">DepositCreation(msg.sender, _receiver, id, Tokens[tokenindex], msg.value, value); </span> 
-                        el cual dentro de la UI a través de web3.js sirve para obtener los depósitos donde estén involucrados el emisor o receptor. 
+                        función createDeposit se le anexa el id de la transacción a los Mappings
+                        <span className="text-muted"> SenderLedger</span> y <span className="text-muted">ReceiverLedger</span>  los cuales dentro de la UI a través
+                        de web3.js sirven para obtener las transacciones/depósitos donde estén involucrados el emisor o receptor. 
                         </p>
                         <p className="text-start">
                         Este escrow de Tokens BEP-20 tiene tres funciones de
