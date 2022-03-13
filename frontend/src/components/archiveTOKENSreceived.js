@@ -9,6 +9,7 @@ const ArchiveTOKENSreceived = ({defaultAccount, tokensEscrow, connected}) => {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
+  const [transactionsLength, setTransactionsLength] = useState([]);
    
   const [pageNumberLimit, setPageNumberLimit] = useState(3);
   const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(3);
@@ -44,26 +45,52 @@ const RenderPageNumbers = pages.map(number =>{
 const web3 = new Web3 (window.ethereum);
 
   useEffect(()  => {
-    const load = async () => {
+
+    const load = async () => {  
       
       setLoading(true);
+      
+           const transactionsLength = await tokensEscrow.methods.getReceiverLedgerLength(defaultAccount).call();
+      setTransactionsLength(transactionsLength);
 
-      const transactions = await tokensEscrow.getPastEvents("DepositCreation", {
-        filter: {Receiver: defaultAccount},
-        fromBlock: 15723199,
-        toBlock: "latest"
-    });
-      transactions.sort((a, b) => b.returnValues.id - a.returnValues.id);
-      setTransactions(transactions);
+      for (let i = 0; i < transactionsLength; i++){
+        const id = await tokensEscrow.methods.ReceiverLedger(defaultAccount, i).call();
+         const result = await tokensEscrow.methods.TransactionLedger(id).call();
+    
+         const util = {
+          returnTxMap: (id,tx) => {  
+              
+              return {
+                  id: id,
+                  sender: tx[0],
+                  receiver: tx[1],
+                  token: tx[2],
+                  amount: tx[3],
+                  judgeFee: tx[4],
+                  ownerFee: tx[5],
+                  value: tx[6],
+                  status: tx[7],
+              }
+          },
+  
+        }
+         const tx = util.returnTxMap(id, result)
+         transactions.push(tx)
+         transactions.sort((a, b) => b.id - a.id);
+        setTransactions(transactions);
+         console.log(transactions)
+         
+        }
 
-      setLoading(false);   
+      
+      setLoading(false);
 
     }
     if(connected) {
       load();
     }
    
-  }, [defaultAccount, tokensEscrow]);
+  }, [defaultAccount, tokensEscrow, transactions]);
 
   const handleNext = () => {
     setCurrentPage(currentPage +1);
@@ -101,8 +128,8 @@ const web3 = new Web3 (window.ethereum);
     <div>   
       { defaultAccount && <div>
       { currentTransactions.map((tx) =>(    
-      <div className="card shadow my-3" key={tx.returnValues.id}>
-        <Link to={`/historial/ttokensreceptor/${tx.returnValues.id}`} className="text-decoration-none text-dark">
+      <div className="card shadow my-3" key={tx.id}>
+        <Link to={`/historial/ttokensreceptor/${tx.id}`} className="text-decoration-none text-dark">
         <div className="card-body">
          <div className="row">
            <div className="col-3">ID</div>
@@ -111,17 +138,17 @@ const web3 = new Web3 (window.ethereum);
            </div>
            <div className="col-4">Emisor</div>
           <div className="w-100"></div>
-           <div className="col-3 text-muted">{tx.returnValues.id}</div>
+           <div className="col-3 text-muted">{tx.id}</div>
            <div className="col-5 text-muted">
            { tokensTransactions.map((token) =>(
            <span key={token.address}>
-             {token.address === tx.returnValues.token &&<span>{token.label}</span>}            
+             {token.address === tx.token &&<span>{token.label}</span>}            
            </span>
            ))} 
-             {parseFloat(web3.utils.fromWei(tx.returnValues.amount)).toFixed(5)}
+             {parseFloat(web3.utils.fromWei(tx.amount)).toFixed(5)}
            </div>
            <div className="col-4 text-muted">
-           {`${tx.returnValues.Sender.substr(0, tx.returnValues.Sender.length - 36)}...${tx.returnValues.Sender.substr(37)}`}
+           {`${tx.sender.substr(0, tx.sender.length - 36)}...${tx.sender.substr(37)}`}
            </div>
          </div>
         </div>

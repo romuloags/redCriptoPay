@@ -70,7 +70,7 @@ const Whitepaper = () => {
                         Las Criptomonedas han tomado gran auge desde el 2017, a finales del 2020 y comienzos del 2021 cada vez eran 
                         más utilizadas las aplicaciones descentralizadas (Dapps). Con el nacimiento de la Binance Smart Chain en el 2020, 
                         cada vez son más los proyectos de la Web 3 que salen a la luz. En Venezuela desde el año 2018 las Criptomonedas son 
-                        un tema cotidiano, y cada vez son más personas que las utilizan, de hecho, Venezuela es el tercer país a 
+                        un tema cotidiano, y cada vez son más personas que las utilizan, de hecho, Venezuela está en tercer país a 
                         nivel mundial con más volumen de transacciones al día para el año 2020, y alrededor del 10% de su población 
                         utiliza las Criptomonedas, a raíz de esa Información nació Red Cripto, un marketplace de Comercios, Servicios y 
                         Productos que utilizan Criptomonedas como método de pago, sin embargo, no todo termina aquí.
@@ -86,7 +86,7 @@ const Whitepaper = () => {
                         transacción (comprador y vendedor), con un sistema de disputa en caso de ser necesario dentro de la transacción.
                         <span className="fw-bold"> Red Cripto Pay es una aplicación descentralizada (Dapp)</span>, que funciona con 
                         <span className="fw-bold"> contratos 
-                        inteligentes</span> desplegados en la <span className="fw-bold">Binance Smart Chain (BSC)</span>. Para interactuar con la aplicación el usuario
+                        inteligentes</span> desplegados en la <span className="fw-bold">BNB Smart Chain (BSC)</span>. Para interactuar con la aplicación el usuario
                         debe utilizar su billetera sin custodia (Metamask), la mayoría de las Dapps en la actualidad utilizan esta modalidad para
                         conectar a sus usuarios.
                         </p>
@@ -162,7 +162,7 @@ const Whitepaper = () => {
                         de billetera propia. Una vez haya descargado Metamask, ya sea la extensión de navegador, o la aplicación móvil, debe ingresar
                         a pay.redcripto.com, si lo hace desde el móvil debe utilizar el explorador de metamask; una vez dentro de la página 
                         web, debe darle click a "Conectar Billetera", Se abrirá una ventana de Metamask donde se autoriza a Red Cripto Pay a conectarse
-                        con la Red a la Binance Smart Chain y conectar su dirección de billetera con la plataforma para poder escribir transacciones en
+                        con la Red a la BNB Smart Chain y conectar su dirección de billetera con la plataforma para poder escribir transacciones en
                         los contratos de la misma, una vez de conectada su billetera a Red Cripto Pay puede interactuar con la aplicación.
                         </p>
                         <p className="text-start">
@@ -303,9 +303,9 @@ const Whitepaper = () => {
                         y TransactionStatus status, esta última es un enum 
                         compuesto por los diferentes estados de una transacción <span className="text-muted">FundsReceived, FundsReleased, Refunded, 
                         AwaitingResolution</span>, en el caso de createDeposit se actualizará el estado de la transaccióna a "FundsReceived"; por último en
-                        la función createDeposit se declara
-                        el evento <span className="text-muted">DepositCreation(msg.sender, _receiver, id, msg.value, value);</span> el cual dentro de la UI a través
-                        de web3.js sirve para obtener los depósitos donde estén involucrados el emisor o receptor. 
+                        la función createDeposit se le anexa el id de la transacción a los Mappings
+                        <span className="text-muted"> SenderLedger</span> y <span className="text-muted">ReceiverLedger</span>  los cuales dentro de la UI a través
+                        de web3.js sirven para obtener las transacciones/depósitos donde estén involucrados el emisor o receptor.
                         </p>
                         <p className="text-start">
                         Este escrow de BNB tiene tres funciones de
@@ -401,9 +401,9 @@ const Whitepaper = () => {
                         y TransactionStatus status, esta última es un enum 
                         compuesto por los diferentes estados de una transacción <span className="text-muted">FundsReceived, FundsReleased, Refunded, 
                         AwaitingResolution</span>, en el caso de createDeposit se actualizará el estado de la transaccióna a "FundsReceived"; por último en la 
-                        función createDeposit se declara
-                        el evento <span className="text-muted">DepositCreation(msg.sender, _receiver, id, Tokens[tokenindex], msg.value, value); </span> 
-                        el cual dentro de la UI a través de web3.js sirve para obtener los depósitos donde estén involucrados el emisor o receptor. 
+                        función createDeposit se le anexa el id de la transacción a los Mappings
+                        <span className="text-muted"> SenderLedger</span> y <span className="text-muted">ReceiverLedger</span>  los cuales dentro de la UI a través
+                        de web3.js sirven para obtener las transacciones/depósitos donde estén involucrados el emisor o receptor.
                         </p>
                         <p className="text-start">
                         Este escrow de Tokens BEP-20 tiene tres funciones de
