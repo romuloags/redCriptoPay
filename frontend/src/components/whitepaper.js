@@ -484,7 +484,7 @@ const Whitepaper = () => {
                         el sitio web pueden quedar obsoletos como resultado; y tampoco Red Cripto Pay tiene la obligación de actualizar o corregir este documento 
                         en conexión con el mismo.
                         </p>
-                        <p className="text-start fw-bold">Riegos</p>
+                        <p className="text-start fw-bold">Riesgos</p>
                         <p className="text-start">
                         Si decide interactuar con los contratos inteligentes de Red Cripto Pay o participar en Red Cripto Pay, usted expresamente reconoce, 
                         acepta y asume los siguientes riesgos:
