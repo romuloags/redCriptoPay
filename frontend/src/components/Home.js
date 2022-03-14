@@ -54,39 +54,39 @@ const Home = ({defaultAccount}) => {
                 <span className="ps-3">¿Cómo funciona Red Cripto Pay?</span></h4>
                 </div>
                 <h4 className=" fs-6 text-info text-start">
-                Para enviar o recibir depósitos debes aegurarte de haberte registrado con tu billetera, añadiendo
+                Para enviar o recibir depósitos debes aegurarte de haberte registrado con tu billetera añadiendo
                 tu información de contacto, de igual forma debes asegurarte de que tu contraparte también 
-                este registrado. De esta forma la información de contacto se correspondería 
+                este registrado. De esta forma la información de contacto se corresponde 
                 con la billetera de usuario. Antes de abrir un depósito debes comunicarte con tu contraparte
                 y llegar a un acuerdo previo.</h4>
                 <img src={use1} width="300" height="300" className="img-fluid d-block m-auto" alt="use1"></img>
                 <h4 className=" fs-6 text-info text-start">
-                Los depositos cuentan de tres entidades: <span className="fw-bold">Emisor </span> 
-                 (persona que deposita las Criptomonedas), <span className="fw-bold"> Receptor </span> 
+                Los depositos cuentan de tres entidades: <span className="fw-bold">Comprador </span> 
+                 (persona que deposita las Criptomonedas), <span className="fw-bold"> Vendedor </span> 
                  (persona que espera recibir las Criptomonedas), <span className="fw-bold">Jurado </span> 
                  (entidad intermediaria en la operación ante cualquier inconveniente del depósito).</h4>
-                 <p className="text-info">El emisor procede a depositar las Criptomonedas, 
+                 <p className="text-info">El comprador procede a depositar las Criptomonedas, 
                  de esta manera el depósito es puesto en garantía.</p>
                 <img src={use2} width="300" height="300" className="img-fluid d-block m-auto" alt="use2"></img>
-                <p className="text-info">Luego el emisor debe comunicarle al receptor que el depósito ya fue
-                aceptado como garantía, el receptor debe verificar la validez y detalles del depósito, 
-                una vez verificado, el receptor deberá enviar el producto o servicio al emisor.</p>
+                <p className="text-info">Luego el comprador debe comunicarle al vendedor que el depósito ya fue
+                aceptado como garantía, el vendedor debe verificar la validez y detalles del depósito, 
+                una vez verificado, el vendedor deberá enviar el producto o servicio al comprador.</p>
                 <img src={use3} width="300" height="300" className="img-fluid d-block m-auto" alt="use3"></img>
-                <p className="text-info">Una vez el emisor haya recibido el producto o servicio de parte 
-                del receptor, el emisor debe liberar el depósito en garantía el receptor, y así culminar 
+                <p className="text-info">Una vez el comprador haya recibido el producto o servicio de parte 
+                del vendedor, el comprador debe liberar el depósito en garantía el receptor, y así culminar 
                 la transacción de manera exitosa.</p>
-                <h4 className="text-primary">¿Qué pasaría si el emisor nunca recibe el producto o servicio?</h4>
-                <p className="text-info">Si el emisor nunca recibe el producto o servicio, el receptor 
-                puede reembolsar el depósito en garantía al emisor.</p>
+                <h4 className="text-primary">¿Qué pasaría si el comprador nunca recibe el producto o servicio?</h4>
+                <p className="text-info">Si el comprador nunca recibe el producto o servicio, el vendedor
+                puede reembolsar el depósito en garantía al comprador.</p>
                 <img src={use4} width="300" height="300" className="img-fluid d-block m-auto" alt="use4"></img>
-                <h4 className="text-primary">¿Qué pasaría si el emisor y receptor no llegan a un acuerdo?</h4>
+                <h4 className="text-primary">¿Qué pasaría si el comprador y vendedor no llegan a un acuerdo?</h4>
                 <p className="text-info">Si hay un inconveniente con la transacción ya sea porque una de las dos
                 partes crea que se incumplió con los términos previamente establecidos, puede abrir una disputa, en 
-                ese momento el jurado entrará en acción, el jurado debe comunicarse con ambas partes, emisor y 
-                receptor deben presentar de manera clara su inconveniente.</p>
+                ese momento el jurado entrará en acción, el jurado debe comunicarse con ambas partes, comprador y 
+                vendedor deben presentar de manera clara su inconveniente.</p>
                 <img src={use5} width="300" height="3000" className="img-fluid d-block m-auto" alt="use5"></img>
                 <p className="text-info">Luego de comunicarse con ambas partes, el jurado tomará la decisión en la 
-                que se haga justicia, ya sea de reembolsar el depósito al emisor o liberar los fondos al receptor, 
+                que se haga justicia, ya sea de reembolsar el depósito al comprador o liberar los fondos al vendedor, 
                 finalizando de manera exitosa y justa la transacción.</p>
                 <img src={use6} width="300" height="3000" className="img-fluid d-block m-auto" alt="use6"></img>
                 <div className="row justify-content-center">
