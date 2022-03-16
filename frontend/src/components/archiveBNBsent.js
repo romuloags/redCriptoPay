@@ -51,13 +51,15 @@ const web3 = new Web3 (window.ethereum);
 
       const transactionsLength = await bnbEscrow.methods.getSenderLedgerLength(defaultAccount).call();
       setTransactionsLength(transactionsLength);
+
+      const transactions = [];
      
       for (let i = 0; i < transactionsLength; i++){
       const id = await bnbEscrow.methods.SenderLedger(defaultAccount, i).call();
        const result = await bnbEscrow.methods.TransactionLedger(id).call();
   
        const util = {
-        returnTxMap: (id,tx) => {  
+        returnTxMap: (id, tx) => {  
             
             return {
                 id: id,
@@ -72,11 +74,11 @@ const web3 = new Web3 (window.ethereum);
         },
 
       }
-       const tx = util.returnTxMap(id, result)
-       transactions.push(tx)
+      
+       const tx = util.returnTxMap(id, result);
+       transactions.push(tx);
        transactions.sort((a, b) => b.id - a.id);
-      setTransactions(transactions);
-       console.log(transactions)
+       setTransactions(transactions);
        
       }
     
