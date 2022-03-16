@@ -51,6 +51,8 @@ const web3 = new Web3 (window.ethereum);
 
       const transactionsLength = await bnbEscrow.methods.getSenderLedgerLength(defaultAccount).call();
       setTransactionsLength(transactionsLength);
+
+      const transactions = [];
      
       for (let i = 0; i < transactionsLength; i++){
       const id = await bnbEscrow.methods.SenderLedger(defaultAccount, i).call();
@@ -76,7 +78,6 @@ const web3 = new Web3 (window.ethereum);
        transactions.push(tx)
        transactions.sort((a, b) => b.id - a.id);
       setTransactions(transactions);
-       console.log(transactions)
        
       }
     
