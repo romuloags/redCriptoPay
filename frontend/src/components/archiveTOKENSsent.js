@@ -127,7 +127,7 @@ const web3 = new Web3 (window.ethereum);
 
   return ( 
     <div>
-      { defaultAccount && <div>
+      { defaultAccount && transactionsLength >= 1 && <div>
       { currentTransactions.map((tx) =>(    
       <div className="card shadow my-3" key={tx.id}>
         <Link to={`/historial/ttokensemisor/${tx.id}`} className="text-decoration-none text-dark">
@@ -158,6 +158,11 @@ const web3 = new Web3 (window.ethereum);
       ))}
       </div>
       }
+      {defaultAccount && transactionsLength < 1 && 
+      <div className="text-success">
+      0 Transacciones
+      </div>}
+      { defaultAccount && transactionsLength >= 1 && 
       <div className=" d-flex justify-content-center">
        <ul className="pageNumbers">
       {pages.length > 1 && <button type="button" className="btn btn-sm-light"
@@ -172,7 +177,7 @@ const web3 = new Web3 (window.ethereum);
       disabled={currentPage === pages[pages.length - 1] ? true : false}>
       <i className="bi bi-arrow-right-circle-fill text-primary"></i></button>}
       </ul>
-      </div>
+      </div>}
       </div> 
      );
 }
