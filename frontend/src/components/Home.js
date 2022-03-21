@@ -43,8 +43,7 @@ const Home = ({defaultAccount}) => {
                  href="https://metamask.io/download" role="button"> 
                  <img className="me-1" src={metamaskicon} 
                  width="25" height="25" alt="bnbicon"></img>Metamask</a> 
-                 </p>
-                 
+                 </p>               
                </div>  
              </div>
              <div className="card justify bg-light shadow content-center mb-4">
@@ -92,7 +91,7 @@ const Home = ({defaultAccount}) => {
                 <div className="row justify-content-center">
                 <div className="col-10 col-lg-3 ms-5">   
                 <a className="btn  btn-primary ms-5 m-2" 
-                 href="https://redcripto.com/blog" role="button">
+                 href="https://redcripto.com/pay" role="button">
                  <i className="bi bi-box-arrow-up-right me-1"></i>Tutorial</a>
                  </div>
                  </div>
