@@ -56,8 +56,8 @@ const Home = ({defaultAccount}) => {
                 <div className="mx-lg-5 px-lg-5 my-3">
                 <div className="ratio ratio-16x9">        
                 <iframe width="750" height="422" src="https://www.youtube.com/embed/Me4o-q0ubJ0" title="YouTube video player" 
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen></iframe>
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                ></iframe>
                 </div>
                 </div>
                 <h4 className=" fs-6 text-info text-start">
