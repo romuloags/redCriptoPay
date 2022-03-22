@@ -43,14 +43,22 @@ const Home = ({defaultAccount}) => {
                  href="https://metamask.io/download" role="button"> 
                  <img className="me-1" src={metamaskicon} 
                  width="25" height="25" alt="bnbicon"></img>Metamask</a> 
-                 </p>               
+                 </p>
+                 
                </div>  
              </div>
-             <div className="card justify bg-light shadow content-center mb-4">
+             <div className="card bg-light shadow mb-4">
                <div className="card-body">
                 <div>  
-                <h4 className="col-lg-5 p-2 text-justify bg-primary rounded text-white">
-                <span className="ps-3">¿Cómo funciona Red Cripto Pay?</span></h4>
+                <h4 className="my-4 justify-content-center text-center">
+                <span className="px-3 py-2 bg-primary rounded text-white">¿Cómo funciona?</span></h4>
+                </div>
+                <div className="mx-lg-5 px-lg-5 my-3">
+                <div className="ratio ratio-16x9">        
+                <iframe width="750" height="422" src="https://www.youtube.com/embed/Me4o-q0ubJ0" title="YouTube video player" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+                </div>
                 </div>
                 <h4 className=" fs-6 text-info text-start">
                 Para enviar o recibir depósitos debes aegurarte de haberte registrado con tu billetera añadiendo
