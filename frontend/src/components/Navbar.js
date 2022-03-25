@@ -27,18 +27,18 @@ const Navbar = ({connect, defaultAccount, connected, isLoading, noProvider}) => 
         <button className="btn btn-dark" type="submit">
         Descargue Metamask</button></a>}
         <button className="navbar-toggler rounded-circle ms-lg-4 me-lg-3 
-        bg-secondary px-2 border-1" 
+        bg-primary text-light px-2 border-0" 
         type="button" data-bs-toggle="offcanvas" 
         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <span><i className="bi bi-list"></i></span>
         </button>
         <div className="offcanvas offcanvas-end border-0" tabIndex="-1" id="offcanvasNavbar" 
         aria-labelledby="offcanvasNavbarLabel">
-          <div className="offcanvas-header bg-info" data-bs-dismiss="offcanvas" aria-label="Close">
+          <div className="offcanvas-header bg-dark" data-bs-dismiss="offcanvas" aria-label="Close">
            <div className="container">
             <div className="row mt-3">
              <div className="col ms-5"> 
-              <Link to="/perfil" className=" nav-item-menu btn btn-success text-light rounded-pill" 
+              <Link to="/perfil" className=" nav-item-menu btn btn-primary text-light rounded-pill" 
               tabIndex="-1" role="button" aria-disabled="true">
                 <i className="bi bi-person-circle pe-2"></i>Perfil</Link>
               </div>
@@ -49,7 +49,7 @@ const Navbar = ({connect, defaultAccount, connected, isLoading, noProvider}) => 
             </div>
            </div>   
           </div>
-          <div className="offcanvas-body justify-content-center bg-info">
+          <div className="offcanvas-body justify-content-center bg-dark">
             <div className="menu-list">
             <ul className="navbar-nav flex-grow-1 ps-1">
             <a className="nav-link text-light d-inline py-0" 

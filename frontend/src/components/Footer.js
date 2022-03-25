@@ -1,4 +1,5 @@
 import logo from "../assets/favicon.png";
+import logodecolorado from "../assets/logodecolorado.png"
 import Tooltip from "react-bootstrap/Tooltip";
 import  OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import { Link } from "react-router-dom";
@@ -10,7 +11,7 @@ const Footer = () => {
      <div className="row justify-content-between">
       <div className="col pt-3">    
         <a href="https://redcripto.com" className="text-muted text-decoration-none">
-        <img src={logo} width="40" height="40" className="d-inline-block mb-1 me-3" alt="redcripto"></img>
+        <img src={logodecolorado} width="45" height="40" className="d-inline-block mb-1 me-3" alt="redcripto"></img>
         <span className="text-secondary"> Red Cripto
         </span>
         </a>
