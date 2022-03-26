@@ -90,7 +90,7 @@ const web3 = new Web3 (window.ethereum);
       load();
     }
    
-  }, [defaultAccount, tokensEscrow, transactions]);
+  }, [defaultAccount, tokensEscrow]);
 
   const handleNext = () => {
     setCurrentPage(currentPage +1);
