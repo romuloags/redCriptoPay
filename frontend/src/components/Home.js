@@ -56,7 +56,7 @@ const Home = ({defaultAccount}) => {
                 <div className="mx-lg-5 px-lg-5 my-3">
                 <div className="ratio ratio-16x9">        
                 <iframe width="750" height="422" src="https://www.youtube.com/embed/Me4o-q0ubJ0" title="YouTube video player" 
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                 ></iframe>
                 </div>
                 </div>
@@ -103,6 +103,13 @@ const Home = ({defaultAccount}) => {
                  <i className="bi bi-box-arrow-up-right me-1"></i>Tutorial</a>
                  </div>
                  </div>
+                 <div className="mx-lg-5 px-lg-5 my-3">
+                <div className="ratio ratio-16x9">
+                <iframe width="750" height="422" src="https://www.youtube.com/embed/ncFRHnjttxI" title="YouTube video player" 
+                frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                ></iframe>
+                </div>
+                </div>
                </div>  
              </div>
              {defaultAccount && <div className="card justify bg-dark shadow content-center mb-4">
@@ -202,11 +209,11 @@ const Home = ({defaultAccount}) => {
                 </div>  
                 <div className="mb-3 col-lg-4 mb-lg-0">
                 <div className="card justify bg-light shadow content-center">
-                 <div className="text-center text-primary mt-2">Depósitos de Binance Coin
+                 <div className="text-center text-primary mt-2">Depósitos de BNB
                  <img src={bnbicon} width="20" height="20" alt="bnbicon" className="mx-1"></img>
                  </div>
                  <div className="text-center text-warning mx-2 mt-2"> Envíe y Reciba pagos con
-                 Binance Coin de manera segura, a través de un contrato tipo fideicomiso.</div>
+                 BNB de manera segura, a través de un contrato tipo fideicomiso.</div>
                  <a className="btn btn-primary mt-2 mx-5" 
                  href="https://bscscan.com/address/0xe414caa589f36e1679298e424957ac10bcd3a340#code" role="button">Contrato</a>
                  <div className="card-body">
