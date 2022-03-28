@@ -28,7 +28,7 @@ const Home = ({defaultAccount}) => {
                <div className="card-body text-light px-0">
                 <h1>Red Cripto <span className="text-danger">Pay</span></h1>
                 <img src={home1} className="img-fluid d-block m-auto" alt="homeImage"></img> 
-                <h4 className=" fs-5 d-block d-md-none text-danger">Deposita y Recibe Criptomonedas de forma segura.</h4>
+                <h4 className=" fs-5 d-block d-md-none text-danger px-2">Deposita y Recibe Criptomonedas de forma segura.</h4>
                 <h4 className=" fs-2 d-none d-md-block text-danger">Deposita y Recibe Criptomonedas de forma segura.</h4>
                </div>  
              </div>
