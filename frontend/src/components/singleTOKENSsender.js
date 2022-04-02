@@ -177,7 +177,7 @@ const SingleTOKENSsender = ({defaultAccount, tokensEscrow, contactInfo}) => {
                             </>
                             </span>
                             </div>
-                            <div className="text-dark my-2">Información del Receptor
+                            <div className="text-dark my-2">Información del Vendedor (Receptor)
                             <span>
                             <>
                             {['bottom'].map((placement) => (

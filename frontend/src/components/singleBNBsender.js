@@ -171,7 +171,7 @@ const SingleBNBsender = ({defaultAccount, bnbEscrow, contactInfo}) => {
                             </>
                             </span>
                             </div>
-                            <div className="text-info my-2">Información del Receptor
+                            <div className="text-info my-2">Información del Vendedor (Receptor)
                             <span>
                             <>
                             {['bottom'].map((placement) => (
