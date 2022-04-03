@@ -1,4 +1,5 @@
-import bnbicon from "../assets/bnbicon.png"
+import bnbicon from "../assets/bnbnewicon.png"
+import bscicon from "../assets/bscicon.png"
 import usdticon from "../assets/usdticon.png"
 import ethicon from "../assets/ethicon.png"
 import btcbicon from "../assets/btcbicon.png"
@@ -37,7 +38,8 @@ const Home = ({defaultAccount}) => {
                 <h3 className="text-dark">Compra y vende Productos y Servicios de manera segura y descentralizada.</h3>
                 <p className=" fs-6 text-dark text-justify">
                 Depósitos descentralizados P2P intercambiando Criptomonedas por Productos y Servicios con protección al Comprador y Vendedor, a 
-                 través de la BNB Smart Chain. 
+                 través de la <img src={bscicon} 
+                 width="25" height="25" alt="bnbicon"></img> BNB Smart Chain. 
                  Solo debes conectar tu billetera descentralizada
                  <a className="btn btn-light text-primary ps-1 p-0" 
                  href="https://metamask.io/download" role="button"> 

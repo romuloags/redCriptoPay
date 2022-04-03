@@ -1,6 +1,6 @@
 import BNBhistory from "./BNBhistory";
 import TOKENShistory from "./TOKENShistory";
-import bnbicon from "../assets/bnbicon.png"
+import bnbicon from "../assets/bnbnewicon.png"
 
 const History = ({defaultAccount, bnbEscrow, tokensEscrow, connected}) => {
     return ( 

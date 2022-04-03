@@ -260,7 +260,7 @@ const Whitepaper = () => {
                         <img src={web3jsimage} width="600" height="600" className="img-fluid d-block m-auto my-4" alt="web3"></img>
                         <h5 className="fw-bold" id="contratos">Contratos Inteligentes</h5>
                         <p className="text-start">
-                        Red Cripto Pay desarrolló cuatro contratos inteligentes desplegados en la Binance Smart Chain. Se utilizó Solidity como lenguaje de programación,
+                        Red Cripto Pay desarrolló cuatro contratos inteligentes desplegados en la BNB Smart Chain. Se utilizó Solidity como lenguaje de programación,
                         y se copiaron varias librerías de OpenZeppelin para hacer más seguro el código.
                         </p>
                         <p className="text-start">

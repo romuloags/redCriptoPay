@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useParams } from "react-router";
 import Web3 from "web3";
-import bnbicon from "../assets/bnbicon.png";
+import bnbicon from "../assets/bnbnewicon.png";
 import { Link } from "react-router-dom"
 
 const SingleBNBsender = ({defaultAccount, bnbEscrow, contactInfo}) => {
