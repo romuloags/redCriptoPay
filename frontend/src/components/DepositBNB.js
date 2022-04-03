@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import Web3 from "web3";
 
-import bnbicon from "../assets/bnbicon.png"
+import bnbicon from "../assets/bnbnewicon.png"
 import Tooltip from "react-bootstrap/Tooltip"
 import  OverlayTrigger from "react-bootstrap/OverlayTrigger"
 
