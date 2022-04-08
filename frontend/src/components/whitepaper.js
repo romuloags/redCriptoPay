@@ -35,7 +35,7 @@ const Whitepaper = () => {
                         <i className="bi bi-file-text pe-2"></i>Whitepaper</h4>
                         <div className="my-3">
                         <div className="text-muted">
-                        Whitepaper oficial de Red Cripto Pay, última revisión marzo 2022
+                        Whitepaper oficial de Red Cripto Pay, última revisión abril 2022
                         </div>
                         <div className="row justify-content-center">
                         <div className="col-md-6 text-start">
@@ -123,7 +123,7 @@ const Whitepaper = () => {
                         segura.
                         </p>
                         <p className="text-start">
-                        Alice procede a realizar un depósito en Criptomonedas, puede hacerlo con el token nativo de la BSC, Binance Coin (BNB) o con Tokens BEP-20, 
+                        Alice procede a realizar un depósito en Criptomonedas, puede hacerlo con el token nativo de la BSC (BNB) o con Tokens BEP-20, 
                         Alice debe pegar la dirección de Billetera de Bob, elegir la moneda a depositar e introducir el monto a enviar, una vez la transacción
                         haya sido confirmada por la Blockchain, el depósito habrá sido puesto en garantía de manera exitosa, esto quiere decir que los fondos
                         depositados por Alice están bloqueados dentro del contrato, ni Alice, ni Bob pueden obtener acceso a esos fondos, a menos de que Alice libere
@@ -176,7 +176,7 @@ const Whitepaper = () => {
                         <img src={datoscontacto} width="600" height="600" className="img-fluid d-block m-auto my-4" alt="datos"></img>
                         <p className="text-start">
                         Para abrir un depósito debe dirigirse al apartado del menú "Depositar", una vez este dentro de la sección de Depositar, puede elegir dos
-                        opciones, depositar con el token nativo de la BSC Binance Coin (BNB), o depositar con tokens BEP-20. Si elije depositar con BNB debe pegar
+                        opciones, depositar con el token nativo de la BSC (BNB), o depositar con tokens BEP-20. Si elije depositar con BNB debe pegar
                         la dirección de Billetera de su contraparte (receptor) y escribir el monto exacto a depositar en BNB, si incluye decimales estos deben escribirse 
                         después de un punto; por otro lado, si elije depositar con tokens BEP-20 debe pegar la dirección de su contraparte (receptor), elegir entre
                         las opciones el token BEP-20 a depositar y el monto exacto a enviar en el token seleccionado, si incluye decimales de igual forma deben 
@@ -251,7 +251,7 @@ const Whitepaper = () => {
                         Para conectar la interfaz de usuario (UI) con la Blockchain y por consiguiente con los contratos inteligentes, se utilizó web3.js,  
                         la cual, es una colección de bibliotecas de JavaScript, que permiten interactuar con un nodo de Ethereum local o remoto mediante HTTP, 
                         IPC o WebSocket. Con web3.js puedes desarrollar aplicaciones (frontend) que interactúan con la Blockchain de Ethereum (o cualquier Blockchain 
-                        que exponga una API JSON RPC compatible con Ethereum como la Binance Smart Chain), leer y escribir 
+                        que exponga una API JSON RPC compatible con Ethereum como la BNB Smart Chain), leer y escribir 
                         datos de contratos inteligentes, o crear contratos inteligentes. web3.js se conecta con Blockchains compatibles con Ethereum  mediante JSON RPC 
                         (llamada a procedimiento remoto). Esta tecnología permite utilizar web3.js para hacer peticiones a un nodo de Ethereum individual.
                         Este nodo, una máquina virtual de Ethereum (EVM) pertenece a la red de Ethereum.
